@@ -292,21 +292,26 @@ def exp_header_with_tags(role: str, period: str, company: str, tags: list) -> li
 
 
 # ─── Двухколоночная таблица ───────────────────────────────────────────────────
-def two_col_table(left_items, right_items, left_title, right_title) -> Table:
+def two_col_table(left_items, right_items, left_title, right_title,
+                  left_w=None, right_w=None) -> Table:
     half = (CONTENT_W - 4*mm) / 2
+    if left_w is None:
+        left_w = half
+    if right_w is None:
+        right_w = half
 
-    def col_content(title, items):
+    def col_content(title, items, col_w):
         parts = [Paragraph(bold(title), S(f"ColT_{title[:6]}", parent=BASE, fontName="Inter-Bold",
                                            fontSize=8.5, textColor=DARK, spaceAfter=3))]
         for item in items:
             parts.append(bullet(item))
-        return parts
+        return parts, col_w
 
-    left  = col_content(left_title,  left_items)
-    right = col_content(right_title, right_items)
+    left_parts,  lw = col_content(left_title,  left_items,  left_w)
+    right_parts, rw = col_content(right_title, right_items, right_w)
 
-    def wrap(parts):
-        t = Table([[p] for p in parts], colWidths=[half])
+    def wrap(parts, col_w):
+        t = Table([[p] for p in parts], colWidths=[col_w])
         t.setStyle(TableStyle([
             ("LEFTPADDING",  (0,0),(-1,-1), 0),
             ("RIGHTPADDING", (0,0),(-1,-1), 0),
@@ -315,7 +320,7 @@ def two_col_table(left_items, right_items, left_title, right_title) -> Table:
         ]))
         return t
 
-    outer = Table([[wrap(left), wrap(right)]], colWidths=[half, half])
+    outer = Table([[wrap(left_parts, lw), wrap(right_parts, rw)]], colWidths=[lw, rw])
     outer.setStyle(TableStyle([
         ("VALIGN",        (0,0),(-1,-1), "TOP"),
         ("LEFTPADDING",   (0,0),(-1,-1), 0),
@@ -344,7 +349,8 @@ def build_header() -> list:
     contacts_line2 = Paragraph(
         "Желаемая позиция: Head of AI / Руководитель AI-направления "
         "&nbsp;·&nbsp; Формат: гибрид (Москва / Санкт-Петербург) "
-        "&nbsp;·&nbsp; Командировки: да, включая международные",
+        "&nbsp;·&nbsp; Командировки: да, включая международные "
+        "&nbsp;·&nbsp; Зарплата: от 400 000 ₽ net",
         S("MetaLine", parent=CONTACT_STYLE, fontSize=7.5, textColor=HexColor("#777777"))
     )
 
@@ -391,7 +397,7 @@ def build_story() -> list:
         ("9 лет",      "в AI/ML"),
         ("7",          "AI-продуктов в production"),
         ("100+",       "CustDev-интервью"),
-        ("x2",         "рост выручки за 3 года"),
+        ("x2",         "доля AI в выручке"),
     ]))
     story.append(Spacer(1, 5))
 
@@ -596,6 +602,7 @@ def build_story() -> list:
     # === ПУБЛИЧНАЯ АКТИВНОСТЬ ===
     story += section_header("Публичная активность и признание")
     story.append(two_col_table(
+        left_w=CONTENT_W * 0.43, right_w=CONTENT_W * 0.57,
         left_title="Спикер AI/tech-конференций",
         left_items=[
             "AI IN, Казань, 2023 — AI-направление",
@@ -606,7 +613,7 @@ def build_story() -> list:
         right_title="Награды и экспертиза",
         right_items=[
             "2× победитель «АРКТЕК ИНЖИНИРИНГ», 2023",
-            "Лауреат Рос.–Кит.конкурса инноваций, 2023",
+            "Лауреат Российско-Китайского конкурса инноваций, 2023",
             "Член жюри AI &amp; Business Hackathon и 2ГИС Hackathon",
             "Член экспертного совета ИНТЦ МГУ «Воробьёвы горы»",
         ]

@@ -1,27 +1,27 @@
-# Зубков С.А. — Резюме и мастер-профиль
+# Зубков Сергей Андреевич — Резюме
 
-Приватный репозиторий. Содержит мастер-профиль и актуальные версии резюме.
+Репозиторий содержит актуальные версии резюме для разных позиций.
 
 ## Структура
 
-| Файл | Описание |
-|------|----------|
-| `master_profile_ru.md` | Мастер-профиль — источник истины для всех версий резюме |
-| `Zubkov_SA_Resume_IT-Director.html` | Резюме IT-директор / CTO / Chief AI Officer (HTML) |
-| `Zubkov_SA_Resume_IT-Director.pdf` | Резюме IT-директор / CTO / Chief AI Officer (PDF, A4) |
-| `generate_resume_pdf.py` | Скрипт генерации PDF (ReportLab + Inter) |
-| `foto_zsa.jpg` | Фото профиля |
-
-## Генерация PDF
-
-```bash
-# Требуется: Python 3.10+, reportlab, шрифты Inter в /tmp/fonts/
-pip install reportlab
-python generate_resume_pdf.py
 ```
+positions/
+  it-director/          # Резюме IT-директора (v1.5)
+  head-of-ai/           # Резюме Head of AI (v1.6)
+shared/
+  foto_zsa.jpg          # Фото
+  master_profile_ru.md  # Мастер-профиль (полный)
+index.html              # GitHub Pages → IT-директор (публичный)
+```
+
+## GitHub Pages
+
+Публичная страница: https://zubkovfpk.github.io/resume/  
+Отображает резюме IT-директора (index.html в корне).
 
 ## Версии
 
-Актуальная версия: **v1.5** (2026-04-23)
-
-История изменений — см. [CHANGELOG.md](CHANGELOG.md).
+| Версия | Позиция | Дата |
+|--------|---------|------|
+| v1.6 | Head of AI / Melon Fashion Group | апр. 2026 |
+| v1.5 | IT-директор | апр. 2026 |

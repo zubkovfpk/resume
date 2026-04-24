@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<title>Зубков С.А. — Head of AI / AI Lead</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: "Segoe UI", Tahoma, sans-serif; font-size: 9pt; line-height: 1.35; color: #1a1a1a; }
+.page { width: 794px; min-height: 1123px; padding: 28px 38px; background: #fff; }
+
+/* ШАПКА */
+.header { display: flex; gap: 18px; margin-bottom: 12px; border-bottom: 3px solid #21a038; padding-bottom: 10px; }
+.photo img { width: 82px; height: 82px; border-radius: 50%; object-fit: cover; }
+.header-text { flex: 1; }
+h1 { font-size: 21pt; font-weight: 700; color: #1a1a1a; margin-bottom: 2px; }
+.job-title { font-size: 11pt; color: #21a038; font-weight: 600; margin-bottom: 5px; }
+.contacts { font-size: 8.5pt; color: #555; display: flex; gap: 14px; flex-wrap: wrap; }
+.contacts a { color: #555; text-decoration: none; }
+.meta-line { font-size: 7.8pt; color: #777; margin-top: 4px; }
+
+/* СЕКЦИИ */
+.section { margin-bottom: 11px; }
+.section-title { font-size: 10.5pt; font-weight: 700; color: #21a038; margin-bottom: 5px; padding-bottom: 2px;
+  border-bottom: 1.5px solid #e0e0e0; text-transform: uppercase; letter-spacing: 0.5px; }
+
+/* МЕТРИКИ */
+.metrics { display: flex; gap: 8px; margin: 7px 0; }
+.metric { background: #e8f5e9; border-radius: 4px; padding: 4px 8px; text-align: center; flex: 1; }
+.metric-value { font-size: 13pt; font-weight: 700; color: #21a038; }
+.metric-label { font-size: 6.8pt; color: #555; text-transform: uppercase; letter-spacing: 0.3px; }
+
+/* КОМПЕТЕНЦИИ */
+.skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; }
+.skill-card { background: linear-gradient(135deg, #f5f5f5, #e9e9e9); padding: 6px 8px; border-left: 3px solid #21a038; font-size: 8pt; }
+.skill-title { font-weight: 700; color: #1a1a1a; margin-bottom: 2px; font-size: 8.5pt; }
+
+/* ОПЫТ */
+.experience { margin-bottom: 9px; }
+.exp-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 3px; }
+.exp-title { font-weight: 700; font-size: 9.5pt; color: #1a1a1a; }
+.exp-period { font-size: 8pt; color: #666; font-style: italic; white-space: nowrap; padding-left: 8px; }
+.exp-company { font-size: 8.5pt; color: #21a038; font-weight: 600; margin-bottom: 3px; }
+.exp-tags { margin-bottom: 4px; }
+.badge { display: inline-block; background: #21a038; color: white; padding: 1px 6px; border-radius: 3px;
+  font-size: 7.2pt; font-weight: 600; margin-right: 3px; }
+
+ul { margin-left: 14px; }
+li { margin-bottom: 2px; font-size: 8.5pt; color: #333; line-height: 1.4; }
+.hl { background: #fff3cd; padding: 0 2px; font-weight: 700; }
+
+/* KPI-BOX */
+.kpi-box { background: #f0fff4; border: 1.5px solid #21a038; border-radius: 6px; padding: 6px 8px; margin: 6px 0; }
+.kpi-box-title { font-size: 8.5pt; font-weight: 700; color: #21a038; text-align: center; margin-bottom: 5px; }
+.kpi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.kpi-card { background: white; border: 1px solid #c8e6c9; border-radius: 5px; padding: 5px 6px; text-align: center; }
+.kpi-value { font-size: 10pt; font-weight: 700; color: #21a038; }
+.kpi-name { font-size: 7.5pt; color: #444; line-height: 1.3; margin: 2px 0; }
+.kpi-sub { font-size: 7pt; color: #777; font-style: italic; }
+
+/* СТЕК */
+.stack { font-size: 8.5pt; line-height: 1.6; color: #333; }
+
+/* ОБРАЗОВАНИЕ */
+.edu-row { display: flex; justify-content: space-between; align-items: baseline;
+  font-size: 8.2pt; padding: 2px 0; }
+.edu-year { color: #888; white-space: nowrap; padding-left: 12px; }
+
+/* ПУБЛИЧНАЯ АКТИВНОСТЬ */
+.two-col { display: grid; grid-template-columns: 43% 57%; gap: 0; }
+.info-block { font-size: 8.2pt; line-height: 1.5; padding-right: 10px; }
+.info-block strong { color: #1a1a1a; font-size: 8.5pt; }
+.award-row { display: flex; justify-content: space-between; align-items: baseline; }
+.award-year { color: #888; white-space: nowrap; padding-left: 8px; }
+
+/* МОТИВАЦИОННАЯ ПЛАШКА */
+.footer-note { margin-top: 10px; padding: 8px 10px; background: #f0f8ff;
+  border-left: 4px solid #21a038; font-size: 8.5pt; font-style: italic; color: #333; }
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- ШАПКА -->
+<div class="header">
+  <div class="photo">
+    <img alt="Фото" src="foto_zsa.jpg"/>
+  </div>
+  <div class="header-text">
+    <h1>Зубков Сергей Андреевич</h1>
+    <div class="job-title">Head of AI / AI Lead / Product Owner AI</div>
+    <div class="contacts">
+      <span>Москва</span>
+      <span>+7 (926) 276-61-43</span>
+      <span><a href="mailto:zubkovfpk@yandex.ru">zubkovfpk@yandex.ru</a></span>
+      <span>Telegram: <a href="https://t.me/SergeyAZubkov">@SergeyAZubkov</a></span>
+      <span><a href="https://www.linkedin.com/in/sergey-a-zubkov">LinkedIn</a></span>
+    </div>
+    <div class="meta-line">
+      Желаемая позиция: Head of AI / Руководитель AI-направления &nbsp;·&nbsp;
+      Формат: гибрид (Москва / Санкт-Петербург) &nbsp;·&nbsp;
+      Командировки: да, включая международные &nbsp;·&nbsp;
+      Зарплата: от 500 000 ₽ net
+    </div>
+  </div>
+</div>
+
+<!-- ПРОФИЛЬ -->
+<div class="section">
+  <div class="section-title">Профиль</div>
+  <p style="font-size:8.5pt; color:#333; line-height:1.45;">
+    20+ лет в ИТ и цифровой трансформации, из них последние 9 лет — фокус на AI/ML-продукты
+    и стратегию AI-направления. Co-Founder и CTO компании ВИЗАРД: выстроил AI-направление с нуля —
+    от CustDev и валидации гипотез до запуска ML-продуктов в production и масштабирования
+    на крупных корпоративных клиентов. Hands-on архитектор и разработчик: LLM, Agentic RAG, GraphRAG,
+    multi-agent workflows, CV/ML. Умею работать в неопределённости, проектировать customer journey
+    и переводить AI-возможности в измеримый бизнес-результат.
+    Открыт к гибридному формату работы в Санкт-Петербурге.
+  </p>
+</div>
+
+<!-- МЕТРИКИ -->
+<div class="metrics">
+  <div class="metric">
+    <div class="metric-value">9 лет</div>
+    <div class="metric-label">в AI/ML</div>
+  </div>
+  <div class="metric">
+    <div class="metric-value">7</div>
+    <div class="metric-label">AI-продуктов в production</div>
+  </div>
+  <div class="metric">
+    <div class="metric-value">100+</div>
+    <div class="metric-label">CustDev-интервью</div>
+  </div>
+  <div class="metric">
+    <div class="metric-value">x2</div>
+    <div class="metric-label">доля AI в выручке</div>
+  </div>
+</div>
+
+<!-- КЛЮЧЕВЫЕ КОМПЕТЕНЦИИ -->
+<div class="section">
+  <div class="section-title">Ключевые компетенции</div>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <div class="skill-title">AI/ML-продукты</div>
+      LLM, Agentic RAG, GraphRAG, multi-agent workflows. CV: YOLO/DETR/ViT.
+      AI-product management: от гипотезы до production и масштабирования.
+    </div>
+    <div class="skill-card">
+      <div class="skill-title">R&amp;D и валидация гипотез</div>
+      Исследование AI-рынка, генерация и проверка гипотез, запуск пилотов.
+      Быстрое прототипирование, A/B-подход, оценка влияния на бизнес-метрики.
+    </div>
+    <div class="skill-card">
+      <div class="skill-title">AI-стратегия</div>
+      Формирование стратегии AI-направления внутри компании.
+      Дорожная карта, приоритизация, выстраивание AI-культуры в команде.
+    </div>
+    <div class="skill-card">
+      <div class="skill-title">Продуктовое мышление</div>
+      Customer journey, CustDev, работа с гипотезами, CJM, приоритизация бэклога.
+      Кросс-функциональные команды (продукт, маркетинг, e-commerce, аналитика).
+    </div>
+    <div class="skill-card">
+      <div class="skill-title">ML-инжиниринг (hands-on)</div>
+      Python, PyTorch, YOLO/EfficientDet/RT-DETR, SAHI, Raster Vision.
+      CI/CD, Docker, Git/GitHub. Prompt-engineering, Constitutional AI, ADR.
+    </div>
+    <div class="skill-card">
+      <div class="skill-title">Данные и интеграции</div>
+      PostgreSQL, Oracle, DWH. API-интеграции, корпоративные шины.
+      Работа с неструктурированными и мультимодальными данными.
+    </div>
+  </div>
+</div>
+
+<!-- ОПЫТ РАБОТЫ -->
+<div class="section">
+  <div class="section-title">Опыт работы</div>
+
+  <!-- РОСКАДАСТР -->
+  <div class="experience">
+    <div class="exp-header">
+      <div class="exp-title">Главный инженер / Enterprise Architect (консалтинговый проект)</div>
+      <div class="exp-period">апр. 2025 — апр. 2026</div>
+    </div>
+    <div class="exp-company">ППК «Роскадастр» — федеральный оператор пространственных данных РФ</div>
+    <div class="exp-tags">
+      <span class="badge">Risk Management</span>
+      <span class="badge">ML</span>
+      <span class="badge">AI-агенты</span>
+    </div>
+    <ul>
+      <li><span class="hl">ML и AI-направление:</span> ML-алгоритмы выявления изменений на местности по спутниковой съёмке; модель оценки операционных рисков (ISO 31000, P×S матрица, SORA/ARA); AI-агенты для планирования геодезических и картографических работ на федеральном уровне.</li>
+      <li><span class="hl">Система управления рисками:</span> разработал полную архитектуру: quality gate на основе P×S матрицы, KRI-мониторинг near miss и операционных событий, визуализация risk map / heat map / value stream. COBIT-домены APO12, BAI01-03, DSS01-06, MEA01-02.</li>
+      <li><span class="hl">KRI-результаты:</span> интегральный индекс качества пространственных данных >95%; коэффициент эффективности производственного планирования >90%; зрелость системы управления рисками — уровень 4 из 5 (продвинутый).</li>
+      <li><span class="hl">Дорожная карта GeoAI 2026–2030:</span> разработал стратегический документ внедрения ИИ на федеральном уровне (6 блоков, 25 мероприятий, горизонт 5 лет): change detection по ДЗЗ/БПЛА (целевой F1 ≥ 0.85), семантическая сегментация объектов местности (mIoU ≥ 0.80), risk-engine с ГИС/ИПД, система раннего предупреждения (≤24 ч). MLOps-контур: мониторинг деградации моделей (model drift / data drift), валидация по ГОСТ Р 57773-2017, dataset registry на базе НСПД.</li>
+    </ul>
+  </div>
+
+  <!-- ВИЗАРД -->
+  <div class="experience">
+    <div class="exp-header">
+      <div class="exp-title">Co-Founder / CTO / Product Owner AI &amp; Data</div>
+      <div class="exp-period">2017 — н.в.</div>
+    </div>
+    <div class="exp-company">ВИЗАРД (VIZARD) — коммерческая платформа для морской логистики и мониторинга судоходства</div>
+    <div class="exp-tags">
+      <span class="badge">AI-стратегия</span>
+      <span class="badge">ML</span>
+      <span class="badge">Product Owner / SBA</span>
+    </div>
+    <div class="kpi-box">
+      <div class="kpi-box-title">AI-результаты платформы VIZARD — измеримый бизнес-эффект</div>
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-value">120 → 200 сут.</div>
+          <div class="kpi-name">Эффект AI-оптимизации буровых операций</div>
+          <div class="kpi-sub">период эксплуатации ПБУ; снижение расходов до 35%</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-value">+17% / +350 K $</div>
+          <div class="kpi-name">Ускорение маршрутов (СМП)</div>
+          <div class="kpi-sub">ускорение прохода; эффект на один рейс</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-value">1 млрд ₽+</div>
+          <div class="kpi-name">Совокупный эффект для клиентов</div>
+          <div class="kpi-sub">за 5+ лет; 400+ суток применения в море</div>
+        </div>
+      </div>
+    </div>
+    <ul>
+      <li><span class="hl">AI-направление с нуля:</span> исследовал рынок AI-решений в maritime/нефтегаз, формировал и валидировал гипотезы по матрице (метрика, инвестиции, вера, сложность, срок проверки, эффект, риск); запускал R&amp;D-проекты — от идеи до пилота и масштабирования на крупных клиентах (ПАО «Газпром», ПАО «Совкомфлот», ПАО «НОВАТЭК» и др.). 80+ протестированных гипотез.</li>
+      <li><span class="hl">Customer journey и CustDev:</span> лично провёл и организовал 100+ интервью с капитанами, логистами, страховыми агентами (включая ОАЭ, Японию, Турцию, LinkedIn-сообщества). Сформировал текущий и целевой journey, выявил ключевые боли и точки создания ценности.</li>
+      <li><span class="hl">AI-journey:</span> спроектировал сценарий, где пользователь формулирует задачу («как пройти A→Б с минимальным риском/топливом»), а система на основе AI-аналитики предлагает оптимальные маршруты и предупреждения в мультимодальном интерфейсе.</li>
+      <li><span class="hl">7 AI-продуктов в production:</span> модуль классификации льда, детекция для БПЛА (mAP@0.5 ≥ 80%), определение нефтяных загрязнений и их источника, модуль маршрутных рекомендаций, агент формирования гидрометеопрогнозов (Python, GFS/CMEMS, multi-agent AI). Плюс ML-алгоритмы в ЕГИП и Роскадастр.</li>
+      <li><span class="hl">Рынок и финмодель:</span> выполнил анализ российского и международных рынков (PAM–TAM–SAM–SOM, сегмент P&amp;I-страхования Великобритании, БРИКС+, КСА); построил P&amp;L и финансовую модель с горизонтом 5 лет. Рост выручки x2 за первые 3 года.</li>
+      <li><span class="hl">Кросс-функциональная работа:</span> команда до 17 человек (разработка, AI/ML, геоаналитика, бизнес-развитие); B2G / B2B / B2B2C. Переход на локальную инфраструктуру в условиях санкций без потери ценности для клиента.</li>
+    </ul>
+  </div>
+
+  <!-- ЕГИП -->
+  <div class="experience">
+    <div class="exp-header">
+      <div class="exp-title">Chief Architect / Product Owner / Customer Journey Lead</div>
+      <div class="exp-period">2012 — 2016</div>
+    </div>
+    <div class="exp-company">Единое геоинформационное пространство Москвы (ЕГИП) — Департамент информационных технологий г. Москвы</div>
+    <div class="exp-tags">
+      <span class="badge">Цифр. трансформация</span>
+      <span class="badge">Data-платформа</span>
+      <span class="badge">Urban AI</span>
+    </div>
+    <ul>
+      <li><span class="hl">Customer journey B2G:</span> единая точка входа к пространственным данным вместо 30+ разрозненных систем — планирование рекламы и торговли, управление наследием и природными территориями, контроль подземных работ, мониторинг транспорта ЖКХ.</li>
+      <li><span class="hl">Customer journey B2C:</span> Электронный атлас Москвы: где смотреть салют, где жарить шашлыки, какие перекрытия планируются, как работает медицина в районе. 200+ публичных слоёв, обновление за 30 минут.</li>
+      <li><span class="hl">AI-journey и гипотезы:</span> 150+ интервью и семинаров с департаментами; проверялись сценарии сокращения выездов инспекторов (с 4 до 2 в год), онлайн-согласования CAD/BIM вместо флешек, снижение числа незаконных точек продажи алкоголя несовершеннолетним на 82%. ML первого поколения: детекция объектов на LiDAR + стереофото.</li>
+      <li><span class="hl">Масштаб и экономика:</span> 60+ органов власти, 37 интегрированных систем. Снижение TCO в 6,3×; экономия бюджета >0,5 млрд руб./год. Лучшее интеграционное решение III Международного GIS-Forum, 2015.</li>
+    </ul>
+  </div>
+
+  <!-- РАННИЙ ПЕРИОД -->
+  <div class="experience" style="margin-bottom:4px;">
+    <div class="exp-header">
+      <div class="exp-title">Инженер / Аналитик → И.о. начальника управления</div>
+      <div class="exp-period">2004 — 2012</div>
+    </div>
+    <div class="exp-company">Коммерческие ИТ/ГИС-организации: РЖД, CSoft, Прайм груп, Эверпоинт</div>
+    <ul>
+      <li>Последовательный карьерный рост от инженера до руководителя; hands-on работа с корпоративными данными, DWH, Oracle, ArcGIS.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ТЕХНОЛОГИЧЕСКИЙ СТЕК -->
+<div class="section">
+  <div class="section-title">Технологический стек</div>
+  <div class="stack">
+    <strong>AI/ML:</strong> LLM, Agentic RAG, GraphRAG, multi-agent workflows, CV/YOLO/EfficientDet/DETR/RT-DETR/ViT, SAHI, Raster Vision &nbsp;·&nbsp;
+    <strong>Languages:</strong> Python (pytest, asyncio, APScheduler), SQL &nbsp;·&nbsp;
+    <strong>DB:</strong> PostgreSQL/PostGIS, Oracle &nbsp;·&nbsp;
+    <strong>DevOps:</strong> Docker, CI/CD, Git/GitHub &nbsp;·&nbsp;
+    <strong>Tools:</strong> Cursor, Windsurf, Perplexity, Notion, PlantUML &nbsp;·&nbsp;
+    <strong>Методологии:</strong> Lean Startup, A/B, PRINCE2, IPMA, TOGAF
+  </div>
+</div>
+
+<!-- ОБРАЗОВАНИЕ -->
+<div class="section">
+  <div class="section-title">Образование и сертификации</div>
+  <div class="edu-row">
+    <span><strong>Дипломатическая академия МИД России</strong> <span style="color:#888;">· Международные отношения</span></span>
+    <span class="edu-year">2011</span>
+  </div>
+  <div class="edu-row">
+    <span><strong>МИИГАиК</strong> <span style="color:#888;">· Прикладная космонавтика / Проектирование и внедрение ИС</span></span>
+    <span class="edu-year">2006</span>
+  </div>
+  <div class="edu-row">
+    <span><strong>IPMA</strong> <span style="color:#888;">· Сертификат управления проектами · № D0861</span></span>
+    <span class="edu-year">2009</span>
+  </div>
+</div>
+
+<!-- ПУБЛИЧНАЯ АКТИВНОСТЬ -->
+<div class="section">
+  <div class="section-title">Публичная активность и признание</div>
+  <div class="two-col">
+    <div class="info-block">
+      <strong>Спикер AI/tech-конференций:</strong>
+      <ul>
+        <li>AI IN, Казань, 2023 — AI-направление</li>
+        <li>Digital Innopolis Days, Казань, 2025</li>
+        <li>Saudi Maritime Congress, Даммам, 2024</li>
+        <li>RAO‑CIS, Санкт-Петербург — регулярно с 2018 г.</li>
+      </ul>
+    </div>
+    <div class="info-block" style="padding-right:0;">
+      <strong>Награды и экспертиза:</strong>
+      <ul>
+        <li class="award-row"><span>2× победитель «АРКТЕК ИНЖИНИРИНГ»</span><span class="award-year">2023</span></li>
+        <li class="award-row"><span>Лауреат Российско-Китайского конкурса инноваций</span><span class="award-year">2023</span></li>
+        <li>Член жюри AI &amp; Business Hackathon и 2ГИС Hackathon</li>
+        <li>Член экспертного совета ИНТЦ МГУ «Воробьёвы горы»</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- МОТИВАЦИОННАЯ ПЛАШКА -->
+<div style="height:10px;"></div>
+<div class="footer-note">
+  <strong>Почему я — для роли Head of AI:</strong> строил AI-направление с нуля в условиях реального рынка
+  и санкционных ограничений — от исследования и гипотез до продуктов в production с измеримым бизнес-эффектом.
+  Сочетаю стратегическое видение с hands-on экспертизой: сам пишу код, сам валидирую архитектуру.
+  Умею работать в неопределённости и переводить AI-возможности на язык бизнес-метрик для любой аудитории —
+  от разработчиков до собственников.
+</div>
+
+</div>
+</body>
+</html>

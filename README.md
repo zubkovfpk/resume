@@ -10,6 +10,7 @@
 | **IT-директор** | [/positions/it-director](https://zubkovfpk.github.io/resume/positions/it-director/) | — |
 | **Head of AI (базовый)** | [/positions/head-of-ai](https://zubkovfpk.github.io/resume/positions/head-of-ai/) | [preview](https://www.perplexity.ai/computer/a/reziume-head-of-ai-zubkov-s-a-_Lwv1XkiTLi8N_nHiRLtpQ) |
 | **Head of AI — belkin.digital** | [/positions/belkin](https://zubkovfpk.github.io/resume/positions/belkin/) | [preview](https://www.perplexity.ai/computer/a/reziume-zubkov-belkin-digital-LvgnX11sQwmm0_3I5ZxnJQ) |
+| **AI Инженер — АИПР** | [/positions/aipr](https://zubkovfpk.github.io/resume/positions/aipr/) | [preview](https://www.perplexity.ai/computer/a/reziume-zubkov-ai-inzhener-aip-cQt_4p.rTuaBPARgEQPVAQ) |
 
 ## Структура
 
@@ -18,6 +19,7 @@ positions/
   it-director/          # Резюме IT-директора (v1.5)
   head-of-ai/           # Резюме Head of AI, базовый (v1.7)
   belkin/               # Резюме Head of AI, адаптация под belkin.digital
+  aipr/                 # Резюме AI Инженер, адаптация под АИПР
 shared/
   foto_zsa.jpg          # Фото
   master_profile_ru.md  # Мастер-профиль (полный)
@@ -38,3 +40,4 @@ index.html              # GitHub Pages — каталог резюме
 | v1.6 | Head of AI / Melon Fashion Group (Zarina) | апр. 2026 |
 | v1.5 | IT-директор | апр. 2026 |
 | belkin | Head of AI / belkin.digital, корп. стиль | апр. 2026 |
+| aipr | AI Инженер / Интегратор ИИ / АИПР, частичная занятость | апр. 2026 |

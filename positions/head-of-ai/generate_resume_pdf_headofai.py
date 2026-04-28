@@ -348,9 +348,9 @@ def build_header() -> list:
     )
     contacts_line2 = Paragraph(
         "Желаемая позиция: Head of AI / Руководитель AI-направления "
-        "&nbsp;·&nbsp; Формат: гибрид (Москва / Санкт-Петербург) "
+        "&nbsp;·&nbsp; Формат: офис, удалёнка, гибрид "
         "&nbsp;·&nbsp; Командировки: да, включая международные "
-        "&nbsp;·&nbsp; Зарплата: от 500 000 ₽ net",
+        "&nbsp;·&nbsp; Зарплата: 500 000 ₽",
         S("MetaLine", parent=CONTACT_STYLE, fontSize=7.5, textColor=HexColor("#777777"))
     )
 
@@ -387,7 +387,7 @@ def build_story() -> list:
         "на крупных корпоративных клиентов. Hands-on архитектор и разработчик: LLM, Agentic RAG, GraphRAG, "
         "multi-agent workflows, CV/ML. Умею работать в неопределённости, проектировать customer journey "
         "и переводить AI-возможности в измеримый бизнес-результат. "
-        "Открыт к гибридному формату работы в Санкт-Петербурге.",
+        "Открыт к гибридному формату работы.",
         BODY
     ))
     story.append(Spacer(1, 3))
@@ -656,7 +656,7 @@ def footer(canvas_obj, doc):
     canvas_obj.setFont("Inter", 7.5)
     canvas_obj.setFillColor(HexColor("#888888"))
     y = MB - 6*mm
-    canvas_obj.drawString(ML, y, "С.А. Зубков  ·  Москва / Санкт-Петербург  ·  2026")
+    canvas_obj.drawString(ML, y, "С.А. Зубков  ·  Москва  ·  2026")
     canvas_obj.drawRightString(PAGE_W - MR, y, f"Стр. {doc.page}")
     canvas_obj.setStrokeColor(GREY_LIGHT)
     canvas_obj.setLineWidth(0.5)

@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<title>Зубков С.А. — AI Lead · belkin.digital</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  /* Градиент из логотипа: синефиолетовый → пурпурный */
+  --grad-from:   #3A10C0;
+  --grad-mid:    #7B0FCC;
+  --grad-to:     #9400D3;
+
+  /* Производные */
+  --purple:      #7B0FCC;   /* основной акцент */
+  --purple-dark: #3A10C0;
+  --purple-light:#F3EAFD;   /* фон карточек */
+  --purple-mid:  #D8BAF8;   /* рамки */
+  --grey-900:    #222222;
+  --grey-700:    #444444;
+  --grey-500:    #666666;
+  --grey-200:    #EEEEEE;
+  --grey-100:    #F7F7F7;
+  --white:       #FFFFFF;
+}
+
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 9pt;
+  line-height: 1.4;
+  color: var(--grey-900);
+  background: #e8e8e8;
+}
+.page {
+  width: 794px;
+  min-height: 1123px;
+  background: var(--white);
+  margin: 0 auto;
+}
+
+/* ── ШАПКА ───────────────────────────────────────── */
+.header {
+  padding: 22px 32px 18px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  border-bottom: 3px solid transparent;
+  border-image: linear-gradient(to right, var(--grad-from), var(--grad-mid), var(--grad-to)) 1;
+  position: relative;
+}
+/* тонкая градиентная полоска сверху */
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(to right, var(--grad-from), var(--grad-mid), var(--grad-to));
+}
+
+.photo img {
+  width: 78px;
+  height: 78px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2.5px solid var(--purple-mid);
+  display: block;
+}
+.header-text { flex: 1; }
+h1 {
+  font-size: 20pt;
+  font-weight: 700;
+  color: var(--grey-900);
+  letter-spacing: -0.3px;
+  line-height: 1.15;
+  margin-bottom: 3px;
+}
+.job-title {
+  font-size: 10.5pt;
+  font-weight: 600;
+  /* Градиентный текст — как логотип */
+  background: linear-gradient(to right, var(--grad-from), var(--grad-mid), var(--grad-to));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 8px;
+}
+.contacts {
+  font-size: 8pt;
+  color: var(--grey-500);
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 5px;
+}
+.contacts a { color: var(--purple); text-decoration: none; }
+.meta-line {
+  font-size: 7.5pt;
+  color: var(--grey-500);
+  margin-top: 2px;
+}
+
+/* Логотип в правом верхнем углу шапки */
+.belkin-logo {
+  display: flex;
+  align-items: flex-start;
+  padding-top: 4px;
+}
+.belkin-logo img {
+  height: 28px;
+  width: auto;
+  opacity: 0.85;
+}
+
+/* ── МЕТРИКИ ─────────────────────────────────────── */
+.metrics-bar {
+  background: linear-gradient(to right, var(--grad-from), var(--grad-mid), var(--grad-to));
+  display: flex;
+}
+.metric {
+  flex: 1;
+  text-align: center;
+  padding: 8px 6px;
+  border-right: 1px solid rgba(255,255,255,0.15);
+}
+.metric:last-child { border-right: none; }
+.metric-value {
+  font-size: 13.5pt;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1;
+  margin-bottom: 2px;
+}
+.metric-label {
+  font-size: 6.5pt;
+  color: rgba(255,255,255,0.65);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ── КОНТЕНТ ─────────────────────────────────────── */
+.content { padding: 16px 32px 18px; }
+
+/* ── СЕКЦИИ ──────────────────────────────────────── */
+.section { margin-bottom: 12px; }
+.section-title {
+  font-size: 7.5pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  margin-bottom: 7px;
+  padding-bottom: 4px;
+  /* Градиентный текст заголовка */
+  background: linear-gradient(to right, var(--grad-from), var(--grad-to));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  border-bottom: 1.5px solid;
+  border-image: linear-gradient(to right, var(--grad-from), var(--grad-to)) 1;
+}
+
+/* ── ПРОФИЛЬ ─────────────────────────────────────── */
+.profile-text {
+  font-size: 8.5pt;
+  color: var(--grey-700);
+  line-height: 1.5;
+}
+
+/* ── КОМПЕТЕНЦИИ ─────────────────────────────────── */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+}
+.skill-card {
+  background: var(--purple-light);
+  border-top: 2px solid var(--purple);
+  padding: 6px 8px;
+  font-size: 7.8pt;
+  color: var(--grey-700);
+  line-height: 1.4;
+}
+.skill-title {
+  font-weight: 700;
+  color: var(--purple);
+  margin-bottom: 2px;
+  font-size: 8pt;
+}
+
+/* ── ОПЫТ ────────────────────────────────────────── */
+.experience {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--grey-200);
+}
+.experience:last-child { border-bottom: none; padding-bottom: 0; margin-bottom: 0; }
+.exp-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2px; }
+.exp-title { font-weight: 700; font-size: 9.5pt; color: var(--grey-900); }
+.exp-period { font-size: 8pt; color: var(--grey-500); white-space: nowrap; padding-left: 8px; }
+.exp-company { font-size: 8.2pt; color: var(--purple); font-weight: 600; margin-bottom: 4px; }
+.exp-tags { margin-bottom: 5px; display: flex; flex-wrap: wrap; gap: 3px; }
+.badge {
+  display: inline-block;
+  background: linear-gradient(to right, var(--grad-from), var(--grad-to));
+  color: white;
+  padding: 1px 7px;
+  border-radius: 2px;
+  font-size: 7pt;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+ul { margin-left: 14px; }
+li { margin-bottom: 2px; font-size: 8.3pt; color: var(--grey-700); line-height: 1.45; }
+.hl { font-weight: 700; color: var(--purple); }
+
+/* ── KPI BOX ─────────────────────────────────────── */
+.kpi-box {
+  background: var(--purple-light);
+  border: 1.5px solid var(--purple-mid);
+  border-radius: 4px;
+  padding: 7px 8px;
+  margin: 6px 0;
+}
+.kpi-box-title {
+  font-size: 7.8pt;
+  font-weight: 700;
+  color: var(--purple);
+  text-align: center;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+.kpi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+.kpi-card {
+  background: white;
+  border: 1px solid var(--purple-mid);
+  border-radius: 3px;
+  padding: 5px 6px;
+  text-align: center;
+}
+.kpi-value { font-size: 9.5pt; font-weight: 700; color: var(--purple); line-height: 1.2; }
+.kpi-name { font-size: 7.2pt; color: var(--grey-700); line-height: 1.3; margin: 2px 0; }
+.kpi-sub { font-size: 6.8pt; color: var(--grey-500); font-style: italic; }
+
+/* ── СТЕК ────────────────────────────────────────── */
+.stack { font-size: 8.2pt; line-height: 1.65; color: var(--grey-700); }
+.stack strong { color: var(--purple); font-weight: 600; }
+
+/* ── ОБРАЗОВАНИЕ ─────────────────────────────────── */
+.edu-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 8.2pt;
+  padding: 2px 0;
+}
+.edu-year { color: var(--grey-500); white-space: nowrap; padding-left: 12px; }
+
+/* ── ПУБЛИЧНАЯ АКТИВНОСТЬ ────────────────────────── */
+.two-col { display: grid; grid-template-columns: 44% 56%; gap: 0; }
+.info-block { font-size: 8pt; line-height: 1.5; padding-right: 10px; }
+.info-block strong { color: var(--grey-900); font-size: 8.2pt; font-weight: 600; }
+.award-row { display: flex; justify-content: space-between; align-items: baseline; }
+.award-year { color: var(--grey-500); white-space: nowrap; padding-left: 8px; }
+
+/* ── МОТИВАЦИОННАЯ ПЛАШКА ────────────────────────── */
+.footer-note {
+  margin-top: 12px;
+  padding: 10px 14px;
+  background: linear-gradient(135deg, var(--grad-from), var(--grad-mid), var(--grad-to));
+  border-radius: 4px;
+  font-size: 8.3pt;
+  color: rgba(255,255,255,0.92);
+  line-height: 1.55;
+}
+.footer-note strong {
+  color: #fff;
+  font-size: 9pt;
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* ── ФУТЕР ───────────────────────────────────────── */
+.page-footer {
+  margin-top: 14px;
+  padding-top: 6px;
+  border-top: 1px solid var(--grey-200);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 7pt;
+  color: #aaa;
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- ШАПКА -->
+<div class="header">
+  <div class="photo">
+    <img alt="Зубков С.А." src="foto_zsa.jpg"/>
+  </div>
+  <div class="header-text">
+    <h1>Зубков Сергей Андреевич</h1>
+    <div class="job-title">AI Lead / Head of AI / Product Owner AI</div>
+    <div class="contacts">
+      <span>Москва</span>
+      <span>+7 (926) 276-61-43</span>
+      <span><a href="mailto:zubkovfpk@gmail.com">zubkovfpk@gmail.com</a></span>
+      <span>Telegram: <a href="https://t.me/SergeyAZubkov">@SergeyAZubkov</a></span>
+      <span><a href="https://www.linkedin.com/in/sergey-a-zubkov">LinkedIn</a></span>
+    </div>
+    <div class="meta-line">
+      Формат: удалённо / гибрид &nbsp;·&nbsp;
+      Командировки: да, включая международные &nbsp;·&nbsp;
+      Зарплата: 500 000 ₽
+    </div>
+  </div>
+
+</div>
+
+<!-- МЕТРИКИ -->
+<div class="metrics-bar">
+  <div class="metric">
+    <div class="metric-value">9 лет</div>
+    <div class="metric-label">в AI/ML</div>
+  </div>
+  <div class="metric">
+    <div class="metric-value">7</div>
+    <div class="metric-label">AI-продуктов в production</div>
+  </div>
+  <div class="metric">
+    <div class="metric-value">100+</div>
+    <div class="metric-label">CustDev-интервью</div>
+  </div>
+  <div class="metric">
+    <div class="metric-value">x2</div>
+    <div class="metric-label">доля AI в выручке</div>
+  </div>
+</div>
+
+<!-- КОНТЕНТ -->
+<div class="content">
+
+<!-- ПРОФИЛЬ -->
+<div class="section">
+  <div class="section-title">Профиль</div>
+  <p class="profile-text">
+    20+ лет в ИТ и цифровой трансформации, из них последние 9 лет — фокус на AI/ML-продукты
+    и стратегию AI-направления. Co-Founder и CTO компании ВИЗАРД: выстроил AI-направление с нуля —
+    от CustDev и валидации гипотез до запуска ML-продуктов в production и масштабирования
+    на крупных корпоративных клиентов. Hands-on архитектор и разработчик: LLM, Agentic RAG, GraphRAG,
+    multi-agent workflows, CV/ML. Умею работать в неопределённости, проектировать customer journey
+    и переводить AI-возможности в измеримый бизнес-результат.
+    Открыт к гибридному формату работы.
+  </p>
+</div>
+
+<!-- КЛЮЧЕВЫЕ КОМПЕТЕНЦИИ -->
+<div class="section">
+  <div class="section-title">Ключевые компетенции</div>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <div class="skill-title">AI/ML-продукты</div>
+      LLM, Agentic RAG, GraphRAG, multi-agent workflows. CV: YOLO/DETR/ViT.
+      AI-product management: от гипотезы до production и масштабирования.
+    </div>
+    <div class="skill-card">
+      <div class="skill-title">R&amp;D и валидация гипотез</div>
+      Исследование AI-рынка, генерация и проверка гипотез, запуск пилотов.
+      Быстрое прототипирование, A/B-подход, оценка влияния на бизнес-метрики.
+    </div>
+    <div class="skill-card">
+      <div class="skill-title">AI-стратегия</div>
+      Формирование стратегии AI-направления внутри компании.
+      Дорожная карта, приоритизация, выстраивание AI-культуры в команде.
+    </div>
+    <div class="skill-card">
+      <div class="skill-title">Продуктовое мышление</div>
+      Customer journey, CustDev, работа с гипотезами, CJM, приоритизация бэклога.
+      Кросс-функциональные команды (продукт, маркетинг, e-commerce, аналитика).
+    </div>
+    <div class="skill-card">
+      <div class="skill-title">ML-инжиниринг (hands-on)</div>
+      Python, PyTorch, YOLO/EfficientDet/RT-DETR, SAHI, Raster Vision.
+      CI/CD, Docker, Git/GitHub. Prompt-engineering, Constitutional AI, ADR.
+    </div>
+    <div class="skill-card">
+      <div class="skill-title">Данные и интеграции</div>
+      PostgreSQL, Oracle, DWH. API-интеграции, корпоративные шины.
+      Работа с неструктурированными и мультимодальными данными.
+    </div>
+  </div>
+</div>
+
+<!-- ОПЫТ РАБОТЫ -->
+<div class="section">
+  <div class="section-title">Опыт работы</div>
+
+  <!-- РОСКАДАСТР -->
+  <div class="experience">
+    <div class="exp-header">
+      <div class="exp-title">Главный инженер / Enterprise Architect (консалтинговый проект)</div>
+      <div class="exp-period">апр. 2025 — апр. 2026</div>
+    </div>
+    <div class="exp-company">ППК «Роскадастр» — федеральный оператор пространственных данных РФ</div>
+    <div class="exp-tags">
+      <span class="badge">Risk Management</span>
+      <span class="badge">ML</span>
+      <span class="badge">AI-агенты</span>
+    </div>
+    <ul>
+      <li><span class="hl">ML и AI-направление:</span> ML-алгоритмы выявления изменений на местности по спутниковой съёмке; модель оценки операционных рисков (ISO 31000, P×S матрица, SORA/ARA); AI-агенты для планирования геодезических и картографических работ на федеральном уровне.</li>
+      <li><span class="hl">Система управления рисками:</span> разработал полную архитектуру: quality gate на основе P×S матрицы, KRI-мониторинг near miss и операционных событий, визуализация risk map / heat map / value stream. COBIT-домены APO12, BAI01-03, DSS01-06, MEA01-02.</li>
+      <li><span class="hl">KRI-результаты:</span> интегральный индекс качества пространственных данных >95%; коэффициент эффективности производственного планирования >90%; зрелость системы управления рисками — уровень 4 из 5 (продвинутый).</li>
+      <li><span class="hl">Дорожная карта GeoAI 2026–2030:</span> разработал стратегический документ внедрения ИИ на федеральном уровне (6 блоков, 25 мероприятий, горизонт 5 лет): change detection по ДЗЗ/БПЛА (целевой F1 ≥ 0.85), семантическая сегментация объектов местности (mIoU ≥ 0.80), risk-engine с ГИС/ИПД, система раннего предупреждения (≤24 ч). MLOps-контур: мониторинг деградации моделей (model drift / data drift), валидация по ГОСТ Р 57773-2017, dataset registry на базе НСПД.</li>
+    </ul>
+  </div>
+
+  <!-- ВИЗАРД -->
+  <div class="experience">
+    <div class="exp-header">
+      <div class="exp-title">Co-Founder / CTO / Product Owner AI &amp; Data</div>
+      <div class="exp-period">2017 — н.в.</div>
+    </div>
+    <div class="exp-company">ВИЗАРД (VIZARD) — коммерческая платформа для морской логистики и мониторинга судоходства</div>
+    <div class="exp-tags">
+      <span class="badge">AI-стратегия</span>
+      <span class="badge">ML</span>
+      <span class="badge">Product Owner / SBA</span>
+    </div>
+    <div class="kpi-box">
+      <div class="kpi-box-title">AI-результаты платформы VIZARD — измеримый бизнес-эффект</div>
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-value">120 → 200 сут.</div>
+          <div class="kpi-name">Эффект AI-оптимизации буровых операций</div>
+          <div class="kpi-sub">период эксплуатации ПБУ; снижение расходов до 35%</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-value">+17% / +350 K $</div>
+          <div class="kpi-name">Ускорение маршрутов (СМП)</div>
+          <div class="kpi-sub">ускорение прохода; эффект на один рейс</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-value">1 млрд ₽+</div>
+          <div class="kpi-name">Совокупный эффект для клиентов</div>
+          <div class="kpi-sub">за 5+ лет; 400+ суток применения в море</div>
+        </div>
+      </div>
+    </div>
+    <ul>
+      <li><span class="hl">AI-направление с нуля:</span> исследовал рынок AI-решений в maritime/нефтегаз, формировал и валидировал гипотезы по матрице (метрика, инвестиции, вера, сложность, срок проверки, эффект, риск); запускал R&amp;D-проекты — от идеи до пилота и масштабирования на крупных клиентах (ПАО «Газпром», ПАО «Совкомфлот», ПАО «НОВАТЭК» и др.). 80+ протестированных гипотез.</li>
+      <li><span class="hl">Customer journey и CustDev:</span> лично провёл и организовал 100+ интервью с капитанами, логистами, страховыми агентами (включая ОАЭ, Японию, Турцию, LinkedIn-сообщества). Сформировал текущий и целевой journey, выявил ключевые боли и точки создания ценности.</li>
+      <li><span class="hl">AI-journey:</span> спроектировал сценарий, где пользователь формулирует задачу («как пройти A→Б с минимальным риском/топливом»), а система на основе AI-аналитики предлагает оптимальные маршруты и предупреждения в мультимодальном интерфейсе.</li>
+      <li><span class="hl">7 AI-продуктов в production:</span> модуль классификации льда, детекция для БПЛА (mAP@0.5 ≥ 80%), определение нефтяных загрязнений и их источника, модуль маршрутных рекомендаций, агент формирования гидрометеопрогнозов (Python, GFS/CMEMS, multi-agent AI). Плюс ML-алгоритмы в ЕГИП и Роскадастр.</li>
+      <li><span class="hl">Рынок и финмодель:</span> выполнил анализ российского и международных рынков (PAM–TAM–SAM–SOM, сегмент P&amp;I-страхования Великобритании, БРИКС+, КСА); построил P&amp;L и финансовую модель с горизонтом 5 лет. Рост выручки x2 за первые 3 года.</li>
+      <li><span class="hl">Кросс-функциональная работа:</span> команда до 17 человек (разработка, AI/ML, геоаналитика, бизнес-развитие); B2G / B2B / B2B2C. Переход на локальную инфраструктуру в условиях санкций без потери ценности для клиента.</li>
+    </ul>
+  </div>
+
+  <!-- ЕГИП -->
+  <div class="experience">
+    <div class="exp-header">
+      <div class="exp-title">Chief Architect / Product Owner / Customer Journey Lead</div>
+      <div class="exp-period">2012 — 2016</div>
+    </div>
+    <div class="exp-company">Единое геоинформационное пространство Москвы (ЕГИП) — Департамент информационных технологий г. Москвы</div>
+    <div class="exp-tags">
+      <span class="badge">Цифр. трансформация</span>
+      <span class="badge">Data-платформа</span>
+      <span class="badge">Urban AI</span>
+    </div>
+    <ul>
+      <li><span class="hl">Customer journey B2G:</span> единая точка входа к пространственным данным вместо 30+ разрозненных систем — планирование рекламы и торговли, управление наследием и природными территориями, контроль подземных работ, мониторинг транспорта ЖКХ.</li>
+      <li><span class="hl">Customer journey B2C:</span> Электронный атлас Москвы: где смотреть салют, где жарить шашлыки, какие перекрытия планируются, как работает медицина в районе. 200+ публичных слоёв, обновление за 30 минут.</li>
+      <li><span class="hl">AI-journey и гипотезы:</span> 150+ интервью и семинаров с департаментами; проверялись сценарии сокращения выездов инспекторов (с 4 до 2 в год), онлайн-согласования CAD/BIM вместо флешек, снижение числа незаконных точек продажи алкоголя несовершеннолетним на 82%. ML первого поколения: детекция объектов на LiDAR + стереофото.</li>
+      <li><span class="hl">Масштаб и экономика:</span> 60+ органов власти, 37 интегрированных систем. Снижение TCO в 6,3×; экономия бюджета >0,5 млрд руб./год. Лучшее интеграционное решение III Международного GIS-Forum, 2015.</li>
+    </ul>
+  </div>
+
+  <!-- РАННИЙ ПЕРИОД -->
+  <div class="experience" style="margin-bottom:0;">
+    <div class="exp-header">
+      <div class="exp-title">Инженер / Аналитик → И.о. начальника управления</div>
+      <div class="exp-period">2004 — 2012</div>
+    </div>
+    <div class="exp-company">Коммерческие ИТ/ГИС-организации: РЖД, CSoft, Прайм груп, Эверпоинт</div>
+    <ul>
+      <li>Последовательный карьерный рост от инженера до руководителя; hands-on работа с корпоративными данными, DWH, Oracle, ArcGIS.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ТЕХНОЛОГИЧЕСКИЙ СТЕК -->
+<div class="section">
+  <div class="section-title">Технологический стек</div>
+  <div class="stack">
+    <strong>AI/ML:</strong> LLM, Agentic RAG, GraphRAG, multi-agent workflows, CV/YOLO/EfficientDet/DETR/RT-DETR/ViT, SAHI, Raster Vision &nbsp;·&nbsp;
+    <strong>Languages:</strong> Python (pytest, asyncio, APScheduler), SQL &nbsp;·&nbsp;
+    <strong>DB:</strong> PostgreSQL/PostGIS, Oracle &nbsp;·&nbsp;
+    <strong>DevOps:</strong> Docker, CI/CD, Git/GitHub &nbsp;·&nbsp;
+    <strong>Tools:</strong> Cursor, Windsurf, Perplexity, Notion, PlantUML &nbsp;·&nbsp;
+    <strong>Методологии:</strong> Lean Startup, A/B, PRINCE2, IPMA, TOGAF
+  </div>
+</div>
+
+<!-- ОБРАЗОВАНИЕ -->
+<div class="section">
+  <div class="section-title">Образование и сертификации</div>
+  <div class="edu-row">
+    <span><strong>Дипломатическая академия МИД России</strong> <span style="color:#888;">· Международные отношения</span></span>
+    <span class="edu-year">2011</span>
+  </div>
+  <div class="edu-row">
+    <span><strong>МИИГАиК</strong> <span style="color:#888;">· Прикладная космонавтика / Проектирование и внедрение ИС</span></span>
+    <span class="edu-year">2006</span>
+  </div>
+  <div class="edu-row">
+    <span><strong>IPMA</strong> <span style="color:#888;">· Сертификат управления проектами · № D0861</span></span>
+    <span class="edu-year">2009</span>
+  </div>
+</div>
+
+<!-- ПУБЛИЧНАЯ АКТИВНОСТЬ -->
+<div class="section">
+  <div class="section-title">Публичная активность и признание</div>
+  <div class="two-col">
+    <div class="info-block">
+      <strong>Спикер AI/tech-конференций:</strong>
+      <ul>
+        <li>AI IN, Казань, 2023 — AI-направление</li>
+        <li>Digital Innopolis Days, Казань, 2025</li>
+        <li>Saudi Maritime Congress, Даммам, 2024</li>
+        <li>RAO‑CIS, Санкт-Петербург — регулярно с 2018 г.</li>
+      </ul>
+    </div>
+    <div class="info-block" style="padding-right:0;">
+      <strong>Награды и экспертиза:</strong>
+      <ul>
+        <li class="award-row"><span>2× победитель «АРКТЕК ИНЖИНИРИНГ»</span><span class="award-year">2023</span></li>
+        <li class="award-row"><span>Лауреат Российско-Китайского конкурса инноваций</span><span class="award-year">2023</span></li>
+        <li>Член жюри AI &amp; Business Hackathon и 2ГИС Hackathon</li>
+        <li>Член экспертного совета ИНТЦ МГУ «Воробьёвы горы»</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- МОТИВАЦИОННАЯ ПЛАШКА -->
+<div class="footer-note">
+  <strong>Почему я — для роли AI Lead в belkin.digital</strong>
+  Весь цикл GenAI-проекта — от discovery и технического предложения до production и демо клиенту —
+  это мой основной рабочий режим последние 9 лет. Сам пишу код и валидирую архитектуру.
+  Умею переводить бизнес-задачу в технические спецификации и обратно,
+  вести клиента через весь delivery и формировать команду. Работаю в Cursor, активно использую
+  AI-агентов в ежедневной работе — что совпадает с VibeEvolve-подходом компании.
+</div>
+
+<!-- ФУТЕР -->
+<div class="page-footer">
+  <span>belkin.digital · AI Lead</span>
+  <span>С.А. Зубков · Москва · 2026</span>
+</div>
+
+</div><!-- /content -->
+</div><!-- /page -->
+</body>
+</html>

@@ -11,6 +11,7 @@
 | **Head of AI (базовый)** | [/positions/head-of-ai](https://zubkovfpk.github.io/resume/positions/head-of-ai/) | [preview](https://www.perplexity.ai/computer/a/reziume-head-of-ai-zubkov-s-a-_Lwv1XkiTLi8N_nHiRLtpQ) |
 | **Head of AI — belkin.digital** | [/positions/belkin](https://zubkovfpk.github.io/resume/positions/belkin/) | [preview](https://www.perplexity.ai/computer/a/reziume-zubkov-belkin-digital-LvgnX11sQwmm0_3I5ZxnJQ) |
 | **AI Инженер — АИПР** | [/positions/aipr](https://zubkovfpk.github.io/resume/positions/aipr/) | [preview](https://www.perplexity.ai/computer/a/reziume-zubkov-ai-inzhener-aip-cQt_4p.rTuaBPARgEQPVAQ) |
+| **Product Owner AI — Т1 ИИ** | [/positions/t1](https://zubkovfpk.github.io/resume/positions/t1/) | [preview](https://www.perplexity.ai/computer/a/reziume-zubkov-product-owner-a-oGqmunaKR1yFktmg.DWMyA) |
 
 ## Структура
 
@@ -20,6 +21,7 @@ positions/
   head-of-ai/           # Резюме Head of AI, базовый (v1.7)
   belkin/               # Резюме Head of AI, адаптация под belkin.digital
   aipr/                 # Резюме AI Инженер, адаптация под АИПР
+  t1/                   # Резюме Product Owner AI, адаптация под Т1 ИИ
 shared/
   foto_zsa.jpg          # Фото
   master_profile_ru.md  # Мастер-профиль (полный)
@@ -41,3 +43,4 @@ index.html              # GitHub Pages — каталог резюме
 | v1.5 | IT-директор | апр. 2026 |
 | belkin | Head of AI / belkin.digital, корп. стиль | апр. 2026 |
 | aipr | AI Инженер / Интегратор ИИ / АИПР, частичная занятость | апр. 2026 |
+| t1 | Product Owner AI / Т1 ИИ, гибрид Москва | апр. 2026 |

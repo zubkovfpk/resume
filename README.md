@@ -13,6 +13,7 @@
 | **AI Инженер — АИПР** | [/positions/aipr](https://zubkovfpk.github.io/resume/positions/aipr/) | [preview](https://www.perplexity.ai/computer/a/reziume-zubkov-ai-inzhener-aip-cQt_4p.rTuaBPARgEQPVAQ) |
 | **Product Owner AI — Т1 ИИ** | [/positions/t1](https://zubkovfpk.github.io/resume/positions/t1/) | [preview](https://www.perplexity.ai/computer/a/reziume-zubkov-product-owner-a-oGqmunaKR1yFktmg.DWMyA) |
 | **Директор по внедрению ИИ — Дата Маркетинг** | [/positions/datamarketing](https://zubkovfpk.github.io/resume/positions/datamarketing/) | [preview](https://www.perplexity.ai/computer/a/reziume-zubkov-direktor-po-vne-nYUR7Ed1QGeKhiuZfb87VQ) |
+| **Руководитель проекта «Цифровой двойник» — ВТБ** | [/positions/vtb](https://zubkovfpk.github.io/resume/positions/vtb/) | [preview](https://www.perplexity.ai/computer/a/reziume-zubkov-vtb-tsifrovoi-d-XlVBE9uqRhqB4wiQpzqmhQ) |
 
 ## Структура
 
@@ -24,6 +25,7 @@ positions/
   aipr/                 # Резюме AI Инженер, адаптация под АИПР
   t1/                   # Резюме Product Owner AI, адаптация под Т1 ИИ
   datamarketing/        # Резюме Директор по внедрению ИИ, адаптация под Дата Маркетинг
+  vtb/                  # Резюме Руководитель проекта «Цифровой двойник», адаптация под ВТБ
 shared/
   foto_zsa.jpg          # Фото
   master_profile_ru.md  # Мастер-профиль (полный)

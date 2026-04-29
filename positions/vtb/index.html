@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<title>Зубков С.А. — Руководитель проекта «Цифровой двойник»</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: "Segoe UI", Tahoma, sans-serif; font-size: 9pt; line-height: 1.35; color: #1A1F2E; }
+.page { width: 794px; min-height: 1123px; padding: 28px 38px; background: #fff; }
+
+/* ШАПКА */
+.header { display: flex; gap: 18px; margin-bottom: 12px; border-bottom: 3px solid #003087; padding-bottom: 10px; }
+.photo img { width: 82px; height: 82px; border-radius: 50%; object-fit: cover; }
+.header-text { flex: 1; }
+h1 { font-size: 21pt; font-weight: 700; color: #003087; margin-bottom: 2px; }
+.job-title { font-size: 11pt; color: #009FDF; font-weight: 600; margin-bottom: 5px; }
+.contacts { font-size: 8.5pt; color: #52566A; display: flex; gap: 14px; flex-wrap: wrap; }
+.contacts a { color: #52566A; text-decoration: none; }
+.meta-line { font-size: 7.8pt; color: #7A7E8E; margin-top: 4px; }
+
+/* СЕКЦИИ */
+.section { margin-bottom: 11px; }
+.section-title { font-size: 10.5pt; font-weight: 700; color: #003087; margin-bottom: 5px; padding-bottom: 2px;
+  border-bottom: 1.5px solid #C8D0E0; text-transform: uppercase; letter-spacing: 0.5px; }
+
+/* МЕТРИКИ */
+.metrics { display: flex; gap: 8px; margin: 7px 0; }
+.metric { background: #F2F5FA; border-radius: 4px; padding: 4px 8px; text-align: center; flex: 1; border-top: 2px solid #003087; }
+.metric-value { font-size: 13pt; font-weight: 700; color: #003087; }
+.metric-label { font-size: 6.8pt; color: #52566A; text-transform: uppercase; letter-spacing: 0.3px; }
+
+/* КОМПЕТЕНЦИИ */
+.skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; }
+.skill-card { background: #F2F5FA; padding: 6px 8px; border-left: 3px solid #009FDF; font-size: 8pt; }
+.skill-title { font-weight: 700; color: #003087; margin-bottom: 2px; font-size: 8.5pt; }
+
+/* ОПЫТ */
+.experience { margin-bottom: 9px; }
+.exp-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 3px; }
+.exp-title { font-weight: 700; font-size: 9.5pt; color: #1A1F2E; }
+.exp-period { font-size: 8pt; color: #7A7E8E; font-style: italic; white-space: nowrap; padding-left: 8px; }
+.exp-company { font-size: 8.5pt; color: #009FDF; font-weight: 600; margin-bottom: 3px; }
+.exp-tags { margin-bottom: 4px; }
+.badge { display: inline-block; background: #003087; color: white; padding: 1px 6px; border-radius: 3px;
+  font-size: 7.2pt; font-weight: 600; margin-right: 3px; }
+.badge-light { display: inline-block; background: #009FDF; color: white; padding: 1px 6px; border-radius: 3px;
+  font-size: 7.2pt; font-weight: 600; margin-right: 3px; }
+
+ul { margin-left: 14px; }
+li { margin-bottom: 2px; font-size: 8.5pt; color: #1A1F2E; line-height: 1.4; }
+.hl { background: #e8f4fc; padding: 0 2px; font-weight: 700; }
+
+/* KPI-BOX */
+.kpi-box { background: #f0f6fc; border: 1.5px solid #009FDF; border-radius: 6px; padding: 6px 8px; margin: 6px 0; }
+.kpi-box-title { font-size: 8.5pt; font-weight: 700; color: #003087; text-align: center; margin-bottom: 5px; }
+.kpi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.kpi-card { background: white; border: 1px solid #C8D0E0; border-radius: 5px; padding: 5px 6px; text-align: center; }
+.kpi-value { font-size: 10pt; font-weight: 700; color: #003087; }
+.kpi-name { font-size: 7.5pt; color: #52566A; line-height: 1.3; margin: 2px 0; }
+.kpi-sub { font-size: 7pt; color: #7A7E8E; font-style: italic; }
+
+/* СТЕК */
+.stack { font-size: 8.5pt; line-height: 1.6; color: #1A1F2E; }
+
+/* ОБРАЗОВАНИЕ */
+.edu-row { display: flex; justify-content: space-between; align-items: baseline;
+  font-size: 8.2pt; padding: 2px 0; }
+.edu-year { color: #7A7E8E; white-space: nowrap; padding-left: 12px; }
+
+/* ПУБЛИЧНАЯ АКТИВНОСТЬ */
+.two-col { display: grid; grid-template-columns: 43% 57%; gap: 0; }
+.info-block { font-size: 8.2pt; line-height: 1.5; padding-right: 10px; color: #1A1F2E; }
+.info-block strong { color: #1A1F2E; font-size: 8.5pt; }
+.award-row { display: flex; justify-content: space-between; align-items: baseline; }
+.award-year { color: #7A7E8E; white-space: nowrap; padding-left: 8px; }
+
+/* МОТИВАЦИОННАЯ ПЛАШКА */
+.footer-note { margin-top: 10px; padding: 8px 10px; background: #f0f6fc;
+  border-left: 4px solid #003087; font-size: 8.5pt; font-style: italic; color: #1A1F2E; }
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- ШАПКА -->
+<div class="header">
+  <div class="photo">
+    <img alt="Фото" src="foto_zsa.jpg"/>
+  </div>
+  <div class="header-text">
+    <h1>Зубков Сергей Андреевич</h1>
+    <div class="job-title">Руководитель проекта / Project Manager AI &amp; Digital Twins</div>
+    <div class="contacts">
+      <span>Москва</span>
+      <span>+7 (926) 276-61-43</span>
+      <span><a href="mailto:zubkovfpk@yandex.ru">zubkovfpk@yandex.ru</a></span>
+      <span>Telegram: <a href="https://t.me/SergeyAZubkov">@SergeyAZubkov</a></span>
+      <span><a href="https://www.linkedin.com/in/sergey-a-zubkov">LinkedIn</a></span>
+    </div>
+    <div class="meta-line">
+      Формат: гибрид (Москва) &nbsp;·&nbsp;
+      Командировки: да, включая международные &nbsp;·&nbsp;
+      Зарплата: 500 000 ₽
+    </div>
+  </div>
+</div>
+
+<!-- ПРОФИЛЬ -->
+<div class="section">
+  <div class="section-title">Профиль</div>
+  <p style="font-size:8.5pt; color:#1A1F2E; line-height:1.45;">
+    20+ лет в ИТ и цифровой трансформации, из них 9 лет — фокус на AI/ML-продукты и их внедрение в энтерпрайз.
+    Управлял ML-проектами с несколькими параллельными командами в крупных федеральных и корпоративных
+    программах (Роскадастр, Россельхознадзор, Газпром, Совкомфлот). Умею читать архитектурные диаграммы
+    и говорить на одном языке с ML-инженерами, системными архитекторами и бизнес-заказчиками.
+    Опыт работы с графовыми зависимостями ИС, сложными интеграциями и моделированием поведения
+    информационных систем в различных условиях нагрузки — в том числе в рамках ГИС-платформ с 37
+    интегрированными системами и 60+ организациями-участниками.
+  </p>
+</div>
+
+<!-- МЕТРИКИ -->
+<div class="metrics">
+  <div class="metric">
+    <div class="metric-value">20+ лет</div>
+    <div class="metric-label">в ИТ / цифровой трансформации</div>
+  </div>
+  <div class="metric">
+    <div class="metric-value">37</div>
+    <div class="metric-label">интегрированных систем (ЕГИП)</div>
+  </div>
+  <div class="metric">
+    <div class="metric-value">7</div>
+    <div class="metric-label">AI-продуктов в production</div>
+  </div>
+  <div class="metric">
+    <div class="metric-value">1 млрд ₽+</div>
+    <div class="metric-label">измеримый эффект для клиентов</div>
+  </div>
+</div>
+
+<!-- КЛЮЧЕВЫЕ КОМПЕТЕНЦИИ -->
+<div class="section">
+  <div class="section-title">Ключевые компетенции</div>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <div class="skill-title">Управление ML-проектами</div>
+      Руководство командами 5–17 человек (ML-инженеры, архитекторы, аналитики).
+      Водопадные и гибкие методики: PMI, IPMA, PRINCE2, SAFe, Scrum.
+      Бэклог, риски, дорожная карта, контроль качества.
+    </div>
+    <div class="skill-card">
+      <div class="skill-title">Архитектура и интеграция ИС</div>
+      Проектирование сложных систем с десятками зависимостей.
+      Чтение и разработка архитектурных диаграмм (UML, C4, ArchiMate, PlantUML).
+      Опыт построения ИС с 37 интегрированными системами.
+    </div>
+    <div class="skill-card">
+      <div class="skill-title">Цифровые двойники и моделирование</div>
+      Моделирование зависимостей и поведения ИС при изменении параметров нагрузки.
+      GraphRAG и граф-аналитика для связанных данных.
+      Выявление цепочек влияния при изменениях в смежных системах.
+    </div>
+    <div class="skill-card">
+      <div class="skill-title">Внедрение ИС в энтерпрайзе</div>
+      Опыт успешного внедрения в госструктурах и крупных корпорациях.
+      Формирование дорожных карт внедрения (горизонт 5 лет).
+      Оценка сроков, управление рисками и качеством.
+    </div>
+    <div class="skill-card">
+      <div class="skill-title">Коммуникация с заказчиком</div>
+      Защита архитектурных решений перед топ-менеджментом.
+      Синхронизация требований бизнеса с техническими возможностями.
+      Регулярная отчётность для стейкхолдеров.
+    </div>
+    <div class="skill-card">
+      <div class="skill-title">ML/AI hands-on</div>
+      LLM, Agentic RAG, GraphRAG, multi-agent workflows.
+      CV: YOLO/RT-DETR/ViT. Python, PyTorch.
+      От архитектуры до production и MLOps-мониторинга.
+    </div>
+  </div>
+</div>
+
+<!-- ОПЫТ РАБОТЫ -->
+<div class="section">
+  <div class="section-title">Опыт работы</div>
+
+  <!-- КОНСАЛТИНГ -->
+  <div class="experience">
+    <div class="exp-header">
+      <div class="exp-title">Fractional CAIO / Enterprise Architect (консалтинговые проекты)</div>
+      <div class="exp-period">2025 — н.в.</div>
+    </div>
+    <div class="exp-company">Роскадастр &amp; Россельхознадзор — федеральные заказчики</div>
+    <div class="exp-tags">
+      <span class="badge">PM</span>
+      <span class="badge">AI-стратегия</span>
+      <span class="badge">ML/CV</span>
+      <span class="badge">B2G</span>
+      <span class="badge-light">Внедрение ИС</span>
+    </div>
+    <ul>
+      <li><span class="hl">ППК «Роскадастр» (апр. 2025 — апр. 2026):</span> дорожная карта GeoAI 2026–2030 (6 блоков, 25 мероприятий); архитектура системы управления рисками (COBIT, ISO 31000); AI-агенты для планирования тысяч выездных геодезических бригад и автоматизации контроля исполнения работ. Роль Fractional CAIO — отвечаю за достижение ROI по каждому направлению, не только за стратегию.</li>
+      <li><span class="hl">Россельхознадзор (окт. 2025 — н.в.):</span> ML-пайплайн детекции карантинных растений по данным БПЛА (YOLO/RT-DETR, mAP@0.5 &gt; 80%). Руководство командой 3–5 ML-инженеров от постановки задачи до сдачи MVP заказчику.</li>
+    </ul>
+  </div>
+
+  <!-- ВИЗАРД -->
+  <div class="experience">
+    <div class="exp-header">
+      <div class="exp-title">Co-Founder / CTO / Project &amp; Product Lead</div>
+      <div class="exp-period">2017 — н.в.</div>
+    </div>
+    <div class="exp-company">ВИЗАРД (VIZARD) — AI-платформа для морской логистики и мониторинга судоходства</div>
+    <div class="exp-tags">
+      <span class="badge">PM</span>
+      <span class="badge">AI-платформа</span>
+      <span class="badge">B2B/B2G</span>
+      <span class="badge">Multi-team</span>
+    </div>
+    <div class="kpi-box">
+      <div class="kpi-box-title">Измеримые результаты внедрения AI-платформы VIZARD</div>
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-value">7</div>
+          <div class="kpi-name">AI-продуктов в production</div>
+          <div class="kpi-sub">от прототипа до промышленной эксплуатации</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-value">+17% / +350 K $</div>
+          <div class="kpi-name">Ускорение маршрутов (СМП)</div>
+          <div class="kpi-sub">эффект на один рейс Совкомфлот</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-value">1 млрд ₽+</div>
+          <div class="kpi-name">Совокупный эффект для клиентов</div>
+          <div class="kpi-sub">за 5+ лет; 400+ суток применения в море</div>
+        </div>
+      </div>
+    </div>
+    <ul>
+      <li><span class="hl">Управление проектами:</span> параллельное ведение нескольких ML-продуктов, команды до 17 человек (ML-инженеры, разработчики, аналитики, DevOps). Планирование спринтов, контроль качества, управление рисками, синхронизация смежных направлений разработки.</li>
+      <li><span class="hl">Корпоративные клиенты:</span> вывод платформы на ПАО «Газпром», ПАО «Совкомфлот», ПАО «НОВАТЭК». Защита архитектурных и технических решений перед заказчиками, согласование требований с несколькими стейкхолдерами.</li>
+      <li><span class="hl">Дорожная карта и бэклог:</span> формирование продуктовой стратегии и приоритизация бэклога; 80+ протестированных гипотез. Рост выручки x2 за первые 3 года.</li>
+    </ul>
+  </div>
+
+  <!-- ЕГИП -->
+  <div class="experience">
+    <div class="exp-header">
+      <div class="exp-title">Chief Architect / Customer Journey Lead</div>
+      <div class="exp-period">2012 — 2016</div>
+    </div>
+    <div class="exp-company">Единое геоинформационное пространство Москвы (ЕГИП) — ДИТ г. Москвы</div>
+    <div class="exp-tags">
+      <span class="badge">Цифр. трансформация</span>
+      <span class="badge">Интеграция ИС</span>
+      <span class="badge">Архитектура</span>
+    </div>
+    <ul>
+      <li><span class="hl">Масштаб:</span> 60+ органов власти, <strong>37 интегрированных ИС</strong>, единая точка входа вместо 30+ разрозненных систем. Снижение TCO в 6,3×; экономия бюджета &gt;0,5 млрд руб./год.</li>
+      <li><span class="hl">Архитектура зависимостей:</span> проектировал граф связей между системами, оценивал влияние изменений в одной ИС на смежные — именно та механика, на которой строится концепция цифрового двойника ИТ-ландшафта.</li>
+      <li>Лучшее интеграционное решение III Международного GIS-Forum, 2015.</li>
+    </ul>
+  </div>
+
+  <!-- РАННИЙ ПЕРИОД -->
+  <div class="experience" style="margin-bottom:4px;">
+    <div class="exp-header">
+      <div class="exp-title">Инженер / Аналитик → И.о. начальника управления</div>
+      <div class="exp-period">2004 — 2012</div>
+    </div>
+    <div class="exp-company">РЖД, CSoft, Прайм груп, Эверпоинт — ИТ/ГИС-организации</div>
+    <ul>
+      <li>Рост от инженера до руководителя; hands-on работа с корпоративными данными, DWH, Oracle, ArcGIS. Системная интеграция, проектирование ИС, управление проектами внедрения.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ТЕХНОЛОГИЧЕСКИЙ СТЕК -->
+<div class="section">
+  <div class="section-title">Технологический стек</div>
+  <div class="stack">
+    <strong>AI/ML:</strong> LLM, Agentic RAG, GraphRAG, multi-agent workflows, CV/YOLO/RT-DETR/ViT &nbsp;·&nbsp;
+    <strong>Languages:</strong> Python (pytest, asyncio), SQL &nbsp;·&nbsp;
+    <strong>DB:</strong> PostgreSQL/PostGIS, Oracle &nbsp;·&nbsp;
+    <strong>DevOps:</strong> Docker, CI/CD, Git/GitHub &nbsp;·&nbsp;
+    <strong>Arch:</strong> UML, C4, ArchiMate, PlantUML, TOGAF &nbsp;·&nbsp;
+    <strong>Tools:</strong> Cursor, Windsurf, Notion &nbsp;·&nbsp;
+    <strong>Методологии:</strong> PMI, PRINCE2, IPMA, SAFe, Lean Startup
+  </div>
+</div>
+
+<!-- ОБРАЗОВАНИЕ -->
+<div class="section">
+  <div class="section-title">Образование и сертификации</div>
+  <div class="edu-row">
+    <span><strong>Дипломатическая академия МИД России</strong> <span style="color:#7A7E8E;">· Международные отношения</span></span>
+    <span class="edu-year">2011</span>
+  </div>
+  <div class="edu-row">
+    <span><strong>МИИГАиК</strong> <span style="color:#7A7E8E;">· Прикладная космонавтика / Проектирование и внедрение ИС</span></span>
+    <span class="edu-year">2006</span>
+  </div>
+  <div class="edu-row">
+    <span><strong>IPMA</strong> <span style="color:#7A7E8E;">· Сертификат управления проектами · № D0861</span></span>
+    <span class="edu-year">2009</span>
+  </div>
+</div>
+
+<!-- ПУБЛИЧНАЯ АКТИВНОСТЬ -->
+<div class="section">
+  <div class="section-title">Публичная активность и признание</div>
+  <div class="two-col">
+    <div class="info-block">
+      <strong>Спикер AI/tech-конференций:</strong>
+      <ul>
+        <li>AI IN, Казань, 2023 — AI-направление</li>
+        <li>Digital Innopolis Days, Казань, 2025</li>
+        <li>Saudi Maritime Congress, Даммам, 2024</li>
+        <li>RAO‑CIS, Санкт-Петербург — регулярно с 2018 г.</li>
+      </ul>
+    </div>
+    <div class="info-block" style="padding-right:0;">
+      <strong>Награды и экспертиза:</strong>
+      <ul>
+        <li class="award-row"><span>2× победитель «АРКТЕК ИНЖИНИРИНГ»</span><span class="award-year">2023</span></li>
+        <li class="award-row"><span>Лауреат Российско-Китайского конкурса инноваций</span><span class="award-year">2023</span></li>
+        <li>Член жюри AI &amp; Business Hackathon и 2ГИС Hackathon</li>
+        <li>Член экспертного совета ИНТЦ МГУ «Воробьёвы горы»</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- МОТИВАЦИОННАЯ ПЛАШКА -->
+<div style="height:10px;"></div>
+<div class="footer-note">
+  <strong>Почему я — для роли Руководителя проекта «Цифровой двойник»:</strong> за 20 лет в ИТ я не раз строил
+  системы, где главная задача — понять, как изменение в одной части влияет на всё остальное.
+  ЕГИП с 37 взаимосвязанными ИС, AI-агенты для управления тысячами выездных бригад, граф зависимостей
+  данных в морской логистике — это та же механика, что лежит в основе цифрового двойника ИТ-ландшафта.
+  Умею управлять командами из ML-инженеров и архитекторов, говорю на их языке, и отвечаю за результат,
+  а не только за процесс.
+</div>
+
+</div>
+</body>
+</html>

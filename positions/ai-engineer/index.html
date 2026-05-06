@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<title>Зубков С.А. — AI Engineer (Middle)</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: "Segoe UI", Tahoma, sans-serif; font-size: 9pt; line-height: 1.35; color: #1a1a1a; }
+.page { width: 794px; min-height: 1123px; padding: 28px 38px; background: #fff; }
+
+/* ШАПКА — акцент #1565C0 (tech blue) вместо зелёного */
+.header { display: flex; gap: 18px; margin-bottom: 12px; border-bottom: 3px solid #1565C0; padding-bottom: 10px; }
+.photo img { width: 82px; height: 82px; border-radius: 50%; object-fit: cover; }
+.header-text { flex: 1; }
+h1 { font-size: 21pt; font-weight: 700; color: #1a1a1a; margin-bottom: 2px; }
+.job-title { font-size: 11pt; color: #1565C0; font-weight: 600; margin-bottom: 5px; }
+.contacts { font-size: 8.5pt; color: #555; display: flex; gap: 14px; flex-wrap: wrap; }
+.contacts a { color: #555; text-decoration: none; }
+.meta-line { font-size: 7.8pt; color: #777; margin-top: 4px; }
+
+/* СЕКЦИИ */
+.section { margin-bottom: 11px; }
+.section-title { font-size: 10.5pt; font-weight: 700; color: #1565C0; margin-bottom: 5px; padding-bottom: 2px;
+  border-bottom: 1.5px solid #e0e0e0; text-transform: uppercase; letter-spacing: 0.5px; }
+
+/* МЕТРИКИ */
+.metrics { display: flex; gap: 8px; margin: 7px 0; }
+.metric { background: #E3F2FD; border-radius: 4px; padding: 4px 8px; text-align: center; flex: 1; }
+.metric-value { font-size: 13pt; font-weight: 700; color: #1565C0; }
+.metric-label { font-size: 6.8pt; color: #555; text-transform: uppercase; letter-spacing: 0.3px; }
+
+/* КОМПЕТЕНЦИИ */
+.skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; }
+.skill-card { background: linear-gradient(135deg, #f5f5f5, #e9e9e9); padding: 6px 8px; border-left: 3px solid #1565C0; font-size: 8pt; }
+.skill-title { font-weight: 700; color: #1a1a1a; margin-bottom: 2px; font-size: 8.5pt; }
+
+/* ОПЫТ */
+.experience { margin-bottom: 9px; }
+.exp-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 3px; }
+.exp-title { font-weight: 700; font-size: 9.5pt; color: #1a1a1a; }
+.exp-period { font-size: 8pt; color: #666; font-style: italic; white-space: nowrap; padding-left: 8px; }
+.exp-company { font-size: 8.5pt; color: #1565C0; font-weight: 600; margin-bottom: 3px; }
+.exp-tags { margin-bottom: 4px; }
+.badge { display: inline-block; background: #1565C0; color: white; padding: 1px 6px; border-radius: 3px;
+  font-size: 7.2pt; font-weight: 600; margin-right: 3px; }
+
+ul { margin-left: 14px; }
+li { margin-bottom: 2px; font-size: 8.5pt; color: #333; line-height: 1.4; }
+.hl { background: #DBEAFE; padding: 0 2px; font-weight: 700; }
+
+/* KPI-BOX */
+.kpi-box { background: #EFF6FF; border: 1.5px solid #1565C0; border-radius: 6px; padding: 6px 8px; margin: 6px 0; }
+.kpi-box-title { font-size: 8.5pt; font-weight: 700; color: #1565C0; text-align: center; margin-bottom: 5px; }
+.kpi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.kpi-card { background: white; border: 1px solid #BFDBFE; border-radius: 5px; padding: 5px 6px; text-align: center; }
+.kpi-value { font-size: 10pt; font-weight: 700; color: #1565C0; }
+.kpi-name { font-size: 7.5pt; color: #444; line-height: 1.3; margin: 2px 0; }
+.kpi-sub { font-size: 7pt; color: #777; font-style: italic; }
+
+/* СТЕК */
+.stack { font-size: 8.5pt; line-height: 1.6; color: #333; }
+
+/* ОБРАЗОВАНИЕ */
+.edu-row { display: flex; justify-content: space-between; align-items: baseline;
+  font-size: 8.2pt; padding: 2px 0; }
+.edu-year { color: #888; white-space: nowrap; padding-left: 12px; }
+
+/* ПУБЛИЧНАЯ АКТИВНОСТЬ */
+.two-col { display: grid; grid-template-columns: 43% 57%; gap: 0; }
+.info-block { font-size: 8.2pt; line-height: 1.5; padding-right: 10px; }
+.info-block strong { color: #1a1a1a; font-size: 8.5pt; }
+.award-row { display: flex; justify-content: space-between; align-items: baseline; }
+.award-year { color: #888; white-space: nowrap; padding-left: 8px; }
+
+/* МОТИВАЦИОННАЯ ПЛАШКА */
+.footer-note { margin-top: 10px; padding: 8px 10px; background: #EFF6FF;
+  border-left: 4px solid #1565C0; font-size: 8.5pt; font-style: italic; color: #333; }
+
+/* БЛОК — DRAFT NOTICE */
+.draft-notice { background: #FEF3C7; border: 2px dashed #D97706; border-radius: 6px;
+  padding: 8px 12px; margin-bottom: 14px; font-size: 8.5pt; color: #92400E; font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- DRAFT NOTICE -->
+<div class="draft-notice">
+  ⚠ ЧЕРНОВИК — заготовка под заполнение после завершения hydromet_bulletin + LangChain/Langfuse.
+  Технические кейсы и метрики моделей будут дополнены по факту.
+</div>
+
+<!-- ШАПКА -->
+<div class="header">
+  <div class="photo">
+    <img alt="Фото" src="foto_zsa.jpg"/>
+  </div>
+  <div class="header-text">
+    <h1>Зубков Сергей Андреевич</h1>
+    <div class="job-title">AI Engineer (Middle) · Multi-Agent Systems · LLM / RAG / CV</div>
+    <div class="contacts">
+      <span>Москва</span>
+      <span>+7 (926) 276-61-43</span>
+      <span><a href="mailto:zubkovfpk@yandex.ru">zubkovfpk@yandex.ru</a></span>
+      <span>Telegram: <a href="https://t.me/SergeyAZubkov">@SergeyAZubkov</a></span>
+      <span><a href="https://www.linkedin.com/in/sergey-a-zubkov">LinkedIn</a></span>
+    </div>
+    <div class="meta-line">
+      Формат: удалёнка &nbsp;·&nbsp;
+      Командировки: да &nbsp;·&nbsp;
+      Занятость: частичная &nbsp;·&nbsp;
+      Зарплата: 250 000 ₽
+    </div>
+  </div>
+</div>
+
+<!-- ПРОФИЛЬ -->
+<div class="section">
+  <div class="section-title">Профиль</div>
+  <p style="font-size:8.5pt; color:#333; line-height:1.45;">
+    AI-инженер с продуктовым бэкграундом: строю и довожу до production мультиагентные системы,
+    LLM-пайплайны (RAG, GraphRAG, Agentic RAG) и CV/ML-модели. 7 AI-систем в живых
+    коммерческих проектах — maritime, ГИС, гидрометеорология. Понимаю бизнес-контекст задачи
+    лучше большинства инженеров: участвовал в CustDev, знаю, откуда берётся требование.
+    Работаю в Python-экосистеме, использую LangChain / Langfuse / Docker / Git.
+    <!-- TODO: дополнить после завершения hydromet_bulletin -->
+  </p>
+</div>
+
+<!-- МЕТРИКИ -->
+<div class="metrics" style="justify-content:center; max-width:600px; margin:7px auto;">
+  <div class="metric">
+    <div class="metric-value">7</div>
+    <div class="metric-label">AI-систем в production</div>
+  </div>
+  <div class="metric">
+    <div class="metric-value">9 лет</div>
+    <div class="metric-label">hands-on AI/ML</div>
+  </div>
+  <div class="metric">
+    <div class="metric-value">LLM + CV</div>
+    <div class="metric-label">оба домена</div>
+  </div>
+</div>
+
+<!-- КЛЮЧЕВЫЕ КОМПЕТЕНЦИИ -->
+<div class="section">
+  <div class="section-title">Ключевые компетенции</div>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <div class="skill-title">Multi-Agent системы</div>
+      Проектирование и реализация оркестрированных агентных пайплайнов.
+      Разделение ответственности агентов, state management, tool use.
+      <!-- TODO: добавить конкретный фреймворк после hydromet -->
+    </div>
+    <div class="skill-card">
+      <div class="skill-title">LLM / RAG / GraphRAG</div>
+      Agentic RAG, GraphRAG, prompt engineering, Constitutional AI.
+      LangChain, Langfuse (observability).
+      <!-- TODO: дополнить после hydromet_bulletin -->
+    </div>
+    <div class="skill-card">
+      <div class="skill-title">CV / Object Detection</div>
+      YOLO / EfficientDet / RT-DETR / ViT. SAHI (small object detection).
+      Raster Vision для спутниковых снимков и ДЗЗ.
+      mAP@0.5 ≥ 80% — реальный production-результат.
+    </div>
+    <div class="skill-card">
+      <div class="skill-title">Python-экосистема</div>
+      Python, pytest, asyncio, APScheduler. FastAPI / REST.
+      Docker, CI/CD, Git/GitHub. Опыт работы в Cursor / Windsurf (AI-assisted dev).
+    </div>
+    <div class="skill-card">
+      <div class="skill-title">Геопространственные данные</div>
+      PostGIS, ArcGIS, QGIS. OPeNDAP, NetCDF, GeoTIFF, ГОСТ Р 57773-2017.
+      GFS/CMEMS (атмосферные и океанографические данные). НСПД.
+    </div>
+    <div class="skill-card">
+      <div class="skill-title">Продуктовый контекст</div>
+      Понимаю требования изнутри: участвовал в CustDev, строил бэклог,
+      определял acceptance criteria. Ускоряет оценку задач и снижает
+      количество итераций с PO/заказчиком.
+    </div>
+  </div>
+</div>
+
+<!-- ОПЫТ РАБОТЫ -->
+<div class="section">
+  <div class="section-title">Опыт работы — AI/ML проекты</div>
+
+  <!-- HYDROMET BULLETIN — TODO -->
+  <div class="experience">
+    <div class="exp-header">
+      <div class="exp-title">AI-инженер — Агент формирования гидрометеобюллетеней</div>
+      <div class="exp-period">2024 — н.в.</div>
+    </div>
+    <div class="exp-company">ВИЗАРД — автономная система мониторинга СМП</div>
+    <div class="exp-tags">
+      <span class="badge">Multi-Agent</span>
+      <span class="badge">LangChain</span>
+      <span class="badge">Langfuse</span>
+      <span class="badge">GFS/CMEMS</span>
+    </div>
+    <ul>
+      <li><span class="hl">Архитектура:</span> <!-- TODO после завершения: описать агентный граф, инструменты, оркестрацию --></li>
+      <li><span class="hl">Данные:</span> GFS (атмосфера) + CMEMS (океан) → парсинг NetCDF/GRIB → нормализация → агентная обработка.</li>
+      <li><span class="hl">Observability:</span> <!-- TODO: Langfuse трейсы, метрики качества бюллетеней --></li>
+      <li><span class="hl">Результат:</span> <!-- TODO: время генерации, качество vs ручной бюллетень --></li>
+    </ul>
+  </div>
+
+  <!-- ВИЗАРД — AI-кейсы -->
+  <div class="experience">
+    <div class="exp-header">
+      <div class="exp-title">AI-инженер — Платформа безопасности мореплавания VIZARD</div>
+      <div class="exp-period">2017 — н.в.</div>
+    </div>
+    <div class="exp-company">ВИЗАРД — мониторинг и навигация в сложных условиях (СМП, Арктика)</div>
+    <div class="exp-tags">
+      <span class="badge">CV/ML</span>
+      <span class="badge">LLM</span>
+      <span class="badge">Agentic RAG</span>
+      <span class="badge">Python</span>
+    </div>
+    <div class="kpi-box">
+      <div class="kpi-box-title">AI-системы в production — технические результаты</div>
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-value">mAP@0.5 ≥ 80%</div>
+          <div class="kpi-name">Детекция объектов с БПЛА</div>
+          <div class="kpi-sub">YOLO / RT-DETR, SAHI, ледовая обстановка</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-value">7 модулей</div>
+          <div class="kpi-name">AI-систем в живом production</div>
+          <div class="kpi-sub">Газпром, Совкомфлот, НОВАТЭК</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-value">14,5%</div>
+          <div class="kpi-name">Экономия судо-суток для клиента</div>
+          <div class="kpi-sub">Подтверждённый эффект AI-оптимизации маршрута</div>
+        </div>
+      </div>
+    </div>
+    <ul>
+      <li><span class="hl">Модуль классификации ледовой обстановки:</span> мультиклассовая классификация типов льда по спутниковым снимкам и данным датчиков. Интеграция с маршрутным модулем.</li>
+      <li><span class="hl">CV-детекция с БПЛА:</span> YOLO/RT-DETR + SAHI (small object detection) для ледовой разведки. mAP@0.5 ≥ 80% в production.</li>
+      <li><span class="hl">Определение нефтяных загрязнений:</span> детекция пятен и атрибуция источника по спутниковым снимкам SAR.</li>
+      <li><span class="hl">Маршрутный AI-модуль:</span> рекомендации оптимального прохода СМП на основе ансамблевой обработки метео-, ледовых и навигационных данных.</li>
+      <li><span class="hl">Агент гидрометеопрогнозов:</span> мультиагентная система (Python, GFS/CMEMS) — автономная генерация оперативных бюллетеней по арктическим маршрутам.</li>
+    </ul>
+  </div>
+
+  <!-- РОСКАДАСТР — ML-кейсы -->
+  <div class="experience">
+    <div class="exp-header">
+      <div class="exp-title">ML-архитектор — GeoAI & Risk Engine</div>
+      <div class="exp-period">апр. 2025 — июн. 2026</div>
+    </div>
+    <div class="exp-company">ППК «Роскадастр» — федеральный оператор пространственных данных РФ</div>
+    <div class="exp-tags">
+      <span class="badge">Change Detection</span>
+      <span class="badge">GeoAI</span>
+      <span class="badge">Risk Engine</span>
+    </div>
+    <ul>
+      <li><span class="hl">Change detection:</span> ML-алгоритмы выявления изменений на местности по спутниковой съёмке и данным БПЛА. Целевой F1 ≥ 0.85, семантическая сегментация объектов (mIoU ≥ 0.80).</li>
+      <li><span class="hl">Risk-engine с ГИС:</span> модель оценки операционных рисков (ISO 31000, P×S матрица); интеграция с ИПД и НСПД. Система раннего предупреждения (≤24 ч).</li>
+      <li><span class="hl">Дорожная карта GeoAI 2026–2030:</span> MLOps-контур: мониторинг деградации моделей (model drift / data drift), валидация по ГОСТ Р 57773-2017, dataset registry.</li>
+    </ul>
+  </div>
+
+  <!-- РАННИЙ ПЕРИОД — сжато -->
+  <div class="experience" style="margin-bottom:4px;">
+    <div class="exp-header">
+      <div class="exp-title">Инженер / Аналитик ГИС → Главный инженер (ИС)</div>
+      <div class="exp-period">2004 — 2016</div>
+    </div>
+    <div class="exp-company">Системные интеграторы / ГИС-организации · ДИТ Москвы (ЕГИП)</div>
+    <ul>
+      <li>ML первого поколения: детекция объектов на LiDAR + стереофото (ЕГИП, 2012–2016). Oracle, PostGIS, ArcGIS, DWH. 37 интегрированных систем, 60+ органов власти.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ТЕХНОЛОГИЧЕСКИЙ СТЕК -->
+<div class="section">
+  <div class="section-title">Технологический стек</div>
+  <div class="stack">
+    <strong>AI/ML:</strong> LLM, Agentic RAG, GraphRAG, multi-agent workflows (LangChain), LangFuse &nbsp;·&nbsp;
+    <strong>CV:</strong> YOLO / EfficientDet / RT-DETR / ViT, SAHI, Raster Vision &nbsp;·&nbsp;
+    <strong>Python:</strong> asyncio, APScheduler, pytest, FastAPI &nbsp;·&nbsp;
+    <strong>Данные:</strong> PostgreSQL/PostGIS, Oracle, NetCDF/GRIB (GFS, CMEMS), OPeNDAP &nbsp;·&nbsp;
+    <strong>ГИС:</strong> ArcGIS, QGIS, PostGIS, GeoTIFF &nbsp;·&nbsp;
+    <strong>DevOps:</strong> Docker, CI/CD, Git/GitHub, Cursor / Windsurf &nbsp;·&nbsp;
+    <strong>Стандарты:</strong> ГОСТ Р 57773-2017, ISO 31000, TOGAF
+  </div>
+</div>
+
+<!-- ОБРАЗОВАНИЕ -->
+<div class="section">
+  <div class="section-title">Образование и сертификации</div>
+  <div class="edu-row">
+    <span><strong>Дипломатическая академия МИД России</strong> <span style="color:#888;">· Международные отношения</span></span>
+    <span class="edu-year">2011</span>
+  </div>
+  <div class="edu-row">
+    <span><strong>МИИГАиК</strong> <span style="color:#888;">· Прикладная космонавтика / Проектирование и внедрение ИС</span></span>
+    <span class="edu-year">2006</span>
+  </div>
+  <div class="edu-row">
+    <span><strong>IPMA</strong> <span style="color:#888;">· Сертификат управления проектами · № D0861</span></span>
+    <span class="edu-year">2009</span>
+  </div>
+</div>
+
+<!-- ПУБЛИЧНАЯ АКТИВНОСТЬ -->
+<div class="section">
+  <div class="section-title">Публичная активность</div>
+  <div class="two-col">
+    <div class="info-block">
+      <strong>Спикер AI/tech-конференций:</strong>
+      <ul>
+        <li>AI IN, Казань, 2023 — AI-направление</li>
+        <li>Digital Innopolis Days, Казань, 2025</li>
+        <li>Saudi Maritime Congress, Даммам, 2024</li>
+        <li>RAO‑CIS, Санкт-Петербург — регулярно с 2018 г.</li>
+      </ul>
+    </div>
+    <div class="info-block" style="padding-right:0;">
+      <strong>Награды:</strong>
+      <ul>
+        <li class="award-row"><span>2× победитель «АРКТЕК ИНЖИНИРИНГ»</span><span class="award-year">2023</span></li>
+        <li class="award-row"><span>Лауреат Российско-Китайского конкурса инноваций</span><span class="award-year">2023</span></li>
+        <li>Член жюри AI &amp; Business Hackathon и 2ГИС Hackathon</li>
+        <li>Член экспертного совета ИНТЦ МГУ «Воробьёвы горы»</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- МОТИВАЦИОННАЯ ПЛАШКА -->
+<div style="height:10px;"></div>
+<div class="footer-note">
+  <strong>Почему я — AI Engineer с ценностью выше среднего:</strong> у меня не просто технический стек —
+  за каждой системой стоит реальный production с измеримым бизнес-эффектом. Я понимаю,
+  зачем строится каждый компонент: откуда пришло требование, какую боль решает,
+  как выглядит acceptance criteria. Это сокращает потери на «потерянных в переводе» задачах
+  и ускоряет выход в production.
+</div>
+
+</div>
+</body>
+</html>

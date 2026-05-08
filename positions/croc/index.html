@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<title>Зубков С.А. — CTO · КРОК</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: "Segoe UI", Tahoma, sans-serif; font-size: 9pt; line-height: 1.3; color: #1a1a1a; }
+.page { width: 794px; min-height: 1123px; padding: 30px 40px; background: #fff; }
+
+/* КРОК: тёмно-синий акцент */
+:root { --accent: #0A2D6E; --accent-light: #e8edf7; }
+
+.header { display: flex; gap: 20px; margin-bottom: 15px; border-bottom: 3px solid var(--accent); padding-bottom: 12px; }
+.photo img { width: 85px; height: 85px; border-radius: 50%; object-fit: cover; }
+.header-text { flex: 1; }
+h1 { font-size: 22pt; font-weight: 700; color: #1a1a1a; margin-bottom: 3px; }
+.title { font-size: 11pt; color: var(--accent); font-weight: 600; margin-bottom: 6px; }
+.contacts { font-size: 8.5pt; color: #555; display: flex; gap: 18px; flex-wrap: wrap; }
+.contacts a { color: #555; text-decoration: none; }
+.contacts a:hover { color: var(--accent); }
+
+.section { margin-bottom: 13px; }
+.section-title { font-size: 11pt; font-weight: 700; color: var(--accent); margin-bottom: 6px; padding-bottom: 3px; border-bottom: 1.5px solid #e0e0e0; text-transform: uppercase; letter-spacing: 0.5px; }
+
+.skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.skill-card { background: linear-gradient(135deg, #f5f5f5, #e8e8e8); padding: 6px 8px; border-left: 3px solid var(--accent); font-size: 8pt; }
+.skill-title { font-weight: 700; color: #1a1a1a; margin-bottom: 2px; font-size: 9pt; }
+.skill-items { color: #444; }
+
+.experience { margin-bottom: 10px; }
+.exp-header { display: flex; justify-content: space-between; margin-bottom: 4px; }
+.exp-title { font-weight: 700; font-size: 10pt; color: #1a1a1a; }
+.exp-period { font-size: 8.5pt; color: #666; font-style: italic; }
+.exp-company { font-size: 9pt; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+.exp-desc { font-size: 8.5pt; color: #333; line-height: 1.4; }
+
+.reference-model { background: var(--accent-light); border: 2px solid var(--accent); border-radius: 8px; padding: 5px; margin: 10px 0; }
+.reference-title { font-size: 10pt; font-weight: 700; color: var(--accent); margin-bottom: 5px; text-align: center; }
+
+.kpi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.kpi-card { background: white; border: 1px solid var(--accent); border-radius: 6px; padding: 5px; text-align: center; }
+.kpi-name { font-size: 8pt; color: #555; margin-bottom: 4px; line-height: 1.2; }
+.kpi-value { font-size: 10pt; font-weight: 700; color: var(--accent); margin-bottom: 3px; }
+.kpi-status { font-size: 7.5pt; color: #666; font-style: italic; }
+
+ul { margin-left: 15px; }
+li { margin-bottom: 2px; font-size: 8.5pt; color: #333; line-height: 1.4; }
+
+.highlight { background: #dce6f7; padding: 0 3px; font-weight: 600; }
+
+.metrics { display: flex; gap: 10px; margin: 8px 0; }
+.metric { background: var(--accent-light); border-radius: 4px; padding: 4px 8px; text-align: center; flex: 1; }
+.metric-value { font-size: 13pt; font-weight: 700; color: var(--accent); }
+.metric-label { font-size: 7pt; color: #555; text-transform: uppercase; }
+
+.badge { display: inline-block; background: var(--accent); color: white; padding: 2px 6px; border-radius: 3px; font-size: 7.5pt; font-weight: 600; margin-right: 4px; }
+
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.info-block { font-size: 8.5pt; line-height: 1.5; }
+.info-block strong { color: #1a1a1a; }
+
+.footer-note { margin-top: 12px; padding: 8px; background: var(--accent-light); border-left: 4px solid var(--accent); font-size: 8.5pt; font-style: italic; }
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- ШАПКА -->
+<div class="header">
+  <div class="photo">
+    <img alt="Фото" src="../../foto_zsa.jpg"/>
+  </div>
+  <div class="header-text">
+    <h1>Зубков Сергей Андреевич</h1>
+    <div class="title">CTO / Technical Director · AI Platform</div>
+    <div class="contacts">
+      <span>Москва</span>
+      <span>+7 (926) 276-61-43</span>
+      <span><a href="mailto:zubkovfpk@yandex.ru">zubkovfpk@yandex.ru</a></span>
+      <span>Telegram: <a href="https://t.me/SergeyAZubkov">@SergeyAZubkov</a></span>
+      <span><a href="https://www.linkedin.com/in/sergey-a-zubkov">LinkedIn</a></span>
+    </div>
+    <div class="contacts" style="margin-top:4px; font-size:8pt; color:#777;">
+      <span>Зарплата: от 700 000 ₽ net &nbsp;·&nbsp; Формат: любой &nbsp;·&nbsp; Командировки: да &nbsp;·&nbsp; Релокация: готов рассматривать с сентября 2027</span>
+    </div>
+  </div>
+</div>
+
+<!-- ПРОФИЛЬ -->
+<div class="section">
+  <div class="section-title">Профиль</div>
+  <p style="font-size:8.5pt; color:#333; line-height:1.4;">
+    Co-Founder и CTO компании ВИЗАРД: спроектировал и вывел в коммерческую эксплуатацию AI-платформу для морской логистики — от архитектурного решения и R&D до production-деплоя на крупных B2G/B2B-клиентах (Газпром, Совкомфлот, НОВАТЭК, Роскадастр).
+    Спроектировал платформу как модульное тиражируемое решение (SaaS / white-label / on-premise), обеспечил mission-critical надёжность: мониторинг дрейфа моделей, CI/CD с quality gates, изоляция зон отказа, NDA-уровень контроля доступа.
+    Принимаю личное участие в развитии AI-стека; понимаю инфраструктуру изнутри — от MLOps-конвейера до экономики внедрений.
+    До ВИЗАРД — Chief Architect программы ЕГИП (Москва): 37 корпоративных систем, 60+ органов власти, ФСТЭК, 152-ФЗ, TCO −6,3×.
+    Руководил командами 50+ человек, портфелями до ~900 млн руб. Умею говорить на языке бизнеса и на языке технологий одновременно.
+  </p>
+</div>
+
+<!-- МЕТРИКИ -->
+<div class="metrics">
+  <div class="metric">
+    <div class="metric-value">9 лет</div>
+    <div class="metric-label">CTO AI-платформы</div>
+  </div>
+  <div class="metric">
+    <div class="metric-value">7</div>
+    <div class="metric-label">AI-продуктов в production</div>
+  </div>
+  <div class="metric">
+    <div class="metric-value">50+</div>
+    <div class="metric-label">пик команды</div>
+  </div>
+  <div class="metric">
+    <div class="metric-value">~900 млн ₽</div>
+    <div class="metric-label">масштаб портфелей</div>
+  </div>
+</div>
+
+<!-- КЛЮЧЕВЫЕ КОМПЕТЕНЦИИ -->
+<div class="section">
+  <div class="section-title">Ключевые компетенции</div>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <div class="skill-title">AI-платформа и архитектура</div>
+      <div class="skill-items">LLM (RAG, Agentic RAG, GraphRAG, multi-agent), CV/ML (YOLO, DETR, ViT), on-premise деплой, модульная тиражируемая архитектура, Enterprise ПО.</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-title">MLOps и DevOps</div>
+      <div class="skill-items">CI/CD с quality gates, мониторинг дрейфа моделей, Docker, Git/GitHub, релизное управление, MLflow-совместимые практики. Переход на локальную инфраструктуру без потери ценности.</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-title">Инфраструктура и надёжность</div>
+      <div class="skill-items">Высоконагруженные системы, микросервисная архитектура, изоляция зон отказа, observability, контроль доступа NDA-уровня. Python (asyncio, pytest), SQL, PostgreSQL.</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-title">Управление разработкой</div>
+      <div class="skill-items">Полный цикл: R&D → разработка → релиз → production → техподдержка. Найм и развитие инженерных лидеров, выстраивание центров компетенций. Команды до 17 (прямое) / 50+ (общее).</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-title">Бизнес и экономика внедрений</div>
+      <div class="skill-items">P&L, unit-экономика, оценка бюджетов и маржинальности, монетизация AI-компетенций (success fee, SaaS, white-label). B2G, B2B, B2B2C, госзакупки 44/223-ФЗ.</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-title">ИТ-стратегия и Enterprise</div>
+      <div class="skill-items">ИТ-стратегия, Enterprise / Solution Architecture, ADR, TOGAF, COBIT, PRINCE2, IPMA. ИБ (ФСТЭК, 152-ФЗ, ISO 31000). Программы цифровой трансформации.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ОПЫТ РАБОТЫ -->
+<div class="section">
+  <div class="section-title">Опыт работы</div>
+
+  <!-- ВИЗАРД -->
+  <div class="experience">
+    <div class="exp-header">
+      <div class="exp-title">Co-Founder / CTO / Product Owner AI &amp; Data</div>
+      <div class="exp-period">2017 — н.в.</div>
+    </div>
+    <div class="exp-company">ВИЗАРД (VIZARD) — коммерческая AI-платформа для морской логистики и мониторинга судоходства</div>
+    <div class="exp-desc">
+      <span class="badge">AI Platform</span>
+      <span class="badge">on-premise / SaaS</span>
+      <span class="badge">MLOps</span>
+      <ul>
+        <li><span class="highlight">Архитектура тиражируемой платформы:</span> спроектировал VIZARD как модульное Enterprise-решение с поставкой в трёх режимах — SaaS, white-label и on-premise (для клиентов с требованиями к контуру безопасности: Газпром, Совкомфлот). Баланс между инновациями в ML и стабильностью: изоляция зон отказа, NDA-уровень контроля доступа, quality gates в CI/CD.</li>
+        <li><span class="highlight">AI/ML стек в production:</span> 7 AI-продуктов: классификация ледовой обстановки, детекция объектов с БПЛА (YOLO/DETR, mAP@0.5 ≥ 80%), определение нефтяных загрязнений, маршрутные рекомендации СМП, multi-agent гидрометеопрогноз (LLM + Agentic RAG + GraphRAG). Для каждого — бэклог, приёмочные критерии, roadmap релизов.</li>
+        <li><span class="highlight">MLOps-контур:</span> мониторинг дрейфа данных и деградации качества моделей в production, CI/CD с автотестами и quality gates, Docker-контейнеризация, Git/GitHub workflow. Hands-on: лично развиваю AI-агент подготовки гидрометеобюллетеней (Python/asyncio, NetCDF/GRIB2, GFS/CMEMS, CI/CD) — репозиторий GitHub.</li>
+        <li><span class="highlight">Управление платёжной механикой и биллингом:</span> реализовывал в двух сценариях — подписочная модель с управлением доступом по статусу подписки и интеграция платежей для страховой компании банковской группы. Понимаю логику ресурсного биллинга как следующий шаг.</li>
+        <li><span class="highlight">Команда и процессы:</span> рост с 3 до 17 человек (2020–2023); полный цикл от R&D (ML/HPC) до внедрения и техподдержки. Найм и развитие ML-инженеров, архитекторов, аналитиков. Time-to-Market под контролем через декомпозицию задач и KPI.</li>
+        <li><span class="highlight">Экономика:</span> P&L, unit-экономика (юнит = рейс по СМП, success fee 10% от подтверждённой экономии). ROI 1,57× в 2026, 9,4× к 2030. Продукт VIZARD в реестре отечественного ПО.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="reference-model">
+    <div class="reference-title">VIZARD — ключевые результаты платформы</div>
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <div class="kpi-name">Эффект для буровых операций</div>
+        <div class="kpi-value">120 → 200 сут.</div>
+        <div class="kpi-status">период эксплуатации ПБУ; снижение расходов до 35%</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-name">Ускорение СМП</div>
+        <div class="kpi-value">+17% / +350 K $</div>
+        <div class="kpi-status">ускорение прохода основного плеча; эффект на рейс</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-name">Совокупная экономия клиентов</div>
+        <div class="kpi-value">1 млрд ₽+</div>
+        <div class="kpi-status">за 5+ лет на рынке; 400+ суток применения в море</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- РОСКАДАСТР -->
+  <div class="experience" style="margin-top:10px;">
+    <div class="exp-header">
+      <div class="exp-title">Главный инженер проекта / Enterprise Architect (AI)</div>
+      <div class="exp-period">апр. 2025 — июн. 2026</div>
+    </div>
+    <div class="exp-company">ППК «Роскадастр» — федеральный оператор пространственных данных РФ (консалтинговый проект)</div>
+    <div class="exp-desc">
+      <ul>
+        <li><span class="highlight">Дорожная карта GeoAI 2026–2030:</span> стратегический документ внедрения ИИ на федеральном уровне — 6 направлений, 25 мероприятий: change detection по ДЗЗ/БПЛА, risk-engine с ГИС/ИПД, AI-агенты планирования геодезических работ, MLOps-контур и dataset registry на базе НСПД.</li>
+        <li><span class="highlight">Архитектура системы управления рисками:</span> quality gate (P×S матрица), KRI-мониторинг, risk map / value stream. COBIT-домены APO12, BAI01–03, DSS01–06, MEA01–02.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ЕГИП -->
+  <div class="experience" style="margin-top:10px;">
+    <div class="exp-header">
+      <div class="exp-title">Chief Architect / Scenario Business Architect (B2G / B2B / B2C)</div>
+      <div class="exp-period">2012 — 2016</div>
+    </div>
+    <div class="exp-company">Единое геоинформационное пространство Москвы (ЕГИП) — Департамент информационных технологий г. Москвы</div>
+    <div class="exp-desc">
+      <span class="badge">Цифр. трансформация</span>
+      <span class="badge">Госсектор</span>
+      <span class="badge">Enterprise Architecture</span>
+      <ul>
+        <li><span class="highlight">Масштаб:</span> 60+ органов исполнительной власти, 37 интегрированных систем, 100+ наборов пространственных данных; 3 года реализации.</li>
+        <li><span class="highlight">Архитектура:</span> единая платформа (B2G/B2C/B2B), 3D + LiDAR, стереофото, CAD/BIM; интеграция через корпоративные шины; реляционные и пространственные БД. Проектирование с учётом ФСТЭК и 152-ФЗ — контроль доступа, аудит, разграничение данных.</li>
+        <li><span class="highlight">ML первого поколения (2014–2016):</span> детекция объектов на LiDAR + стереофото — один из первых urban AI-кейсов в России.</li>
+        <li><span class="highlight">Результаты:</span> TCO −6,3×; экономия бюджета &gt;0,5 млрд руб./год; 200+ публичных слоёв; обновление данных за 30 мин. Благодарность Мэра Москвы; лучшее интеграционное решение III GIS-Forum, 2015.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Ранний период -->
+  <div class="experience" style="margin-top:10px;">
+    <div class="exp-header">
+      <div class="exp-title">Инженер / Аналитик / ГИС-специалист → И.о. начальника управления</div>
+      <div class="exp-period">2004 — 2012</div>
+    </div>
+    <div class="exp-company">Системные интеграторы / ГИС-организации: РЖД, CSoft, Прайм груп, Эверпоинт</div>
+    <div class="exp-desc">
+      <ul>
+        <li>Последовательный карьерный рост: от инженера/аналитика до и.о. начальника управления.</li>
+        <li>Enterprise-внедрения на стороне интегратора: Oracle Database, ArcGIS, DWH/data-платформы, CAD/BIM. Полный цикл от пресейла до сдачи в эксплуатацию.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ТЕХНОЛОГИЧЕСКИЙ СТЕК -->
+<div class="section">
+  <div class="section-title">Технологический стек</div>
+  <div style="font-size: 8.5pt; line-height: 1.5;">
+    <strong>AI/ML:</strong> LLM, Agentic RAG, GraphRAG, multi-agent, CV/YOLO/DETR/ViT, fine-tuning LLM, HuggingFace &nbsp;|&nbsp;
+    <strong>MLOps:</strong> Docker, CI/CD, Git/GitHub, мониторинг дрейфа моделей, MLflow-практики &nbsp;|&nbsp;
+    <strong>Languages:</strong> Python (asyncio, pytest, APScheduler), SQL &nbsp;|&nbsp;
+    <strong>DB:</strong> PostgreSQL/PostGIS, Oracle &nbsp;|&nbsp;
+    <strong>Infra:</strong> микросервисы, on-premise деплой, observability &nbsp;|&nbsp;
+    <strong>GIS/Data:</strong> ArcGIS, QGIS, NetCDF, GRIB2, GeoTIFF, GFS, CMEMS &nbsp;|&nbsp;
+    <strong>Методологии:</strong> TOGAF, COBIT, PRINCE2, IPMA, ISO 31000 &nbsp;|&nbsp;
+    <strong>Tools:</strong> Cursor, Windsurf, Perplexity, Notion, PlantUML
+  </div>
+</div>
+
+<!-- ОБРАЗОВАНИЕ -->
+<div class="section">
+  <div class="section-title">Образование и сертификации</div>
+  <div style="display: flex; justify-content: space-between; font-size: 8.5pt; gap: 10px;">
+    <div><strong>Дипломатическая академия МИД России</strong> (2011) — Международные отношения</div>
+    <div><strong>МИИГАиК</strong> (2006) — Прикладная космонавтика / ИС</div>
+    <div><strong>IPMA</strong> (2009, № D0861) — Управление проектами</div>
+  </div>
+</div>
+
+<!-- ПУБЛИЧНАЯ АКТИВНОСТЬ И НАГРАДЫ -->
+<div class="section">
+  <div class="section-title">Публичная активность и награды</div>
+  <div class="two-col">
+    <div class="info-block">
+      <strong>Спикер конференций:</strong>
+      <ul>
+        <li>RAO‑CIS (Санкт-Петербург) — регулярно с 2018 г.</li>
+        <li>AI IN, Казань, 2023</li>
+        <li>Saudi Maritime Congress, Даммам, 2024</li>
+        <li>Digital Innopolis Days, Казань, 2025</li>
+      </ul>
+    </div>
+    <div class="info-block">
+      <strong>Награды и признание:</strong>
+      <ul>
+        <li>Благодарность Мэра Москвы, 2015</li>
+        <li>III GIS-Forum — лучшее интеграционное решение, 2015</li>
+        <li>2× победитель «АРКТЕК ИНЖИНИРИНГ», 2023</li>
+        <li>Лауреат Российско-Китайского конкурса инноваций, 2023</li>
+        <li>Член жюри AI &amp; Business Hackathon и 2ГИС Hackathon</li>
+        <li>Член экспертного совета ИНТЦ МГУ «Воробьёвы горы»</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- МОТИВАЦИОННАЯ ПЛАШКА -->
+<div class="footer-note">
+  <strong>Почему я — для роли CTO AI-платформы в КРОК:</strong> 9 лет строю коммерческую AI-платформу с нуля — от архитектуры и R&D до production-деплоя у Enterprise-клиентов с требованиями к контуру безопасности и on-premise поставке.
+  Задача КРОК — превратить экспертизу в ML/HPC в тиражируемый Enterprise-продукт — это ровно то, что я делал в ВИЗАРД: модульная архитектура, релизный конвейер, ML-биллинг и экономика внедрений.
+  Сохраняю hands-on экспертизу в стеке (Python, LLM, Agentic RAG, CV/ML, Docker, CI/CD), что позволяет принимать обоснованные архитектурные решения и ставить задачи команде без потери контекста.
+</div>
+
+</div>
+</body>
+</html>

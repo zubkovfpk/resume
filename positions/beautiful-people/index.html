@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<title>Зубков С.А. — AI Automation Lead · Beautiful People</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: "Segoe UI", Tahoma, sans-serif; font-size: 9pt; line-height: 1.3; color: #1a1a1a; background: #fff; }
+.page { width: 794px; min-height: 1123px; padding: 28px 38px; background: #fff; }
+
+:root {
+  --accent: #0077B6;
+  --accent-mid: #0096C7;
+  --accent-light: #E8F4FA;
+  --accent-pale: #F0F8FC;
+}
+
+/* ШАПКА */
+.header { display: flex; gap: 18px; margin-bottom: 14px; border-bottom: 3px solid var(--accent); padding-bottom: 12px; }
+.photo img { width: 82px; height: 82px; border-radius: 50%; object-fit: cover; }
+.header-text { flex: 1; }
+h1 { font-size: 21pt; font-weight: 700; color: #1a1a1a; margin-bottom: 2px; }
+.title { font-size: 11pt; color: var(--accent); font-weight: 600; margin-bottom: 5px; }
+.contacts { font-size: 8.5pt; color: #555; display: flex; gap: 16px; flex-wrap: wrap; }
+.contacts a { color: #555; text-decoration: none; }
+.meta { font-size: 8pt; color: #777; margin-top: 4px; }
+
+/* СЕКЦИИ */
+.section { margin-bottom: 12px; }
+.section-title { font-size: 10.5pt; font-weight: 700; color: var(--accent); margin-bottom: 6px;
+  padding-bottom: 3px; border-bottom: 1.5px solid #d0e8f5; text-transform: uppercase; letter-spacing: 0.4px; }
+
+/* МЕТРИКИ */
+.metrics { display: flex; gap: 8px; margin: 8px 0; }
+.metric { background: var(--accent-light); border-radius: 5px; padding: 5px 10px; text-align: center; flex: 1; }
+.metric-value { font-size: 13pt; font-weight: 700; color: var(--accent); line-height: 1.1; }
+.metric-label { font-size: 7pt; color: #555; text-transform: uppercase; margin-top: 1px; }
+
+/* КОМПЕТЕНЦИИ */
+.skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; }
+.skill-card { background: linear-gradient(135deg, var(--accent-pale), var(--accent-light)); padding: 6px 8px; border-left: 3px solid var(--accent-mid); }
+.skill-title { font-weight: 700; color: #1a1a1a; font-size: 8.5pt; margin-bottom: 2px; }
+.skill-items { font-size: 7.5pt; color: #444; line-height: 1.4; }
+
+/* ОПЫТ */
+.experience { margin-bottom: 10px; }
+.exp-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2px; }
+.exp-title { font-weight: 700; font-size: 9.5pt; color: #1a1a1a; }
+.exp-period { font-size: 8pt; color: #777; font-style: italic; }
+.exp-company { font-size: 8.5pt; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+.exp-desc { font-size: 8.5pt; color: #333; line-height: 1.4; }
+ul { margin-left: 14px; }
+li { margin-bottom: 2px; }
+.highlight { font-weight: 600; color: #1a1a1a; }
+
+/* KPI-БЛОК */
+.kpi-row { display: flex; gap: 8px; margin: 6px 0; }
+.kpi-card { flex: 1; border: 1px solid #b8d8ef; border-radius: 5px; padding: 5px 7px; text-align: center; background: white; }
+.kpi-value { font-size: 10pt; font-weight: 700; color: var(--accent); }
+.kpi-label { font-size: 7pt; color: #666; line-height: 1.3; }
+
+/* ПЛАШКА */
+.footer-note { margin-top: 10px; padding: 8px 10px; background: var(--accent-light);
+  border-left: 4px solid var(--accent); font-size: 8.5pt; line-height: 1.5; }
+
+.badge { display: inline-block; background: var(--accent); color: white;
+  padding: 1px 6px; border-radius: 3px; font-size: 7.5pt; font-weight: 600; margin-right: 3px; }
+
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; font-size: 8.5pt; }
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- ШАПКА -->
+<div class="header">
+  <div class="photo">
+    <img alt="Фото" src="foto_zsa.jpg"/>
+  </div>
+  <div class="header-text">
+    <h1>Зубков Сергей Андреевич</h1>
+    <div class="title">Руководитель AI-направления / AI Automation Lead</div>
+    <div class="contacts">
+      <span>Москва (удалённо)</span>
+      <span>+7 (926) 276-61-43</span>
+      <span><a href="mailto:zubkovfpk@yandex.ru">zubkovfpk@yandex.ru</a></span>
+      <span>Telegram: <a href="https://t.me/SergeyAZubkov">@SergeyAZubkov</a></span>
+    </div>
+    <div class="meta">Формат: удалённо &nbsp;·&nbsp; Занятость: частичная / полная &nbsp;·&nbsp; Командировки: да &nbsp;·&nbsp; Релокация: готов рассматривать с сентября 2027</div>
+  </div>
+</div>
+
+<!-- ПРОФИЛЬ -->
+<div class="section">
+  <div class="section-title">Профиль</div>
+  <p style="font-size:8.5pt; color:#333; line-height:1.5;">
+    9 лет запускаю AI-направления с нуля: нахожу процессы с потерями, формирую гипотезы, собираю MVP, внедряю в работу команды и считаю реальный эффект в деньгах и часах.
+    Не теоретик — лично пишу код (Python, LLM, API), строю агентов и интеграции, провожу интервью с пользователями.
+    Прошёл путь от первого AI-кейса в госсекторе (детекция объектов на LiDAR, ЕГИП Москвы, 2014) до коммерческой платформы VIZARD с 7 AI-продуктами в production и >1 млрд ₽ эффекта для клиентов.
+    Умею разбирать операционный хаос, находить узкие места и превращать их в понятные AI-решения с измеримым результатом.
+  </p>
+</div>
+
+<!-- МЕТРИКИ -->
+<div class="metrics">
+  <div class="metric">
+    <div class="metric-value">80+</div>
+    <div class="metric-label">гипотез приоритизировано</div>
+  </div>
+  <div class="metric">
+    <div class="metric-value">7</div>
+    <div class="metric-label">AI-продуктов в production</div>
+  </div>
+  <div class="metric">
+    <div class="metric-value">100+</div>
+    <div class="metric-label">CustDev-интервью</div>
+  </div>
+  <div class="metric">
+    <div class="metric-value">1 млрд ₽+</div>
+    <div class="metric-label">эффект для клиентов</div>
+  </div>
+</div>
+
+<!-- КОМПЕТЕНЦИИ -->
+<div class="section">
+  <div class="section-title">Ключевые компетенции</div>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <div class="skill-title">Поиск и оценка процессов</div>
+      <div class="skill-items">Карта процессов, journey mapping, интервью со стейкхолдерами. Матрица оценки: финансовый эффект, риски, повторяемость, сложность внедрения, время сотрудников.</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-title">MVP и проверка гипотез</div>
+      <div class="skill-items">Быстрая сборка AI-решений: от гипотезы до пилота за 2–4 недели. Kill/go по данным. 80+ проверенных гипотез. A/B, CustDev, приёмочные критерии.</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-title">AI-стек и интеграции</div>
+      <div class="skill-items">LLM (GPT, Claude), Agentic RAG, multi-agent, CV/ML. Python, API, Telegram-боты, CI/CD. Понимание no-code/low-code подхода (n8n, Make, Zapier-логика).</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-title">Измерение эффекта</div>
+      <div class="skill-items">P&L, unit-экономика, ROI внедрений. Ежемесячный отчёт по пользе AI: экономия времени, снижение рисков, финансовый эффект, удобство для сотрудников.</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-title">Клиентский путь и CX</div>
+      <div class="skill-items">B2C / B2B / B2G journey mapping. Автоматизация обращений, классификация по срочности и типу, маршрутизация, контроль качества коммуникаций.</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-title">Управление направлением</div>
+      <div class="skill-items">Запуск AI-департамента с нуля, найм и координация подрядчиков. Roadmap на 6–12 месяцев, приоритизация WSJF/RICE, стейкхолдер-менеджмент.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ОПЫТ РАБОТЫ -->
+<div class="section">
+  <div class="section-title">Опыт работы</div>
+
+  <!-- ВИЗАРД -->
+  <div class="experience">
+    <div class="exp-header">
+      <div class="exp-title">Product Owner AI & Data / Co-Founder</div>
+      <div class="exp-period">2017 — н.в. · 9 лет</div>
+    </div>
+    <div class="exp-company">ВИЗАРД (VIZARD) — AI-платформа мониторинга судоходства и морской логистики</div>
+    <div class="exp-desc">
+      <span class="badge">AI Automation</span>
+      <span class="badge">LLM + RAG</span>
+      <span class="badge">CustDev</span>
+      <ul style="margin-top:4px;">
+        <li><span class="highlight">Запустил AI-направление с нуля:</span> исследовал процессы maritime/нефтегаз, формировал и валидировал гипотезы по матрице (финансовый эффект, сложность внедрения, время проверки, риск). 80+ протестированных гипотез — kill/go по данным.</li>
+        <li><span class="highlight">CustDev и journey mapping:</span> 100+ интервью с конечными пользователями (капитаны, логисты, страховые агенты, включая ОАЭ, Японию, Турцию). Выявил боли и точки создания ценности, сформировал текущий и целевой journey.</li>
+        <li><span class="highlight">MVP → production:</span> 7 AI-продуктов от гипотезы до реального использования: классификация ледовой обстановки, детекция объектов с БПЛА, определение нефтяных загрязнений, маршрутные рекомендации, multi-agent гидрометеопрогноз (LLM + Agentic RAG). Каждый — с приёмочными критериями и roadmap релизов.</li>
+        <li><span class="highlight">Измерение эффекта:</span> unit-экономика (юнит = рейс по СМП, success fee 10% от подтверждённой экономии). >1 млрд ₽ эффекта для клиентов за 5+ лет. ROI платформы 1,57× в 2026, 9,4× к 2030.</li>
+        <li><span class="highlight">Hands-on разработка:</span> лично участвую в создании AI-агента подготовки гидрометеобюллетеней (Python/asyncio, LLM, GFS/CMEMS, CI/CD, GitHub).</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="kpi-row">
+    <div class="kpi-card">
+      <div class="kpi-value">+17% / +350 K $</div>
+      <div class="kpi-label">ускорение маршрутов СМП на рейс</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-value">−35%</div>
+      <div class="kpi-label">снижение операц. расходов буровых</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-value">400+ суток</div>
+      <div class="kpi-label">применения AI в море</div>
+    </div>
+  </div>
+
+  <!-- РОСКАДАСТР -->
+  <div class="experience" style="margin-top:10px;">
+    <div class="exp-header">
+      <div class="exp-title">Главный инженер проекта / AI Strategy Lead</div>
+      <div class="exp-period">апр. 2025 — июн. 2026</div>
+    </div>
+    <div class="exp-company">ППК «Роскадастр» — федеральный оператор пространственных данных РФ (консалтинг)</div>
+    <div class="exp-desc">
+      <ul>
+        <li><span class="highlight">Roadmap AI-направления на 5 лет:</span> разработал стратегический документ — 6 направлений, 25 мероприятий. Карта процессов для автоматизации, матрица приоритизации по эффекту и сложности внедрения.</li>
+        <li><span class="highlight">Система оценки и мониторинга:</span> quality gate (P×S матрица), KRI-мониторинг, risk map. Индекс качества данных >95%, эффективность планирования >90%.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ЕГИП -->
+  <div class="experience" style="margin-top:10px;">
+    <div class="exp-header">
+      <div class="exp-title">Chief Architect / Customer Journey Lead</div>
+      <div class="exp-period">2012 — 2016 · 4 года</div>
+    </div>
+    <div class="exp-company">ЕГИП — Департамент информационных технологий г. Москвы</div>
+    <div class="exp-desc">
+      <ul>
+        <li><span class="highlight">Journey mapping и автоматизация процессов:</span> 150+ интервью и воркшопов с 60+ органами власти; выявление узких мест, проверка сценариев автоматизации, измерение эффекта (TCO −6,3×, экономия >0,5 млрд руб./год).</li>
+        <li><span class="highlight">ML первого поколения (2014–2016):</span> первый urban AI-кейс в России — детекция объектов на LiDAR + стереофото.</li>
+        <li>37 интегрированных систем, 200+ публичных слоёв данных. Благодарность Мэра Москвы.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Ранний период -->
+  <div class="experience" style="margin-top:10px;">
+    <div class="exp-header">
+      <div class="exp-title">Инженер / Аналитик / ГИС-специалист → И.о. начальника управления</div>
+      <div class="exp-period">2004 — 2012</div>
+    </div>
+    <div class="exp-company">Системные интеграторы / ГИС-организации: РЖД, CSoft, Прайм груп, Эверпоинт</div>
+    <div class="exp-desc">
+      <ul>
+        <li>Внедрения корпоративных систем на стороне интегратора (Oracle, ArcGIS, DWH). Полный цикл: пресейл → разработка → сдача в эксплуатацию.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ТЕХНОЛОГИЧЕСКИЙ СТЕК -->
+<div class="section">
+  <div class="section-title">Технологический стек</div>
+  <div style="font-size: 8.5pt; line-height: 1.6;">
+    <strong>AI/LLM:</strong> GPT-4o, Claude, Agentic RAG, GraphRAG, multi-agent, CV/YOLO &nbsp;|&nbsp;
+    <strong>Разработка:</strong> Python (asyncio, pytest), SQL, API-интеграции, Telegram-боты, CI/CD, Docker, Git &nbsp;|&nbsp;
+    <strong>Данные:</strong> PostgreSQL/PostGIS, NetCDF, GeoTIFF &nbsp;|&nbsp;
+    <strong>No-code логика:</strong> понимание Make/n8n/Zapier-подхода, Notion, Airtable &nbsp;|&nbsp;
+    <strong>CRM/интеграции:</strong> опыт интеграции платёжных систем и управления доступом по статусу подписки &nbsp;|&nbsp;
+    <strong>Инструменты:</strong> Cursor, Windsurf, Perplexity, GitHub, PlantUML
+  </div>
+</div>
+
+<!-- ОБРАЗОВАНИЕ -->
+<div class="section">
+  <div class="section-title">Образование и сертификации</div>
+  <div class="two-col" style="font-size:8.5pt;">
+    <div>
+      <strong>Дипломатическая академия МИД России</strong> (2011) — Международные отношения<br/>
+      <strong>МИИГАиК</strong> (2006) — Прикладная космонавтика / ИС
+    </div>
+    <div>
+      <strong>IPMA (D)</strong>, СОВНЕТ, 2009, № D0861 — Управление проектами<br/>
+      <strong>Спикер:</strong> RAO-CIS (с 2018), AI IN Казань (2023), Saudi Maritime Congress (2024), Digital Innopolis Days (2025)
+    </div>
+  </div>
+</div>
+
+<!-- МОТИВАЦИОННАЯ ПЛАШКА -->
+<div class="footer-note">
+  <strong>Почему мне интересна Beautiful People:</strong> задача «запустить AI-направление с нуля и доказать пользу внутри компании» — это именно то, чем я занимаюсь последние 9 лет.
+  У вас есть богатая база для AI-трансформации: CRM, обращения, медицинские карты, фото до/после, клиентский путь, склад.
+  Я умею превращать это в конкретный результат: карта процессов → матрица приоритизации → MVP за 2–4 недели → измеримый эффект в отчёте.
+  Работаю руками, а не только ставлю задачи. Готов к part-time формату на старте с перспективой роста в полноценный AI-департамент.
+</div>
+
+</div>
+</body>
+</html>

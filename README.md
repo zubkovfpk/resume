@@ -10,6 +10,7 @@
 | **Владелец продукта (AI & Data)** | [/positions/po-ai](https://zubkovfpk.github.io/resume/positions/po-ai/) | [preview](https://www.perplexity.ai/computer/a/zubkov-ai-product-owner-3.Cu_YAxTeeSlHH5wbXoyQ) |
 | **IT-директор / CTO** | [/positions/it-director](https://zubkovfpk.github.io/resume/positions/it-director/) | — |
 | **AI-инженер (Middle)** | [/positions/ai-engineer](https://zubkovfpk.github.io/resume/positions/ai-engineer/) | [preview](https://www.perplexity.ai/computer/a/zubkov-ai-engineer-chernovik-dXpr8muESDmiKnCHJV3cWg) |
+| **AI/LLM Engineer — Hi, Rockits!** | [/positions/rockits](https://zubkovfpk.github.io/resume/positions/rockits/) | [preview](https://www.perplexity.ai/computer/a/zubkov-ai-engineer-hi-rockits-ThpaYCr7SaeH_90FNCETOw) |
 | **Руководитель AI-направления — Beautiful People** | [/positions/beautiful-people](https://zubkovfpk.github.io/resume/positions/beautiful-people/) | [preview](https://www.perplexity.ai/computer/a/zubkov-ai-automation-lead-beau-gCx7YUzFRkOU74UcY4zvGA) |
 | **CTO · AI Platform — КРОК** | [/positions/croc](https://zubkovfpk.github.io/resume/positions/croc/) | [preview](https://www.perplexity.ai/computer/a/zubkov-cto-krok-1qbII5DpRXiTfrCk5Evqxw) |
 | **Директор по внедрению ИИ — Дата Маркетинг** | [/positions/datamarketing](https://zubkovfpk.github.io/resume/positions/datamarketing/) | [preview](https://www.perplexity.ai/computer/a/reziume-zubkov-direktor-po-vne-nYUR7Ed1QGeKhiuZfb87VQ) |

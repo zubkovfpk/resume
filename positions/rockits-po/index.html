@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<title>Зубков С.А. — Product Owner / Product Director (0→1)</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: "Segoe UI", Tahoma, sans-serif; font-size: 9pt; line-height: 1.35; color: #1a1a1a; }
+.page { width: 794px; min-height: 1123px; padding: 28px 38px; background: #fff; }
+
+/* ШАПКА */
+.header { display: flex; gap: 18px; margin-bottom: 12px; border-bottom: 3px solid #21a038; padding-bottom: 10px; }
+.photo img { width: 82px; height: 82px; border-radius: 50%; object-fit: cover; }
+.header-text { flex: 1; }
+h1 { font-size: 21pt; font-weight: 700; color: #1a1a1a; margin-bottom: 2px; }
+.job-title { font-size: 11pt; color: #21a038; font-weight: 600; margin-bottom: 5px; }
+.contacts { font-size: 8.5pt; color: #555; display: flex; gap: 14px; flex-wrap: wrap; }
+.contacts a { color: #555; text-decoration: none; }
+.meta-line { font-size: 7.8pt; color: #777; margin-top: 4px; }
+
+/* СЕКЦИИ */
+.section { margin-bottom: 11px; }
+.section-title { font-size: 10.5pt; font-weight: 700; color: #21a038; margin-bottom: 5px; padding-bottom: 2px;
+  border-bottom: 1.5px solid #e0e0e0; text-transform: uppercase; letter-spacing: 0.5px; }
+
+/* МЕТРИКИ */
+.metrics { display: flex; gap: 8px; margin: 7px 0; }
+.metric { background: #e8f5e9; border-radius: 4px; padding: 4px 8px; text-align: center; flex: 1; }
+.metric-value { font-size: 13pt; font-weight: 700; color: #21a038; }
+.metric-label { font-size: 6.8pt; color: #555; text-transform: uppercase; letter-spacing: 0.3px; }
+
+/* КОМПЕТЕНЦИИ */
+.skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; }
+.skill-card { background: linear-gradient(135deg, #f5f5f5, #e9e9e9); padding: 6px 8px; border-left: 3px solid #21a038; font-size: 8pt; }
+.skill-title { font-weight: 700; color: #1a1a1a; margin-bottom: 2px; font-size: 8.5pt; }
+
+/* ОПЫТ */
+.experience { margin-bottom: 9px; }
+.exp-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 3px; }
+.exp-title { font-weight: 700; font-size: 9.5pt; color: #1a1a1a; }
+.exp-period { font-size: 8pt; color: #666; font-style: italic; white-space: nowrap; padding-left: 8px; }
+.exp-company { font-size: 8.5pt; color: #21a038; font-weight: 600; margin-bottom: 3px; }
+.exp-tags { margin-bottom: 4px; }
+.badge { display: inline-block; background: #21a038; color: white; padding: 1px 6px; border-radius: 3px;
+  font-size: 7.2pt; font-weight: 600; margin-right: 3px; }
+
+ul { margin-left: 14px; }
+li { margin-bottom: 2px; font-size: 8.5pt; color: #333; line-height: 1.4; }
+.hl { background: #fff3cd; padding: 0 2px; font-weight: 700; }
+
+/* KPI-BOX */
+.kpi-box { background: #f0fff4; border: 1.5px solid #21a038; border-radius: 6px; padding: 6px 8px; margin: 6px 0; }
+.kpi-box-title { font-size: 8.5pt; font-weight: 700; color: #21a038; text-align: center; margin-bottom: 5px; }
+.kpi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.kpi-card { background: white; border: 1px solid #c8e6c9; border-radius: 5px; padding: 5px 6px; text-align: center; }
+.kpi-value { font-size: 10pt; font-weight: 700; color: #21a038; }
+.kpi-name { font-size: 7.5pt; color: #444; line-height: 1.3; margin: 2px 0; }
+.kpi-sub { font-size: 7pt; color: #777; font-style: italic; }
+
+/* ОБРАЗОВАНИЕ */
+.edu-row { display: flex; justify-content: space-between; align-items: baseline;
+  font-size: 8.2pt; padding: 2px 0; }
+.edu-year { color: #888; white-space: nowrap; padding-left: 12px; }
+
+/* ПУБЛИЧНАЯ АКТИВНОСТЬ */
+.two-col { display: grid; grid-template-columns: 43% 57%; gap: 0; }
+.info-block { font-size: 8.2pt; line-height: 1.5; padding-right: 10px; }
+.info-block strong { color: #1a1a1a; font-size: 8.5pt; }
+.award-row { display: flex; justify-content: space-between; align-items: baseline; }
+.award-year { color: #888; white-space: nowrap; padding-left: 8px; }
+
+/* МОТИВАЦИОННАЯ ПЛАШКА */
+.footer-note { margin-top: 10px; padding: 8px 10px; background: #f0fff4;
+  border-left: 4px solid #21a038; font-size: 8.5pt; font-style: italic; color: #333; }
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- ШАПКА -->
+<div class="header">
+  <div class="photo">
+    <img alt="Фото" src="foto_zsa.jpg"/>
+  </div>
+  <div class="header-text">
+    <h1>Зубков Сергей Андреевич</h1>
+    <div class="job-title">Product Owner / Product Director · AI-продукты с нуля (0→1)</div>
+    <div class="contacts">
+      <span>Москва</span>
+      <span>+7 (926) 276-61-43</span>
+      <span><a href="mailto:zubkovfpk@yandex.ru">zubkovfpk@yandex.ru</a></span>
+      <span>Telegram: <a href="https://t.me/SergeyAZubkov">@SergeyAZubkov</a></span>
+      <span><a href="https://www.linkedin.com/in/sergey-a-zubkov">LinkedIn</a></span>
+    </div>
+    <div class="meta-line">
+      Формат: удалённо / гибрид &nbsp;·&nbsp;
+      Релокация: готов рассматривать с сентября 2027 &nbsp;·&nbsp;
+      Зарплата: 500 000 ₽
+    </div>
+  </div>
+</div>
+
+<!-- ПРОФИЛЬ -->
+<div class="section">
+  <div class="section-title">Профиль</div>
+  <p style="font-size:8.5pt; color:#333; line-height:1.45;">
+    9 лет строю AI-продукты с нуля — от первого CustDev-интервью до коммерческого масштабирования.
+    Думаю как фаундер: сам формирую гипотезы, сам их проверяю, сам собираю прототипы с помощью
+    AI-инструментов (Cursor, Claude, Windsurf) — не жду разработку. Умею работать с двойным
+    стейкхолдером и принимать решения на основе метрик, а не договорённостей. Параллельно веду
+    EdTech-проект: совместно с партнёром на месте запускаем AI-продукт для государственных
+    университетов Колумбии — понимаю специфику образовательного рынка изнутри.
+    Понимаю AI-архитектуру изнутри — это делает меня более точным PO, а не инженером.
+  </p>
+</div>
+
+<!-- МЕТРИКИ -->
+<div class="metrics">
+  <div class="metric">
+    <div class="metric-value">7</div>
+    <div class="metric-label">AI-продуктов 0→1</div>
+  </div>
+  <div class="metric">
+    <div class="metric-value">80+</div>
+    <div class="metric-label">гипотез протестировано</div>
+  </div>
+  <div class="metric">
+    <div class="metric-value">100+</div>
+    <div class="metric-label">CustDev-интервью</div>
+  </div>
+  <div class="metric">
+    <div class="metric-value">1 млрд ₽+</div>
+    <div class="metric-label">подтверждённый эффект</div>
+  </div>
+</div>
+
+<!-- КЛЮЧЕВЫЕ КОМПЕТЕНЦИИ -->
+<div class="section">
+  <div class="section-title">Ключевые компетенции</div>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <div class="skill-title">0→1 и валидация гипотез</div>
+      80+ проверенных гипотез по матрице (метрика, вера, сложность, срок, риск).
+      Запускал 5+ тестов в неделю. A/B-подход, быстрые пилоты, kill/go-решения.
+    </div>
+    <div class="skill-card">
+      <div class="skill-title">Прототипирование руками</div>
+      AI-native: собираю MVP через Cursor, Claude, Windsurf без ожидания разработки.
+      Проектирую LLM-сценарии, пользовательские пути, логику взаимодействия с AI.
+    </div>
+    <div class="skill-card">
+      <div class="skill-title">Метрики и юнит-экономика</div>
+      Retention, completion rate, CAC, LTV, стоимость сессии/запроса.
+      Строил P&amp;L и финмодели с горизонтом 5 лет. ROI 1,57× → 9,4×.
+    </div>
+    <div class="skill-card">
+      <div class="skill-title">CustDev и двойной стейкхолдер</div>
+      100+ интервью лично (B2B, B2G, B2C). Понимаю механику «пользователь ≠ плательщик»:
+      формирую отдельные journey для каждого сегмента, нахожу точки ценности.
+    </div>
+    <div class="skill-card">
+      <div class="skill-title">Бэклог и roadmap</div>
+      WSJF, RICE, MoSCoW. Story mapping, Planning Poker. Защищаю roadmap перед
+      стейкхолдерами любого уровня. Прозрачная коммуникация приоритетов.
+    </div>
+    <div class="skill-card">
+      <div class="skill-title">Технический контекст PO</div>
+      <em style="font-size:7.5pt;color:#666;">AI/ML:</em> LLM, Agentic RAG, multi-agent, CV/ML<br/>
+      <em style="font-size:7.5pt;color:#666;">Инструменты:</em> Cursor, Claude, Windsurf, Notion, Jira<br/>
+      <em style="font-size:7.5pt;color:#666;">Данные:</em> Python, SQL, Docker, CI/CD, Git
+    </div>
+  </div>
+</div>
+
+<!-- ОПЫТ РАБОТЫ -->
+<div class="section">
+  <div class="section-title">Опыт работы</div>
+
+  <!-- ВИЗАРД -->
+  <div class="experience">
+    <div class="exp-header">
+      <div class="exp-title">Product Owner AI &amp; Data / VIZARD · 0→1</div>
+      <div class="exp-period">2017 — н.в. · 9 лет</div>
+    </div>
+    <div class="exp-company">ВИЗАРД (VIZARD) — коммерческая AI-платформа для морской логистики и мониторинга судоходства</div>
+    <div class="exp-tags">
+      <span class="badge">0→1</span>
+      <span class="badge">CustDev</span>
+      <span class="badge">AI-продукт</span>
+      <span class="badge">P&amp;L</span>
+    </div>
+    <div class="kpi-box">
+      <div class="kpi-box-title">Измеримый бизнес-эффект AI-продуктов VIZARD</div>
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-value">7 продуктов</div>
+          <div class="kpi-name">В production — каждый с нуля</div>
+          <div class="kpi-sub">гипотеза → прототип → пилот → масштаб</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-value">+17% / +350 K $</div>
+          <div class="kpi-name">Ускорение маршрутов (СМП)</div>
+          <div class="kpi-sub">эффект на один рейс клиента</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-value">1 млрд ₽+</div>
+          <div class="kpi-name">Совокупный эффект для клиентов</div>
+          <div class="kpi-sub">за 5+ лет; клиенты: Газпром, Совкомфлот, НОВАТЭК</div>
+        </div>
+      </div>
+    </div>
+    <ul>
+      <li><span class="hl">0→1 без готовой команды и процессов:</span> с нуля сформировал AI-направление — исследование рынка, матрица гипотез (метрика, инвестиции, вера, сложность, срок, эффект, риск), R&amp;D-проекты от идеи до пилота. 80+ протестированных гипотез, клиенты: ПАО «Газпром», ПАО «Совкомфлот», ПАО «НОВАТЭК».</li>
+      <li><span class="hl">CustDev и двойной стейкхолдер:</span> 100+ интервью лично — капитаны, логисты, страховщики, топ-менеджмент. Включая зарубежные рынки: ОАЭ, Япония, Турция. Отдельные journey для пользователя (капитан) и плательщика (судовладелец / страховщик).</li>
+      <li><span class="hl">Прототипы и пользовательские сценарии:</span> спроектировал AI-journey где пользователь формулирует задачу («как пройти A→Б с минимальным риском/топливом»), система предлагает оптимальные маршруты и предупреждения — мультимодальный интерфейс.</li>
+      <li><span class="hl">Юнит-экономика и P&amp;L:</span> финмодель с горизонтом 5 лет, success fee (10% от экономии клиента), ROI 1,57× в 2026 → 9,4× к 2030. Анализ PAM–TAM–SAM–SOM: Россия, БРИКС+, P&amp;I-страхование.</li>
+      <li><span class="hl">Команда и процессы с нуля:</span> сформировал и управлял кросс-функциональной командой до 17 человек (разработка, AI/ML, бизнес-развитие). Выстроил продуктовый процесс: бэклог, спринты, приёмочные критерии, roadmap релизов.</li>
+    </ul>
+  </div>
+
+  <!-- ЕДТЕХ КОЛУМБИЯ -->
+  <div class="experience">
+    <div class="exp-header">
+      <div class="exp-title">Product Owner · EdTech AI-продукт (параллельный проект)</div>
+      <div class="exp-period">2025 — н.в.</div>
+    </div>
+    <div class="exp-company">Колумбия — AI-ассистент для государственных университетов</div>
+    <div class="exp-tags">
+      <span class="badge">EdTech</span>
+      <span class="badge">0→1</span>
+      <span class="badge">LLM</span>
+    </div>
+    <ul>
+      <li><span class="hl">Живой 0→1 EdTech-проект:</span> совместно с партнёром на месте запускаем AI-ассистент для внутренних образовательных программ государственных университетов Колумбии. Полный цикл: CustDev, проектирование сценариев, прототип на LLM, локализация.</li>
+      <li><span class="hl">Двойной стейкхолдер:</span> студент пользуется — университет / государство принимает решение о внедрении. Работаю с обоими уровнями одновременно.</li>
+      <li><span class="hl">Нестандартные ограничения:</span> мультиязычный стек, инфраструктурные ограничения локального рынка, партнёрская сеть на месте.</li>
+    </ul>
+  </div>
+
+  <!-- ЕГИП -->
+  <div class="experience">
+    <div class="exp-header">
+      <div class="exp-title">Chief Architect / Product Owner — Цифровая платформа города</div>
+      <div class="exp-period">2012 — 2016</div>
+    </div>
+    <div class="exp-company">ЕГИП — Департамент информационных технологий г. Москвы</div>
+    <div class="exp-tags">
+      <span class="badge">0→1</span>
+      <span class="badge">B2G/B2C</span>
+      <span class="badge">Urban AI</span>
+    </div>
+    <ul>
+      <li><span class="hl">Продукт с нуля для двух аудиторий:</span> единая точка входа к пространственным данным (60+ органов власти) и публичный Электронный атлас Москвы (B2C) — два параллельных journey из одной платформы.</li>
+      <li><span class="hl">Гипотезы и AI-первого поколения:</span> 150+ интервью с департаментами, проверка сценариев сокращения выездов инспекторов, онлайн-согласования BIM; ML-детекция объектов на LiDAR (2014–2016) — один из первых urban AI-кейсов в России.</li>
+      <li><span class="hl">Результат:</span> 37 интегрированных систем, снижение TCO в 6,3×, экономия >0,5 млрд руб./год. Благодарность Мэра Москвы.</li>
+    </ul>
+  </div>
+
+  <!-- РАННИЙ ПЕРИОД -->
+  <div class="experience" style="margin-bottom:4px;">
+    <div class="exp-header">
+      <div class="exp-title">Инженер / Аналитик → И.о. начальника управления</div>
+      <div class="exp-period">2004 — 2012</div>
+    </div>
+    <div class="exp-company">Системные интеграторы / ГИС-организации: РЖД, CSoft, Прайм груп, Эверпоинт</div>
+    <ul>
+      <li>Последовательный карьерный рост от инженера до руководителя; hands-on работа с корпоративными данными, DWH, Oracle, ArcGIS.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ОБРАЗОВАНИЕ -->
+<div class="section">
+  <div class="section-title">Образование и сертификации</div>
+  <div class="edu-row">
+    <span><strong>Дипломатическая академия МИД России</strong> <span style="color:#888;">· Международные отношения</span></span>
+    <span class="edu-year">2011</span>
+  </div>
+  <div class="edu-row">
+    <span><strong>МИИГАиК</strong> <span style="color:#888;">· Прикладная космонавтика / Проектирование и внедрение ИС</span></span>
+    <span class="edu-year">2006</span>
+  </div>
+  <div class="edu-row">
+    <span><strong>IPMA</strong> <span style="color:#888;">· Сертификат управления проектами · № D0861</span></span>
+    <span class="edu-year">2009</span>
+  </div>
+</div>
+
+<!-- ПУБЛИЧНАЯ АКТИВНОСТЬ -->
+<div class="section">
+  <div class="section-title">Публичная активность и признание</div>
+  <div class="two-col">
+    <div class="info-block">
+      <strong>Спикер AI/tech-конференций:</strong>
+      <ul>
+        <li>AI IN, Казань, 2023 — AI-направление</li>
+        <li>Digital Innopolis Days, Казань, 2025</li>
+        <li>Saudi Maritime Congress, Даммам, 2024</li>
+        <li>RAO‑CIS, Санкт-Петербург — регулярно с 2018 г.</li>
+      </ul>
+    </div>
+    <div class="info-block" style="padding-right:0;">
+      <strong>Награды и экспертиза:</strong>
+      <ul>
+        <li class="award-row"><span>2× победитель «АРКТЕК ИНЖИНИРИНГ»</span><span class="award-year">2023</span></li>
+        <li class="award-row"><span>Лауреат Российско-Китайского конкурса инноваций</span><span class="award-year">2023</span></li>
+        <li>Член жюри AI &amp; Business Hackathon и 2ГИС Hackathon</li>
+        <li>Член экспертного совета ИНТЦ МГУ «Воробьёвы горы»</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- МОТИВАЦИОННАЯ ПЛАШКА -->
+<div style="height:8px;"></div>
+<div class="footer-note">
+  <strong>Почему эта роль:</strong> строить AI-репетитор с нуля, без готовой команды и процессов,
+  с ответственностью за продуктовые решения — именно тот режим, в котором я часто работаю последние 9 лет.
+  EdTech-домен интересен не абстрактно: параллельно веду живой EdTech-проект в Колумбии,
+  понимаю механику «пользователь ≠ плательщик» на практике.
+  Готов делать руками — CustDev, прототипы, тесты — без ожидания чётких задач сверху.
+</div>
+
+</div>
+</body>
+</html>

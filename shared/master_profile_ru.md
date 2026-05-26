@@ -1,8 +1,8 @@
 # Мастер‑профиль Сергея (RU)
 
-Версия: 1.6  
+Версия: 1.7  
 Дата сборки: 2026‑04‑21  
-Последнее обновление: 2026‑05‑08  
+Последнее обновление: 2026‑05‑26  
 Автор: Зубков Сергей Андреевич (совместно с Comet)  
 Статус: согласован по блокам 1–10; в работе — генерация резюме под вакансии из шорт‑листа hh.ru.  
 Открытые поля — см. раздел 16.  
@@ -75,6 +75,19 @@
 - Стандартная формулировка участия в AI-стеке для резюме: «Принимаю личное участие в развитии AI-стека» (не «лично развиваю»).
 - Constitutional AI, оценка качества агентов, AI‑product management.
 - ML первого поколения — детекция объектов на LiDAR + стереофото (исторический опыт ЕГИП, без ретроактивных GenAI‑припиcок).
+
+### 3.2a. AI Quality & Evaluation (`AILead`, `GenAIArch`, `CTO`)
+
+Самостоятельная экспертиза, сформированная в ходе двух production-проектов (VIZARD + Роскадастр).
+
+- **Autonomy Boundary Matrix** (аналоги: HITL boundaries, escalation policy, decision authority matrix) — фреймворк зонирования автономности агента: зелёная (автономно) / жёлтая (предлагает, оператор подтверждает) / красная (никогда без явной санкции).
+- **Constitutional AI / hard guardrails** (аналоги: CAI, safety constraints, policy enforcement layer) — программная блокировка запрещённых действий до рендеринга ответа. Forbidden action rate — цель строго 0%.
+- **Self-RAG + Critic loop** (аналоги: LLM-as-judge, self-reflection) — верификация утверждений через базу + проверка черновика вторым LLM-вызовом до выдачи пользователю.
+- **Evaluation Framework** (аналоги: eval framework, LLM eval, behavioral testing) — комплекс KRI + quality gate + триггеры деградации. Отслеживается через Langfuse self-hosted (данные не выходят за периметр заказчика).
+- **5 критических метрик** (знать наизусть): missed escalation rate, confidence calibration error (ECE), behavioral consistency, forbidden action rate, false negative rate.
+- **Source attribution rate** — дополнительная метрика для LLM-агентов в юридически значимых контекстах (падение ниже 90% → алерт и ревизия knowledge base).
+
+Примечание по фреймингу: эта экспертиза не входит в комплект ни одного vendor-решения; это quality layer, который строится поверх любой архитектуры генерации. Использовать при адаптации под роли AI Quality / Head of AI Quality / AI Product Quality Owner.
 - Computer Vision / ML на данных с БПЛА: hands‑on обучение моделей детекции (bounding boxes) с применением семейств YOLO, EfficientDet, InternImage, ResNet, Faster R‑CNN, а также трансформерных архитектур (ViT, DETR, RT‑DETR, SegFormer) и гибридных подходов; вспомогательные техники — SAHI, Raster Vision (проект 2025 — н.в., Россельхознадзор).
 
 ### 3.3. Архитектура и разработка (`CTO`, `GenAIArch`, `GeoAI`)
@@ -240,6 +253,13 @@ M&A (текущая активность):
 
 - Участвую в текущей сделке по продаже компании более крупному игроку рынка; детали — коммерческая тайна.
 
+ML-пайплайн VIZARD (классификация ледовой обстановки):
+
+- Основной источник данных: **SAR-изображения** (радиолокационные спутниковые снимки), не оптика.
+- Пайплайн: SAR → RGB-композиты GeoTIFF → классификация.
+- Эволюция архитектур: U-Net → U-Net++ с Attention Gate → **SegFormer** (трансформерный энкодер). Переход на SegFormer закрыл проблему граничных классов льда и открыл выход на направление страхования морских рисков.
+- Известный артефакт качества: влажный снег «проваливает» обратное рассеивание в SAR — в GeoTIFF-композите выглядит как другой класс льда. Ошибку поймали операторы БОЦ (круглосуточный ситуационный центр); сработал регламент, до клиента не дошла. Три слоя закрытия: (1) data quality flag при аномальном изменении сигнала ещё на этапе формирования композита; (2) confidence score — ниже порога → верификация; (3) hard guardrail — CRITICAL-действие без подтверждения диспетчера запрещено программно (в рамках Autonomy Boundary Matrix).
+
 Награды и признание (подсводка по ВИЗАРД/VIZARD):
 
 - VIZARD — в реестре отечественного ПО.
@@ -335,6 +355,25 @@ M&A (текущая активность):
 - «Апрель 2025 — н.в. — главный инженер в проекте ППК „Роскадастр“ (контрактная занятость).»
 - «В рамках проекта — взаимодействие с филиалом „Инфотех“ как одним из подразделений.»
 - «Член рабочей группы по разработке ГОСТ Р „Пространственные данные. Качество данных“ и ряда смежных стандартов.»
+
+Технический стек проекта (госконтур, нуль иностранного SaaS):
+
+- LLM: **GigaChat** (Сбер) + **YandexGPT** (Яндекс).
+- Векторное хранилище: **pgvector** (PostgreSQL extension, open source, on-premise).
+- GraphRAG: **Apache AGE** на PostgreSQL.
+- Оркестрация: **LangChain** без облачных зависимостей.
+- Обсервабилити / трейсинг: **Langfuse self-hosted** (развёрнут на серверах заказчика, данные не выходят за периметр).
+- Embedding: **ruBERT** + **E5** локально.
+- Контекст знаний: RAG из реестра РПОиБД (Реестр прав оценки и бесплатного донорства).
+- Проект консалтинговый: проектировали стандарт и архитектуру, не полный production-цикл.
+
+Блок AI Quality / Evaluation Framework (в рамках проекта Роскадастра):
+
+- Autonomy Boundary Matrix: зонирование действий LLM-агента (зелёная/жёлтая/красная).
+- Constitutional AI: программная блокировка юридически значимых формулировок без верифицированного основания — до рендеринга.
+- Self-RAG + Critic loop: верификация каждой отсылки на НПА через базу + второй LLM-вызов проверяет черновик.
+- Evaluation Framework: KRI + quality gate + триггеры деградации; source attribution rate — падение ниже 90% → алерт и ревизия knowledge base.
+- Трейсинг через Langfuse self-hosted: полная цепочка любого решения — за секунды; данные не выходят за периметр заказчика.
 
 Публичные результаты проекта:
 
@@ -675,9 +714,9 @@ M&A (текущая активность):
 - Языки программирования и скрипты: Python (pytest, asyncio, APScheduler), SQL, Bash/PowerShell, HTML/CSS, Markdown/PlantUML.
 - Данные и ГИС: PostgreSQL/PostGIS, Oracle; NetCDF, GeoTIFF, GRIB2, Shapefile, GeoPackage; ArcGIS, QGIS, MapInfo, Bentley, EverGIS.
 - Метеоданные: GFS, CMEMS, ERA5, NOAA.
-- AI / ML: LLM, Agentic RAG, GraphRAG, multi‑agent orchestration, Constitutional AI, prompt‑инженерия, fine-tuning LLM (HuggingFace); исторический опыт ML — детекция объектов на LiDAR + стереофото.
+- AI / ML: LLM, Agentic RAG (Self-RAG), GraphRAG, multi‑agent orchestration, Constitutional AI, prompt‑инженерия, fine-tuning LLM; Evaluation Framework (Autonomy Boundary Matrix, Critic loop, quality gate, KRI, триггеры деградации). Госконтур: GigaChat, YandexGPT, pgvector, Apache AGE, LangChain, Langfuse self-hosted, ruBERT, E5. Исторический опыт ML — детекция объектов на LiDAR + стереофото.
   - Примечание: LoRA (Low-Rank Adaptation) — метод fine-tuning LLM; в стек включать только как «fine-tuning LLM», не «LoRA» (омоним с радиосвязью, создаёт путаницу).
-- Computer Vision / Deep Learning: семейства YOLO, EfficientDet, InternImage, ResNet, Faster R‑CNN; трансформерные архитектуры (ViT, DETR, RT‑DETR, SegFormer); гибридные подходы; SAHI, Raster Vision.
+- Computer Vision / Deep Learning: семейства YOLO, EfficientDet, InternImage, ResNet, Faster R‑CNN; трансформерные архитектуры (ViT, DETR, RT‑DETR, SegFormer); гибридные подходы; SAHI, Raster Vision. Сегментация на SAR-данных: пайплайн SAR → RGB-композиты GeoTIFF → классификация; эволюция: U-Net → U-Net++ (Attention Gate) → SegFormer (VIZARD, ледовая обстановка).
 - Инструменты разработки и DevOps: Cursor, Windsurf, Perplexity, VS Code, Git/GitHub, Docker, CI/CD, pytest.
 - Архитектурная документация: C4, PlantUML, ADR, Markdown.
 - Методологии: TOGAF, COBIT, PRINCE2, IPMA (сертификат), ISO 31000, FMEA, SORA.
@@ -707,7 +746,8 @@ M&A (текущая активность):
 - CTO‑гибрид (`CTO`):
   - Summary 2.1 или 2.4; все разделы включены; подразделы 4.5 (hydromet_bulletin) и 4.5a (Россельхознадзор / ML на БПЛА) — как парные витрины hands‑on.
 - Head of AI / AI Lead (`AILead`, `GenAIArch`):
-  - Summary 2.2; Компетенции 3.2, 3.3, 3.4; Опыт 4.4, 4.5, 4.5a; Проекты 5.2, 5.3, 5.4, 5.6; Публичная активность с акцентом на AI IN, AI & Business Hackathon, Digital Innopolis Days, ИНТЦ МГУ.
+  - Summary 2.2; Компетенции 3.2, **3.2a**, 3.3, 3.4; Опыт 4.4 (с блоком ML-пайплайна), 4.5, 4.5a, 4.6 (с блоком AI Quality); Проекты 5.2, 5.3, 5.4, 5.6; Публичная активность с акцентом на AI IN, AI & Business Hackathon, Digital Innopolis Days, ИНТЦ МГУ.
+- **AI Quality / AI Product Quality Owner** (CAIO profile): использовать раздел **3.2a** как центральный блок профиля. Опыт: 4.4 (VIZARD, ML-пайплайн + три слоя закрытия) + 4.6 (Роскадастр, госконтур, LLM-агент). Фрейм: quality layer, который строится поверх любой архитектуры генерации и не входит в комплект ни одного vendor-решения.
 - Digital Transformation / госсектор (`DigitalTransformation`):
   - Summary 2.3; Опыт 4.2, 4.4, 4.6; Проекты 5.1, 5.5; Разделы 6, 7; Награды с акцентом на Благодарность Мэра Москвы и III Международный GIS‑Forum.
 

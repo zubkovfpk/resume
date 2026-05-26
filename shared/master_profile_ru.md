@@ -78,16 +78,23 @@
 
 ### 3.2a. AI Quality & Evaluation (`AILead`, `GenAIArch`, `CTO`)
 
-Самостоятельная экспертиза, сформированная в ходе двух production-проектов (VIZARD + Роскадастр).
+Экспертиза сформирована в ходе двух проектов (VIZARD + Роскадастр). Навыки разделены по уровню владения — важно для честного позиционирования.
 
-- **Autonomy Boundary Matrix** (аналоги: HITL boundaries, escalation policy, decision authority matrix) — фреймворк зонирования автономности агента: зелёная (автономно) / жёлтая (предлагает, оператор подтверждает) / красная (никогда без явной санкции).
-- **Constitutional AI / hard guardrails** (аналоги: CAI, safety constraints, policy enforcement layer) — программная блокировка запрещённых действий до рендеринга ответа. Forbidden action rate — цель строго 0%.
-- **Self-RAG + Critic loop** (аналоги: LLM-as-judge, self-reflection) — верификация утверждений через базу + проверка черновика вторым LLM-вызовом до выдачи пользователю.
-- **Evaluation Framework** (аналоги: eval framework, LLM eval, behavioral testing) — комплекс KRI + quality gate + триггеры деградации. Отслеживается через Langfuse self-hosted (данные не выходят за периметр заказчика).
-- **5 критических метрик** (знать наизусть): missed escalation rate, confidence calibration error (ECE), behavioral consistency, forbidden action rate, false negative rate.
-- **Source attribution rate** — дополнительная метрика для LLM-агентов в юридически значимых контекстах (падение ниже 90% → алерт и ревизия knowledge base).
+**Уровень `[arch/lead]` — проектирую, ставлю задачу, принимаю архитектурное решение:**
 
-Примечание по фреймингу: эта экспертиза не входит в комплект ни одного vendor-решения; это quality layer, который строится поверх любой архитектуры генерации. Использовать при адаптации под роли AI Quality / Head of AI Quality / AI Product Quality Owner.
+- **Autonomy Boundary Matrix** (аналоги: HITL boundaries, escalation policy, decision authority matrix) — фреймворк зонирования автономности агента: зелёная (автономно) / жёлтая (предлагает, оператор подтверждает) / красная (никогда без явной санкции). Применён в VIZARD и Роскадастре как проектный стандарт.
+- **Constitutional AI / hard guardrails** (аналоги: CAI, safety constraints, policy enforcement layer) — программная блокировка запрещённых действий до рендеринга ответа. Forbidden action rate — цель строго 0%. Формулировал требования и стандарт, не писал enforcement-слой лично.
+- **Self-RAG как архитектурный паттерн** — понимаю зачем и как встраивается в пайплайн; использовал при проектировании стандарта Роскадастра.
+- **Определение метрик и KRI для мониторинга деградации** — missed escalation rate, confidence calibration error (ECE), behavioral consistency, forbidden action rate, false negative rate, source attribution rate. Знаю что мерить и почему; формулировал как часть Evaluation Framework.
+- **Langfuse self-hosted** — настройка трейсинга, чтение трейсов, анализ цепочек решений агента в production. Данные не выходят за периметр заказчика.
+
+**Уровень `[familiar/growing]` — понимаю принцип, участвовал в проектировании стандарта, не production-owner реализации:**
+
+- **Critic loop / LLM-as-judge** — знаю паттерн и логику второго LLM-вызова для проверки черновика; в Роскадастре входил в проектируемый стандарт, не был лично реализован в коде.
+- **Evaluation Framework как живой pipeline** — проектировал структуру (KRI + quality gate + триггеры деградации); не запускал готовые eval-сьюты в CI/CD самостоятельно.
+- **GraphRAG (Apache AGE)** — архитектурное решение на уровне стандарта; не строил граф-схему с нуля.
+
+Примечание по фреймингу: эта экспертиза не входит в комплект ни одного vendor-решения — это quality layer поверх любой архитектуры генерации. При адаптации резюме под AI Quality / AI Product Quality Owner использовать только `[arch/lead]`-блок; `[familiar/growing]` — как контекст роста, не как заявленную компетенцию.
 - Computer Vision / ML на данных с БПЛА: hands‑on обучение моделей детекции (bounding boxes) с применением семейств YOLO, EfficientDet, InternImage, ResNet, Faster R‑CNN, а также трансформерных архитектур (ViT, DETR, RT‑DETR, SegFormer) и гибридных подходов; вспомогательные техники — SAHI, Raster Vision (проект 2025 — н.в., Россельхознадзор).
 
 ### 3.3. Архитектура и разработка (`CTO`, `GenAIArch`, `GeoAI`)
@@ -367,13 +374,14 @@ ML-пайплайн VIZARD (классификация ледовой обста
 - Контекст знаний: RAG из реестра РПОиБД (Реестр прав оценки и бесплатного донорства).
 - Проект консалтинговый: проектировали стандарт и архитектуру, не полный production-цикл.
 
-Блок AI Quality / Evaluation Framework (в рамках проекта Роскадастра):
+Блок AI Quality / Evaluation Framework (в рамках проекта Роскадастра, проект консалтинговый):
 
-- Autonomy Boundary Matrix: зонирование действий LLM-агента (зелёная/жёлтая/красная).
-- Constitutional AI: программная блокировка юридически значимых формулировок без верифицированного основания — до рендеринга.
-- Self-RAG + Critic loop: верификация каждой отсылки на НПА через базу + второй LLM-вызов проверяет черновик.
-- Evaluation Framework: KRI + quality gate + триггеры деградации; source attribution rate — падение ниже 90% → алерт и ревизия knowledge base.
-- Трейсинг через Langfuse self-hosted: полная цепочка любого решения — за секунды; данные не выходят за периметр заказчика.
+- `[arch/lead]` **Autonomy Boundary Matrix**: сформулировал и внедрил в проектный стандарт — зонирование действий LLM-агента (зелёная/жёлтая/красная).
+- `[arch/lead]` **Constitutional AI**: формулировал требования и проектный стандарт блокировки юридически значимых формулировок без верифицированного основания; enforcement-слой проектировал, не реализовывал лично.
+- `[arch/lead]` **Evaluation Framework**: определил KRI + quality gate + триггеры деградации; source attribution rate < 90% → алерт и ревизия knowledge base.
+- `[arch/lead]` **Langfuse self-hosted**: настройка и использование; данные не выходят за периметр заказчика.
+- `[familiar/growing]` **Self-RAG + Critic loop**: вошёл в проектируемый стандарт; не реализован лично в коде.
+- `[familiar/growing]` **GraphRAG (Apache AGE)**: принял архитектурное решение на уровне стандарта; не строил граф-схему с нуля.
 
 Публичные результаты проекта:
 

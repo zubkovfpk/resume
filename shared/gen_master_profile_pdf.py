@@ -209,7 +209,7 @@ def build():
         OUT_PATH, pagesize=A4,
         leftMargin=MARGIN_L, rightMargin=MARGIN_R,
         topMargin=MARGIN_T, bottomMargin=MARGIN_B,
-        title="Мастер-профиль Зубков С.А. v1.7.5",
+        title="Мастер-профиль Зубков С.А. v1.7.6",
         author="Perplexity Computer",
     )
     story = []
@@ -219,7 +219,7 @@ def build():
     # ══════════════════════════════════════════════════════════════════════
     header_tbl = Table([[
         Paragraph("Зубков Сергей Андреевич", H1),
-        Paragraph("Мастер-профиль v1.7.5 · 27.05.2026", H1_SUB),
+        Paragraph("Мастер-профиль v1.7.6 · 27.05.2026", H1_SUB),
     ]], colWidths=[CONTENT_W * 0.65, CONTENT_W * 0.35])
     header_tbl.setStyle(TableStyle([
         ("BACKGROUND",    (0,0), (-1,-1), NAVY),
@@ -360,6 +360,8 @@ def build():
         "[growing]: Critic loop / LLM-as-judge, Self-RAG, GraphRAG (Apache AGE).",
         "ML первого поколения — детекция объектов на LiDAR + стереофото (ЕГИП, 2014–2016).",
         'Принимаю личное участие в развитии AI-стека.',
+        'ESG & Climate GeoAI: мониторинг ПГ (CO\u2082/CH\u2084), NbS-анализ, MRV-технологии.',
+        'Edge-инференс на БПЛА и бортовых устройствах (без выделенного GPU).',
     ])
     story.append(sp(1))
 
@@ -374,6 +376,7 @@ def build():
             "ArcGIS, QGIS, MapInfo, Bentley, EverGIS; 3D + LiDAR, CAD/BIM.",
             "NetCDF, GeoTIFF, GRIB2, Shapefile, GeoPackage. Метеоданные: GFS, CMEMS, ERA5, NOAA.",
             "Данные БПЛА (RGB), крупноформатные наборы изображений, ML-пайплайн детекции.",
+            "Арктические акватории: SAR \u2192 RGB-композиты, классификация льдов, детекция судов и айсбергов; интеграция с AIS и метеоданными (CO\u2082/CH\u2084).",
         ]),
         ("3.5 Продукт и рынок", "`CTO AI-Lead DigitalTransformation`", [
             "Customer journey, AI-journey, product discovery, кастдев.",
@@ -430,6 +433,7 @@ def build():
     story.append(sp(1))
 
     # 4.4 ВИЗАРД
+    story.append(Paragraph("4.4 ВИЗАРД", H3))
     for item in exp_block(
         "2017 — н.в.",
         "Co-Founder / CTO / SBA / Product Owner AI & Data — ВИЗАРД",
@@ -449,6 +453,7 @@ def build():
             "В условиях санкций: переархитектура на локальный мессенджер и доступные источники данных.",
             "Победитель «АРКТЕК ИНЖИНИРИНГ» в двух номинациях; лауреат Российско-Китайского конкурса, 2023.",
             "Октябрь 2025 — новое направление: ML-детекция сорных растений по БПЛА для Россельхознадзора (MVP сдан).",
+            "Edge-инференс: модели классификации льдов и детекции айсбергов/судов (EfficientNet, LLaMA-подобные арх.) обучались на ноутбуках GPU, далее функционируют на планшетах наблюдателей БОЦ и БПЛА без выделенного GPU.",
             "M&A: участвую в текущей сделке по продаже компании (детали под NDA).",
         ]
     ): story.append(item)
@@ -462,6 +467,23 @@ def build():
         "Источники: GFS, CMEMS, ERA5, NOAA. Multi-agent AI-оркестрация: Cursor, Windsurf, Perplexity.",
         "CI/CD, Docker, Git/GitHub. Открытый репозиторий GitHub — доступ по запросу; демо на собеседовании.",
     ])
+    story.append(sp(1))
+
+    # 4.5б ESG / Climate GeoAI
+    story.append(Paragraph("4.5б Подпроект VIZARD · ESG-направление: климатические риски и мониторинг ПГ на СМП (2024 — н.в.)", H3))
+    story += bullet_list([
+        "По итогам CustDev и Market Research (БРИКС+, 2024–2025) инициировал новое продуктовое направление VIZARD: "
+        "цифровой мониторинг климатических рисков и выбросов ПГ для судоходства на СМП; проведён кастдев "
+        "с нефтегазовыми компаниями и операторами КНГ.",
+        "Спроектировал архитектуру GeoAI-модуля: интеграция ДЗЗ (САР, мультиспектр), AIS-данных "
+        "и метеоисточников (GFS, CMEMS, ERA5) для пространственно-временного анализа эмиссий CO\u2082/CH\u2084 "
+        "в арктических акваториях; ML-пайплайн валидации по NOAA Arctic Report Card.",
+        "Экспертный вклад в исследование по Nature-Based Solutions для российской Арктики "
+        "(Sustainability, MDPI, 2025, 17, 10409; авторы — МГУ, ИЭПИ): GIS-поддержка, "
+        "пространственный анализ арктических экосистем, картографирование зон NbS "
+        "(леса, болота, ревайлдинг, восстановление экосистем).",
+    ])
+    story.append(rule())
     story.append(sp(1))
 
     # 4.5a Россельхознадзор
@@ -516,6 +538,9 @@ def build():
         ("Роскадастр — LLM-агент", "ITD / AILead",
          "Госконтур: GigaChat + YandexGPT + pgvector + Langfuse self-hosted. "
          "AI Quality стандарты: Constitutional AI, Autonomy Boundary Matrix, Evaluation Framework."),
+        ("VIZARD · ESG/Climate GeoAI", "CTO / AILead / GeoAI",
+         "Цифровой мониторинг ПГ и климатических рисков СМП: GeoAI-модуль, SAR + AIS + ERA5/CMEMS, "
+         "анализ CO\u2082/CH\u2084; edge-инференс на БПЛА; NbS-анализ арктических экосистем (Sustainability, 2025)."),
     ]
     proj_rows = []
     for title, tags, desc in projects:
@@ -578,6 +603,8 @@ def build():
         "«Комплексный ледовый мониторинг на основе продуктов ООО ВИЗАРД» // НГН, 2022.",
         "«Система оперативного мониторинга ледовой обстановки (нейросети, SAR)» // НГН, 2021.",
         "«Методика ледовой разведки с БПЛА» // НГН, 2020.",
+        "Эксперт по GIS/GeoAI: \u00abAre Nature-Based Climate Solutions in the Russian Arctic Feasible?\u00bb // Sustainability, MDPI, 2025, 17, 10409. "
+        "(авторы: МГУ биофак + геофак, ИЭПИ).",
     ])
 
     col_w = (CONTENT_W - 8) / 2

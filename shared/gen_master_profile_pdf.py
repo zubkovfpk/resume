@@ -246,7 +246,7 @@ def build():
         textColor=colors.white, leading=10.5, spaceAfter=0)
     contacts = Table([[
         Paragraph("+7\u00a0(926)\u00a0276\u201161\u201143", SMALL_W),
-        Paragraph("zubkovfpk@yandex.ru\u00a0/\u00a0zubkovfpk@gmail.com", SMALL_W),
+        Paragraph("zubkovfpk@yandex.ru<br/>zubkovfpk@gmail.com", SMALL_W2),
         Paragraph("@SergeyAZubkov\u00a0·<br/>linkedin.com/in/sergey&#8209;a&#8209;zubkov", SMALL_W2),
         Paragraph("Москва\u00a0·\u00a0релок.\u00a0сен.\u00a02027", SMALL_W),
     ]], colWidths=[74, 172, 164, 100])
@@ -539,8 +539,8 @@ def build():
     # ══════════════════════════════════════════════════════════════════════
     # РАЗДЕЛ 6–9: РЕГУЛЯТОРИКА / ПУБЛИЧНАЯ АКТИВНОСТЬ / НАГРАДЫ
     # ══════════════════════════════════════════════════════════════════════
-    story.append(sec_header("6–9. Регуляторика · Публичная активность · Награды"))
-    story.append(sp(1))
+    # KeepTogether: заголовок секции + вся двухколоночная таблица
+    sec_69_header = sec_header("6–9. Регуляторика · Публичная активность · Награды")
 
     # Две колонки
     col_l = [
@@ -590,7 +590,7 @@ def build():
         ("RIGHTPADDING",  (1,0), (1,-1),  0),
         ("LINEAFTER",     (0,0), (0,-1),  0.5, BORDER),
     ]))
-    story.append(two_col)
+    story.append(KeepTogether([sec_69_header, sp(1), two_col]))
     story.append(sp(2))
 
     # ══════════════════════════════════════════════════════════════════════

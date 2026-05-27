@@ -241,10 +241,13 @@ def build():
         wordWrap=None, splitLongWords=0)
     # 4 ячейки с точными pt-ширинами: phone | emails | TG+LI | city+reloc
     # Сумма = 510pt ≈ CONTENT_W (A4, отступы 16mm+14mm)
+    # TG+LI в 2 строки: «@SergeyAZubkov ·» / «linkedin.com/in/...»
+    SMALL_W2 = ParagraphStyle("small_w2", fontName="Inter", fontSize=7,
+        textColor=colors.white, leading=10.5, spaceAfter=0)
     contacts = Table([[
         Paragraph("+7\u00a0(926)\u00a0276\u201161\u201143", SMALL_W),
         Paragraph("zubkovfpk@yandex.ru\u00a0/\u00a0zubkovfpk@gmail.com", SMALL_W),
-        Paragraph("@SergeyAZubkov\u00a0·\u00a0linkedin.com/in/sergey&#8209;a&#8209;zubkov", SMALL_W),
+        Paragraph("@SergeyAZubkov\u00a0·<br/>linkedin.com/in/sergey&#8209;a&#8209;zubkov", SMALL_W2),
         Paragraph("Москва\u00a0·\u00a0релок.\u00a0сен.\u00a02027", SMALL_W),
     ]], colWidths=[74, 172, 164, 100])
     contacts.setStyle(TableStyle([
@@ -387,7 +390,6 @@ def build():
     # ══════════════════════════════════════════════════════════════════════
     # РАЗДЕЛ 4: ОПЫТ РАБОТЫ
     # ══════════════════════════════════════════════════════════════════════
-    story.append(PageBreak())
     story.append(sec_header("4. Опыт работы"))
     story.append(sp(1))
 

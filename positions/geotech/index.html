@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<title>Зубков С.А. — Главный архитектор AI-платформы · Геотех</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: "Segoe UI", Tahoma, sans-serif; font-size: 9pt; line-height: 1.3; color: #1a1a1a; }
+.page { width: 794px; min-height: 1123px; padding: 28px 38px; background: #fff; }
+
+/* Геотех: тёмно-серый / тёплый акцент (земля, промышленность) */
+:root { --accent: #2C4A1E; --accent2: #5A7A3A; --accent-light: #EEF3E8; --hi: #d4e8c2; }
+
+.header { display: flex; gap: 18px; margin-bottom: 12px; border-bottom: 3px solid var(--accent); padding-bottom: 10px; }
+.photo img { width: 82px; height: 82px; border-radius: 50%; object-fit: cover; }
+.header-text { flex: 1; }
+h1 { font-size: 21pt; font-weight: 700; color: #1a1a1a; margin-bottom: 2px; }
+.job-title { font-size: 11pt; color: var(--accent); font-weight: 600; margin-bottom: 5px; }
+.contacts { font-size: 8.5pt; color: #555; display: flex; gap: 14px; flex-wrap: wrap; }
+.contacts a { color: #555; text-decoration: none; }
+.meta-line { font-size: 7.8pt; color: #777; margin-top: 4px; }
+
+.section { margin-bottom: 11px; }
+.section-title { font-size: 10.5pt; font-weight: 700; color: var(--accent); margin-bottom: 5px;
+  padding-bottom: 2px; border-bottom: 1.5px solid var(--hi); text-transform: uppercase; letter-spacing: 0.5px; }
+
+.metrics { display: flex; gap: 8px; margin: 7px 0; }
+.metric { background: var(--accent-light); border-radius: 4px; padding: 4px 8px; text-align: center; flex: 1; border-top: 2px solid var(--accent); }
+.metric-value { font-size: 13pt; font-weight: 700; color: var(--accent); }
+.metric-label { font-size: 6.8pt; color: #555; text-transform: uppercase; letter-spacing: 0.3px; }
+
+.skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; }
+.skill-card { background: #f7f7f7; padding: 6px 8px; border-left: 3px solid var(--accent); font-size: 8pt; }
+.skill-title { font-weight: 700; color: #1a1a1a; margin-bottom: 2px; font-size: 8.5pt; }
+
+.experience { margin-bottom: 9px; }
+.exp-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 3px; }
+.exp-title { font-weight: 700; font-size: 9.5pt; color: #1a1a1a; }
+.exp-period { font-size: 8pt; color: #666; font-style: italic; white-space: nowrap; padding-left: 8px; }
+.exp-company { font-size: 8.5pt; color: var(--accent); font-weight: 600; margin-bottom: 3px; }
+.exp-tags { margin-bottom: 4px; }
+.badge { display: inline-block; background: var(--accent); color: white; padding: 1px 6px; border-radius: 3px;
+  font-size: 7.2pt; font-weight: 600; margin-right: 3px; }
+.badge2 { background: var(--accent2); }
+
+ul { margin-left: 14px; }
+li { margin-bottom: 2px; font-size: 8.5pt; color: #333; line-height: 1.4; }
+.hl { background: var(--hi); padding: 0 2px; font-weight: 700; }
+
+.kpi-box { background: var(--accent-light); border: 1.5px solid var(--accent2); border-radius: 6px;
+  padding: 6px 8px; margin: 5px 0; }
+.kpi-box-title { font-size: 8.5pt; font-weight: 700; color: var(--accent); text-align: center; margin-bottom: 5px; }
+.kpi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.kpi-card { background: white; border: 1px solid var(--hi); border-radius: 5px; padding: 5px 6px; text-align: center; }
+.kpi-value { font-size: 10pt; font-weight: 700; color: var(--accent); }
+.kpi-name { font-size: 7.5pt; color: #444; line-height: 1.3; margin: 2px 0; }
+.kpi-sub { font-size: 7pt; color: #777; font-style: italic; }
+
+.stack { font-size: 8.5pt; line-height: 1.6; color: #333; }
+
+.edu-row { display: flex; justify-content: space-between; align-items: baseline;
+  font-size: 8.2pt; padding: 2px 0; }
+.edu-year { color: #888; white-space: nowrap; padding-left: 12px; }
+
+.two-col { display: grid; grid-template-columns: 48% 52%; gap: 0; }
+.info-block { font-size: 8.2pt; line-height: 1.5; padding-right: 10px; }
+
+.footer-note { margin-top: 10px; padding: 8px 10px; background: var(--accent-light);
+  border-left: 4px solid var(--accent2); font-size: 8.5pt; font-style: italic; color: #1a1a1a; }
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- ШАПКА -->
+<div class="header">
+  <div class="photo">
+    <img alt="Фото" src="foto_zsa.jpg"/>
+  </div>
+  <div class="header-text">
+    <h1>Зубков Сергей Андреевич</h1>
+    <div class="job-title">Главный архитектор AI-платформы &nbsp;·&nbsp; On-prem LLM / MLOps / Vendor Independence</div>
+    <div class="contacts">
+      <span>Москва</span>
+      <span>+7 (926) 276-61-43</span>
+      <span><a href="mailto:zubkovfpk@yandex.ru">zubkovfpk@yandex.ru</a></span>
+      <span>Telegram: <a href="https://t.me/SergeyAZubkov">@SergeyAZubkov</a></span>
+      <span><a href="https://www.linkedin.com/in/sergey-a-zubkov">LinkedIn</a></span>
+    </div>
+    <div class="meta-line">
+      Формат: офис / гибрид &nbsp;·&nbsp; Зарплата: по договорённости &nbsp;·&nbsp;
+      Командировки: да
+    </div>
+  </div>
+</div>
+
+<!-- ПРОФИЛЬ -->
+<div class="section">
+  <div class="section-title">Профиль</div>
+  <p style="font-size:8.5pt; color:#333; line-height:1.45;">
+    Co-Founder и CTO компании ВИЗАРД: 9 лет проектировал и развивал on-premise и SaaS AI-платформу
+    для Enterprise-клиентов с требованиями к контуру безопасности (Газпром, Совкомфлот, НОВАТЭК).
+    Задача, с которой меня прислали к вам — быть техническим владельцем архитектуры —
+    это в точности то, что я делаю: проектирую фундамент, который выдерживает кратный рост нагрузки,
+    и жёстко контролирую качество внешних команд. Модульность, vendor independence, отчуждаемость,
+    CI/CD с quality gates — принципы, которые заложены в VIZARD с первого дня.
+    До этого — Chief Architect ЕГИП г. Москвы: 37 корпоративных систем, 60+ органов власти,
+    микросервисная интеграция, ФСТЭК/152-ФЗ. Сам пишу код; понимаю стек от инфраструктуры до бизнес-метрики.
+  </p>
+</div>
+
+<!-- МЕТРИКИ -->
+<div class="metrics">
+  <div class="metric">
+    <div class="metric-value">9 лет</div>
+    <div class="metric-label">архитектор AI-платформы</div>
+  </div>
+  <div class="metric">
+    <div class="metric-value">7</div>
+    <div class="metric-label">AI-сервисов в production</div>
+  </div>
+  <div class="metric">
+    <div class="metric-value">on-prem</div>
+    <div class="metric-label">K8s · S3 · LLM · MLOps</div>
+  </div>
+  <div class="metric">
+    <div class="metric-value">37</div>
+    <div class="metric-label">систем проинтегрировано</div>
+  </div>
+</div>
+
+<!-- КЛЮЧЕВЫЕ КОМПЕТЕНЦИИ -->
+<div class="section">
+  <div class="section-title">Ключевые компетенции</div>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <div class="skill-title">Архитектура AI-платформы</div>
+      Проектирование целевой архитектуры: микросервисы, API-контракты, модульность без vendor lock-in.
+      On-prem деплой LLM (Qwen-совместимые архитектуры), объектное хранилище (S3), корпоративное DWH.
+      Масштабирование без перестройки ядра.
+    </div>
+    <div class="skill-card">
+      <div class="skill-title">MLOps и DevOps</div>
+      Kubernetes (K8s) для контейнерной оркестрации AI-сервисов. CI/CD с quality gates и автотестами.
+      Мониторинг дрейфа моделей и деградации качества в production. Docker, Git/GitHub.
+      Гарантия отчуждаемости: документация, пайплайны в собственном контуре.
+    </div>
+    <div class="skill-card">
+      <div class="skill-title">Управление подрядчиками</div>
+      Стандартизация API и интеграционных контрактов для внешних команд. Архитектурное ревью кода,
+      контроль объёма и технологического стека. Приёмка релизов по quality gates.
+      Опыт работы с 3–5 внешними командами одновременно.
+    </div>
+    <div class="skill-card">
+      <div class="skill-title">LLM и GenAI в production</div>
+      Agentic RAG, GraphRAG (Apache AGE), multi-agent workflows. Constitutional AI,
+      Autonomy Boundary Matrix, Langfuse self-hosted. LLM в госконтуре без внешних API
+      (GigaChat, YandexGPT + pgvector). Fine-tuning LLM.
+    </div>
+    <div class="skill-card">
+      <div class="skill-title">Надёжность и безопасность</div>
+      Изоляция зон отказа, observability, NDA-уровень контроля доступа.
+      ФСТЭК, 152-ФЗ, COBIT, ISO 31000. Compliance для федеральных операторов.
+      Оценка и снижение технического долга; quality gates на уровне архитектуры.
+    </div>
+    <div class="skill-card">
+      <div class="skill-title">ГИС и пространственные данные</div>
+      ArcGIS, QGIS, PostGIS, NetCDF, GeoTIFF, GRIB2, SAR, ДЗЗ. GFS/CMEMS/ERA5.
+      ML-пайплайны на геопространственных данных. Релевантно для задач
+      геологоразведки и мониторинга месторождений.
+    </div>
+  </div>
+</div>
+
+<!-- ОПЫТ РАБОТЫ -->
+<div class="section">
+  <div class="section-title">Опыт работы</div>
+
+  <!-- ВИЗАРД -->
+  <div class="experience">
+    <div class="exp-header">
+      <div class="exp-title">Co-Founder / CTO — Технический владелец архитектуры</div>
+      <div class="exp-period">2017 — н.в.</div>
+    </div>
+    <div class="exp-company">ВИЗАРД (VIZARD) — корпоративная AI-платформа мониторинга судоходства (on-prem / SaaS)</div>
+    <div class="exp-tags">
+      <span class="badge">On-prem AI</span>
+      <span class="badge">Vendor Independence</span>
+      <span class="badge">MLOps</span>
+      <span class="badge badge2">Контроль подрядчиков</span>
+    </div>
+    <ul>
+      <li><span class="hl">Целевая архитектура платформы:</span> спроектировал VIZARD как модульное решение
+        с поставкой в трёх режимах — SaaS, white-label и on-prem. Принципы с первого дня:
+        защита от vendor lock-in (стандартные API-контракты, сменяемые компоненты),
+        отчуждаемость (документация + CI/CD в контуре клиента), масштабируемость без перестройки ядра.</li>
+      <li><span class="hl">On-prem LLM и MLOps-контур:</span> деплой LLM-агентов на собственной инфраструктуре
+        клиентов без внешних API. Контейнерная оркестрация AI-сервисов, объектное хранилище
+        для геоданных и метеоданных (S3-совместимое), мониторинг дрейфа моделей,
+        CI/CD с quality gates, автотесты. Всё — в собственном контуре.</li>
+      <li><span class="hl">Управление внешними командами:</span> стандартизировал API-интерфейсы и
+        интеграционные контракты для подрядчиков; проводил архитектурное ревью кода,
+        контролировал технологический стек и объём разработки. Обеспечивал отчуждаемость
+        каждого компонента: документация, тесты, пайплайны — в репозитории заказчика.</li>
+      <li><span class="hl">AI/ML в production:</span> 7 сервисов в эксплуатации —
+        классификация ледовой обстановки, детекция объектов с БПЛА
+        (YOLO/DETR/SegFormer, mAP@0.5 ≥ 80%), определение нефтяных загрязнений по SAR,
+        ML-агент подготовки гидрометеобюллетеней (Python, NetCDF/GRIB2, multi-agent, APScheduler).</li>
+      <li><span class="hl">Бизнес-метрики:</span> time-to-market под контролем через декомпозицию задач
+        и KPI-систему; оценка TCO и ROI по каждому направлению; ROI 1,57× в 2026, 9,4× к 2030.</li>
+    </ul>
+    <div class="kpi-box" style="margin-top:5px;">
+      <div class="kpi-box-title">Measurable impact AI-платформы для Enterprise-клиентов</div>
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-value">120 → 200 сут.</div>
+          <div class="kpi-name">Оптимизация буровых операций</div>
+          <div class="kpi-sub">снижение расходов до 35%</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-value">+17% / +350 K $</div>
+          <div class="kpi-name">AI-маршрутизация СМП</div>
+          <div class="kpi-sub">эффект на один рейс</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-value">1 млрд ₽+</div>
+          <div class="kpi-name">Совокупный business impact</div>
+          <div class="kpi-sub">Газпром, Совкомфлот, НОВАТЭК; 5+ лет</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- РОСКАДАСТР -->
+  <div class="experience">
+    <div class="exp-header">
+      <div class="exp-title">Главный инженер / Enterprise Architect (AI) — консалтинг</div>
+      <div class="exp-period">апр. 2025 — июн. 2026</div>
+    </div>
+    <div class="exp-company">ППК «Роскадастр» — федеральный оператор пространственных данных РФ</div>
+    <div class="exp-tags">
+      <span class="badge">On-prem LLM</span>
+      <span class="badge">MLOps-контур</span>
+      <span class="badge badge2">Roadmap 5 лет</span>
+    </div>
+    <ul>
+      <li><span class="hl">LLM-агент в закрытом контуре:</span> GigaChat + YandexGPT, pgvector,
+        Apache AGE (GraphRAG), LangChain, Langfuse self-hosted, ruBERT, E5 — без внешних API.
+        Constitutional AI, Autonomy Boundary Matrix. Офлайн-архитектура.</li>
+      <li><span class="hl">Дорожная карта GeoAI 2026–2030:</span> 6 блоков, 25 мероприятий;
+        change detection по ДЗЗ/БПЛА, risk-engine с ГИС, dataset registry на базе НСПД,
+        MLOps-контур с мониторингом model/data drift. Качество данных &gt;95%, KRI-система.</li>
+    </ul>
+  </div>
+
+  <!-- ЕГИП -->
+  <div class="experience">
+    <div class="exp-header">
+      <div class="exp-title">Chief Architect / Scenario Business Architect</div>
+      <div class="exp-period">2012 — 2016</div>
+    </div>
+    <div class="exp-company">ЕГИП г. Москвы — Департамент информационных технологий г. Москвы</div>
+    <div class="exp-tags">
+      <span class="badge">Enterprise Architecture</span>
+      <span class="badge">Микросервисная интеграция</span>
+      <span class="badge badge2">37 систем</span>
+    </div>
+    <ul>
+      <li><span class="hl">Масштаб и архитектура:</span> 60+ органов власти, 37 интегрированных систем,
+        100+ наборов пространственных данных. Единая платформа с микросервисной интеграцией через
+        корпоративные шины; API-стандартизация; ФСТЭК, 152-ФЗ. TCO −6,3×, экономия
+        &gt;0,5 млрд руб./год.</li>
+      <li><span class="hl">ML первого поколения (2014–2016):</span> детекция объектов на LiDAR +
+        стереофото — первый urban AI-кейс в России на реальных геоданных.</li>
+      <li>Благодарность Мэра Москвы; лучшее интеграционное решение III GIS-Forum, 2015.</li>
+    </ul>
+  </div>
+
+  <!-- Ранний период -->
+  <div class="experience" style="margin-bottom:4px;">
+    <div class="exp-header">
+      <div class="exp-title">Инженер / Аналитик → И.о. начальника управления</div>
+      <div class="exp-period">2004 — 2012</div>
+    </div>
+    <div class="exp-company">Системные интеграторы / ГИС-организации: РЖД, CSoft, Прайм груп, Эверпоинт</div>
+    <ul>
+      <li>Enterprise-внедрения на стороне интегратора: Oracle Database, ArcGIS, DWH; полный цикл от пресейла до сдачи.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ТЕХНОЛОГИЧЕСКИЙ СТЕК -->
+<div class="section">
+  <div class="section-title">Технологический стек</div>
+  <div class="stack">
+    <strong>Инфраструктура:</strong> Kubernetes (K8s), Docker, S3-совместимое хранилище, on-prem деплой,
+    микросервисная архитектура, CI/CD, observability &nbsp;·&nbsp;
+    <strong>AI/LLM:</strong> Qwen-совместимые архитектуры, GigaChat, YandexGPT, Agentic RAG,
+    GraphRAG (Apache AGE), multi-agent, fine-tuning LLM, Langfuse self-hosted &nbsp;·&nbsp;
+    <strong>ML/CV:</strong> YOLO, DETR, SegFormer, U-Net++, scikit-learn, HuggingFace &nbsp;·&nbsp;
+    <strong>Python:</strong> asyncio, FastAPI, APScheduler, pytest, pandas &nbsp;·&nbsp;
+    <strong>DB:</strong> PostgreSQL/PostGIS, pgvector, Oracle &nbsp;·&nbsp;
+    <strong>GIS/Data:</strong> ArcGIS, QGIS, NetCDF, GRIB2, GeoTIFF, SAR, GFS/CMEMS &nbsp;·&nbsp;
+    <strong>Методологии:</strong> TOGAF, COBIT, ISO 31000, PRINCE2, IPMA
+  </div>
+</div>
+
+<!-- ОБРАЗОВАНИЕ -->
+<div class="section">
+  <div class="section-title">Образование и сертификации</div>
+  <div class="edu-row">
+    <span><strong>МИИГАиК</strong> <span style="color:#888;">· Прикладная космонавтика / Проектирование ИС</span></span>
+    <span class="edu-year">2006</span>
+  </div>
+  <div class="edu-row">
+    <span><strong>Дипломатическая академия МИД России</strong> <span style="color:#888;">· Международные отношения</span></span>
+    <span class="edu-year">2011</span>
+  </div>
+  <div class="edu-row">
+    <span><strong>IPMA</strong> <span style="color:#888;">· Сертификат управления проектами · № D0861</span></span>
+    <span class="edu-year">2009</span>
+  </div>
+</div>
+
+<!-- ПУБЛИЧНАЯ АКТИВНОСТЬ -->
+<div class="section">
+  <div class="section-title">Публичная активность и награды</div>
+  <div class="two-col">
+    <div class="info-block">
+      <strong>Спикер конференций:</strong>
+      <ul>
+        <li>RAO-CIS, Санкт-Петербург — регулярно с 2018 г.</li>
+        <li>AI IN, Казань, 2023</li>
+        <li>Saudi Maritime Congress, Даммам, 2024</li>
+        <li>Digital Innopolis Days, Казань, 2025</li>
+      </ul>
+    </div>
+    <div class="info-block" style="padding-right:0;">
+      <strong>Награды и признание:</strong>
+      <ul>
+        <li>2× победитель «АРКТЕК ИНЖИНИРИНГ», 2023</li>
+        <li>Лауреат Российско-Китайского конкурса инноваций, 2023</li>
+        <li>Благодарность Мэра Москвы, 2015</li>
+        <li>Член экспертного совета ИНТЦ МГУ «Воробьёвы горы»</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- МОТИВАЦИОННАЯ ПЛАШКА -->
+<div style="height:6px;"></div>
+<div class="footer-note">
+  Задача, описанная в вакансии — «спроектировать надёжный фундамент и жёстко контролировать
+  качество внешних команд» — это именно то, чем я занимался 9 лет в ВИЗАРД. Модульность,
+  vendor independence, отчуждаемость — не слова из требований, а принципы, проверенные
+  в production у Газпрома и Совкомфлота. On-prem LLM на K8s-кластере без внешних API —
+  уже делал для Роскадастра в закрытом госконтуре.
+</div>
+
+</div>
+</body>
+</html>

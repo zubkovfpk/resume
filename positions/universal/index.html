@@ -7,17 +7,18 @@
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
   :root {
-    --accent: #1a1a2e;
-    --accent2: #16213e;
-    --gold: #c9a84c;
-    --hi: #f5f0e8;
+    --accent: #2c3e50;
+    --accent2: #34495e;
+    --gold: #2980b9;
+    --hi: #f0f4f8;
     --text: #1a1a1a;
     --muted: #555;
-    --border: #e0e0e0;
-    --tag-bg: #1a1a2e;
+    --border: #dde3ea;
+    --tag-bg: #2c3e50;
     --tag-color: #fff;
-    --tag-ai-bg: #c9a84c;
-    --tag-ai-color: #1a1a1a;
+    --tag-ai-bg: #2980b9;
+    --tag-ai-color: #fff;
+    --step2-bg: #e8ecf0;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: 'Inter', Arial, sans-serif; font-size: 8.5pt; color: var(--text); background: #fff; line-height: 1.45; }
@@ -61,19 +62,23 @@
   .pt-step { flex: 1; background: var(--hi); border: 1px solid var(--border); padding: 8px 10px; position: relative; }
   .pt-step:not(:last-child)::after {
     content: '▶'; position: absolute; right: -10px; top: 50%; transform: translateY(-50%);
-    color: var(--gold); font-size: 12pt; z-index: 1; background: #fff; padding: 0 1px;
+    color: var(--accent); font-size: 12pt; z-index: 1; background: var(--step2-bg); padding: 0 1px;
+  }
+  .pt-step:first-child::after {
+    background: var(--step2-bg);
   }
   .pt-step:first-child { border-radius: 5px 0 0 5px; }
-  .pt-step:last-child { border-radius: 0 5px 5px 0; background: #1a1a2e; color: #fff; }
-  .pt-step:last-child .pt-period { color: var(--gold); }
+  .pt-step:nth-child(2) { background: var(--step2-bg); }
+  .pt-step:last-child { border-radius: 0 5px 5px 0; background: #2c3e50; color: #fff; }
+  .pt-step:last-child .pt-period { color: #a8c8e8; }
   .pt-step:last-child .pt-desc { color: #ddd; }
   .pt-level { font-size: 6.8pt; font-weight: 700; text-transform: uppercase; letter-spacing: 0.4px; color: var(--gold); margin-bottom: 2px; }
-  .pt-step:last-child .pt-level { color: var(--gold); }
+  .pt-step:last-child .pt-level { color: #a8c8e8; }
   .pt-period { font-size: 7.2pt; color: var(--muted); margin-bottom: 2px; }
   .pt-title { font-size: 8.5pt; font-weight: 700; margin-bottom: 2px; }
   .pt-step:last-child .pt-title { color: #fff; }
   .pt-project { font-size: 8pt; font-weight: 600; color: var(--accent); margin-bottom: 2px; }
-  .pt-step:last-child .pt-project { color: var(--gold); }
+  .pt-step:last-child .pt-project { color: #a8c8e8; }
   .pt-desc { font-size: 7.5pt; color: #444; line-height: 1.4; }
 
   /* INDUSTRY TRACKS */
@@ -210,7 +215,7 @@
     <div class="ind-card">
       <div class="ind-header">
         <div class="ind-title">🛢 Нефтегаз / ТЭК</div>
-        <div class="ind-period">2008–2026</div>
+        <div class="ind-period">2008–2023</div>
       </div>
       <div class="ind-projects">Газпром (ОГГИС, ИУС МСБ, Оренбург), Газпром недра, НК «Роснефть», Транснефть, ТЭК МО, Ямал (NDA)</div>
       <div class="tags">
@@ -223,11 +228,11 @@
       </div>
       <ul class="ind-list">
         <li>ОГГИС и ИУС МСБ Газпром — аналитик, затем PM: геолого-геофизические данные, планирование добычи УВ, объекты в Надыме и Уренгое</li>
-        <li>VIZARD: AI-мониторинг деформаций поверхности и инфраструктуры на п-ове Ямал (NDA); снижение расходов на буровые до 35%</li>
+        <li>VIZARD: AI-мониторинг деформаций поверхности и инфраструктуры на п-ове Ямал (NDA)</li>
       </ul>
       <div class="ind-metrics">
-        <div class="ind-metric"><span class="ind-metric-val">−35%</span><span class="ind-metric-lbl">расходы на буровые операции</span></div>
-        <div class="ind-metric"><span class="ind-metric-val">200 сут.</span><span class="ind-metric-lbl">период эксплуатации буровой (было 120)</span></div>
+        <div class="ind-metric"><span class="ind-metric-val">−35%</span><span class="ind-metric-lbl">расходы на сухопутное бурение (материк)</span></div>
+        <div class="ind-metric"><span class="ind-metric-val">120→200 сут.</span><span class="ind-metric-lbl">эксплуатация буровой на шельфе</span></div>
         <div class="ind-metric"><span class="ind-metric-val">5 проектов</span><span class="ind-metric-lbl">от аналитика до AI-платформы</span></div>
       </div>
     </div>
@@ -236,7 +241,7 @@
     <div class="ind-card">
       <div class="ind-header">
         <div class="ind-title">🚂 Транспорт / Логистика</div>
-        <div class="ind-period">2005–2026</div>
+        <div class="ind-period">2005–2025</div>
       </div>
       <div class="ind-projects">РЖД (ГО/ЧС), ЕГИП (транспортная инфраструктура Москвы), VIZARD (СМП, морская логистика)</div>
       <div class="tags">
@@ -249,11 +254,11 @@
       <ul class="ind-list">
         <li>РЖД: Система подготовки планов ГО и ЧС — ГИС-специалист (2005–2008)</li>
         <li>ЕГИП: транспортная инфраструктура Москвы в едином геопространстве</li>
-        <li>VIZARD: AI-маршрутизация по СМП — ускорение прохода +17%, ~350 тыс. USD на рейс</li>
+        <li>VIZARD: AI-маршрутизация судов по Северному морскому пути</li>
       </ul>
       <div class="ind-metrics">
         <div class="ind-metric"><span class="ind-metric-val">+17%</span><span class="ind-metric-lbl">скорость прохода СМП</span></div>
-        <div class="ind-metric"><span class="ind-metric-val">~350 K $</span><span class="ind-metric-lbl">эффект на один рейс</span></div>
+        <div class="ind-metric"><span class="ind-metric-val">~350 K $</span><span class="ind-metric-lbl">эффект на один морской рейс по СМП</span></div>
         <div class="ind-metric"><span class="ind-metric-val">1 млрд ₽+</span><span class="ind-metric-lbl">совокупный эффект 5+ лет</span></div>
       </div>
     </div>
@@ -273,8 +278,8 @@
         <span class="tag-ai">ML (2014–2016)</span>
       </div>
       <ul class="ind-list">
-        <li>Единое геоинформационное пространство: 37 систем, 100+ наборов данных, 60+ ОИВ</li>
-        <li>Снижение TCO в 6,3×; переход от 30+ разрозненных систем к единой платформе</li>
+        <li>Единое геоинформационное пространство: 37 систем, 100+ наборов данных</li>
+        <li>Переход от 30+ разрозненных ведомственных систем к единой платформе</li>
         <li>Благодарность Мэра Москвы (2015); лучшее интеграционное решение III GIS-Forum</li>
       </ul>
       <div class="ind-metrics">
@@ -288,7 +293,7 @@
     <div class="ind-card">
       <div class="ind-header">
         <div class="ind-title">📐 Кадастр / Земельные ресурсы</div>
-        <div class="ind-period">2010–2026</div>
+        <div class="ind-period">2010–2012 · 2025–н.в.</div>
       </div>
       <div class="ind-projects">Норникель (управление ЗУ), ППК «Роскадастр» (GeoAI 2026–2030)</div>
       <div class="tags">
@@ -301,7 +306,7 @@
       </div>
       <ul class="ind-list">
         <li>Норникель: управление жизненным циклом ЗУ под объектами инфраструктуры (2010–2012)</li>
-        <li>Роскадастр: дорожная карта GeoAI 2026–2030, LLM-агенты (GigaChat + YandexGPT, pgvector, Langfuse self-hosted), KRI-система мониторинга</li>
+        <li>Роскадастр (Fractional CAIO): дорожная карта GeoAI 2026–2030, LLM-агенты (GigaChat + YandexGPT, pgvector, Langfuse self-hosted), KRI-система мониторинга. Разработал модель рисков AI: Autonomy Boundary Matrix (зелёная / жёлтая / красная зоны автономности агента), Constitutional AI как контрольный слой, политика эскалации инцидентов, forbidden action rate — 0%.</li>
       </ul>
       <div class="ind-metrics">
         <div class="ind-metric"><span class="ind-metric-val">6 блоков</span><span class="ind-metric-lbl">AI-стратегия 2026–2030</span></div>
@@ -314,7 +319,7 @@
     <div class="ind-card">
       <div class="ind-header">
         <div class="ind-title">🌾 Сельское хозяйство / АПК</div>
-        <div class="ind-period">2008–2026</div>
+        <div class="ind-period">2008–2009 · 2025–н.в.</div>
       </div>
       <div class="ind-projects">Минсельхоз РФ (мониторинг земель), Россельхознадзор (AI-контроль)</div>
       <div class="tags">
@@ -323,7 +328,7 @@
         <span class="tag">Госрегулирование</span>
         <span class="tag-ai">CV / ML</span>
         <span class="tag-ai">БПЛА</span>
-        <span class="tag-ai">mAP@0.5 &gt;80%</span>
+
       </div>
       <ul class="ind-list">
         <li>Минсельхоз: система дистанционного мониторинга земель с/х-назначения АПК (2008–2009)</li>
@@ -340,7 +345,7 @@
     <div class="ind-card">
       <div class="ind-header">
         <div class="ind-title">⛏ Горнодобыча / Промышленность</div>
-        <div class="ind-period">2010–2024</div>
+        <div class="ind-period">2010 · 2024</div>
       </div>
       <div class="ind-projects">Норникель (кадастр ЗУ), Верхнекамское месторождение калийных солей (VIZARD)</div>
       <div class="tags">
@@ -358,6 +363,32 @@
         <div class="ind-metric"><span class="ind-metric-val">SAR→CV</span><span class="ind-metric-lbl">ML-пайплайн мониторинга</span></div>
         <div class="ind-metric"><span class="ind-metric-val">2 проекта</span><span class="ind-metric-lbl">Норникель + Верхнекамское</span></div>
         <div class="ind-metric"><span class="ind-metric-val">edge</span><span class="ind-metric-lbl">инференс на БПЛА без GPU</span></div>
+      </div>
+    </div>
+
+    <!-- Госрегулирование / Правкомиссия -->
+    <div class="ind-card">
+      <div class="ind-header">
+        <div class="ind-title">🏛 Госрегулирование / Стандартизация</div>
+        <div class="ind-period">2015–н.в.</div>
+      </div>
+      <div class="ind-projects">ДИТ Москвы, Роскадастр, ИНТЦ МГУ «Воробьёвы горы», ГОСТ Р</div>
+      <div class="tags">
+        <span class="tag">B2G</span>
+        <span class="tag">Стандартизация</span>
+        <span class="tag">Экспертный совет</span>
+        <span class="tag-ai">AI-регулирование</span>
+        <span class="tag">Пространственные данные</span>
+      </div>
+      <ul class="ind-list">
+        <li>Член экспертного совета ИНТЦ МГУ «Воробьёвы горы» — экспертиза AI-проектов в сфере пространственных данных и геоинформатики</li>
+        <li>Член рабочей группы ГОСТ Р «Пространственные данные. Качество данных» — формирование требований к качеству геоданных для AI-систем</li>
+        <li>Взаимодействие с ТОП-руководителями федеральных ОИВ и коллегиальными органами при реализации ЕГИП и Роскадастр-проектов</li>
+      </ul>
+      <div class="ind-metrics">
+        <div class="ind-metric"><span class="ind-metric-val">5+</span><span class="ind-metric-lbl">публикаций · 10+ РИД</span></div>
+        <div class="ind-metric"><span class="ind-metric-val">2 экспертных</span><span class="ind-metric-lbl">совета / рабочих группы</span></div>
+        <div class="ind-metric"><span class="ind-metric-val">60+ ОИВ</span><span class="ind-metric-lbl">федерального и городского уровней</span></div>
       </div>
     </div>
 
@@ -398,7 +429,7 @@
   </div>
 
   <div class="closing-quote">
-    Моя ценность — не в знании одной отрасли, а в умении заходить в новую, быстро находить точки роста для AI и выстраивать трансформацию, которая даёт измеримый результат. Семь отраслей, три уровня зрелости платформ, девять лет практики AI — всё это в одном кандидате.
+    Моя ценность — не в знании одной отрасли, а в умении заходить в новую, быстро находить точки роста для AI и выстраивать трансформацию, которая даёт измеримый результат. Восемь отраслей, три уровня зрелости платформ, девять лет практики AI — всё это в одном кандидате.
   </div>
 
 </div>

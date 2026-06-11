@@ -14,4 +14,8 @@
 
 Сергей Зубков
 +7 (926) 276-61-43 · MAX · zubkovsa@vizard.tech / @SergeyAZubkov
-Резюме: https://zubkovfpk.github.io/resume/positions/emco/
+
+Моё финансовое ожидание: оклад от 500 000 руб. net + годовой бонус.
+Резюме:
+— HTML-версия (актуальная): https://zubkovfpk.github.io/resume/positions/emco/
+— PDF: https://zubkovfpk.github.io/resume/positions/emco/Zubkov_SA_Resume_EMCO.pdf

@@ -12,4 +12,8 @@
 
 Сергей Зубков
 +7 (926) 276-61-43 · zubkovsa@vizard.tech / @SergeyAZubkov
-Резюме: https://zubkovfpk.github.io/resume/positions/bcs/
+
+Моё финансовое ожидание: оклад от 500 000 руб. net + годовой бонус.
+Резюме:
+— HTML-версия (актуальная): https://zubkovfpk.github.io/resume/positions/bcs/
+— PDF: https://zubkovfpk.github.io/resume/positions/bcs/Zubkov_SA_Resume_BCS.pdf

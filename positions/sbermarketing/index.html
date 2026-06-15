@@ -83,7 +83,7 @@
 
   /* INDUSTRY TRACKS */
   .industry-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; margin-bottom: 4px; }
-  .ind-card { border: 1px solid var(--border); border-radius: 5px; padding: 8px 10px; }
+  .ind-card { border: 1px solid var(--border); border-radius: 5px; padding: 8px 10px; display: flex; flex-direction: column; }
   .ind-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 3px; }
   .ind-title { font-size: 8.5pt; font-weight: 700; color: var(--accent); }
   .ind-period { font-size: 7.2pt; color: var(--muted); }
@@ -98,10 +98,10 @@
   .tag-t3 { background: #8a6030; color: #fff; font-size: 6.5pt; font-weight: 700; padding: 1px 5px; border-radius: 3px; } /* Продукт */
   .tag-t4 { background: #6b52b0; color: #fff; font-size: 6.5pt; font-weight: 700; padding: 1px 5px; border-radius: 3px; } /* Инфраструктура */
   .tag-t5 { background: #9e4040; color: #fff; font-size: 6.5pt; font-weight: 700; padding: 1px 5px; border-radius: 3px; } /* AI/Tech */
-  .ind-metrics { display: flex; gap: 5px; margin-top: 4px; }
-  .ind-metric { flex: 1; background: var(--hi); border-radius: 3px; padding: 4px 5px; text-align: center; }
-  .ind-metric-val { font-size: 8.5pt; font-weight: 700; color: var(--accent); display: block; }
-  .ind-metric-lbl { font-size: 6.2pt; color: var(--muted); line-height: 1.3; }
+  .ind-metrics { display: flex; gap: 5px; margin-top: auto; padding-top: 4px; align-items: stretch; }
+  .ind-metric { flex: 1; background: var(--hi); border-radius: 3px; padding: 4px 5px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; }
+  .ind-metric-val { font-size: 8.5pt; font-weight: 700; color: var(--accent); display: block; white-space: nowrap; flex-shrink: 0; }
+  .ind-metric-lbl { font-size: 6.2pt; color: var(--muted); line-height: 1.3; margin-top: 2px; flex: 1; display: flex; align-items: flex-start; justify-content: center; }
   ul.ind-list { padding-left: 12px; }
   ul.ind-list li { font-size: 7.6pt; margin-bottom: 2px; line-height: 1.4; }
   .hl { background: #e8f8ff; padding: 0 2px; font-weight: 700; border-radius: 2px; }
@@ -118,7 +118,7 @@
 
   /* CLOSING */
   .closing-quote {
-    background: #e8f7f9; border-left: 4px solid var(--accent);
+    background: #f0f4f5; border-left: 4px solid var(--accent);
     border-radius: 0 5px 5px 0; padding: 10px 14px;
     font-size: 8.6pt; color: #111; font-style: normal; font-weight: 500;
     margin-top: 10px; line-height: 1.6;

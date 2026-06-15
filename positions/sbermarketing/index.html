@@ -92,6 +92,12 @@
   .tag { background: var(--tag-bg); color: var(--tag-color); font-size: 6.5pt; font-weight: 600; padding: 1px 5px; border-radius: 3px; }
   .tag-ai { background: var(--tag-ai-bg); color: var(--tag-ai-color); font-size: 6.5pt; font-weight: 700; padding: 1px 5px; border-radius: 3px; }
   .tag-gray { background: #ebebeb; color: #444; font-size: 6.5pt; font-weight: 600; padding: 1px 5px; border-radius: 3px; }
+  /* TASK TAGS — 5 задач вакансии */
+  .tag-t1 { background: #1a5fa8; color: #fff; font-size: 6.5pt; font-weight: 700; padding: 1px 5px; border-radius: 3px; } /* Стратегия */
+  .tag-t2 { background: #1e7a3a; color: #fff; font-size: 6.5pt; font-weight: 700; padding: 1px 5px; border-radius: 3px; } /* PM */
+  .tag-t3 { background: #9b5c00; color: #fff; font-size: 6.5pt; font-weight: 700; padding: 1px 5px; border-radius: 3px; } /* Продукт */
+  .tag-t4 { background: #7B2CFF; color: #fff; font-size: 6.5pt; font-weight: 700; padding: 1px 5px; border-radius: 3px; } /* Инфраструктура */
+  .tag-t5 { background: #b01e1e; color: #fff; font-size: 6.5pt; font-weight: 700; padding: 1px 5px; border-radius: 3px; } /* AI/Tech */
   .ind-metrics { display: flex; gap: 5px; margin-top: 4px; }
   .ind-metric { flex: 1; background: var(--hi); border-radius: 3px; padding: 4px 5px; text-align: center; }
   .ind-metric-val { font-size: 8.5pt; font-weight: 700; color: var(--accent); display: block; }
@@ -149,7 +155,7 @@
   <div class="metrics">
     <div class="metric-box"><span class="metric-value">22 года</span><span class="metric-label">В ИТ и управлении</span></div>
     <div class="metric-box"><span class="metric-value">100+ млн ₽</span><span class="metric-label">Макс. AI-бюджет</span></div>
-    <div class="metric-box"><span class="metric-value">250+</span><span class="metric-label">Гипотез проверено</span></div>
+    <div class="metric-box"><span class="metric-value">400+</span><span class="metric-label">Процессов трансформировано</span></div>
     <div class="metric-box"><span class="metric-value">7</span><span class="metric-label">AI-решений в Prod</span></div>
     <div class="metric-box"><span class="metric-value">6 отраслей</span><span class="metric-label">Трансформировано</span></div>
     <div class="metric-box"><span class="metric-value">1 млрд ₽+</span><span class="metric-label">Совокупный эффект</span></div>
@@ -208,8 +214,16 @@
   </div>
 
   <!-- ОТРАСЛЕВАЯ ЭКСПЕРТИЗА -->
-  <div style="page-break-inside: avoid; break-inside: avoid;">
+  <div style="page-break-inside: avoid; break-inside: avoid; padding-top: 14px;">
   <div class="section-title">Отраслевая экспертиза</div>
+  <div style="display:flex; gap:6px; flex-wrap:wrap; margin-bottom:6px; font-size:6.5pt;">
+    <span style="color:#555;">5 задач вакансии:</span>
+    <span class="tag-t1">◆ Стратегия ЦТ</span>
+    <span class="tag-t2">◆ PM / подрядчики</span>
+    <span class="tag-t3">◆ Продукт / внедрение</span>
+    <span class="tag-t4">◆ ИТ-инфраструктура</span>
+    <span class="tag-t5">◆ AI/Tech-решения</span>
+  </div>
   <div class="industry-grid">
 
     <!-- Нефтегаз / ТЭК -->
@@ -218,14 +232,12 @@
         <div class="ind-title">🛢 Нефтегаз / ТЭК</div>
         <div class="ind-period">2008–2023</div>
       </div>
-      <div class="ind-projects">Газпром (ОГГИС, ИУС МСБ, Оренбург), Газпром недра, НК «Роснефть», Транснефть, ТЭК МО, Ямал (NDA)</div>
+      <div class="ind-projects">Газпром (ОГГИС, ИУС МСБ, Оренбург), Газпром недра, НК «Роснефть», Транснефть, ТЭК МО, Ямал (NDA) &nbsp;··· <b>70+ процессов</b></div>
       <div class="tags">
-        <span class="tag">ГИС / ДЗЗ</span>
-        <span class="tag">Геологоразведка</span>
-        <span class="tag">Добыча УВ</span>
-        <span class="tag-ai">AI/ML</span>
-        <span class="tag-ai">SAR</span>
-        <span class="tag">Мониторинг инфраструктуры</span>
+        <span class="tag-t1">◆ Стратегия</span>
+        <span class="tag-t2">◆ PM</span>
+        <span class="tag-t3">◆ Продукт</span>
+        <span class="tag-t5">◆ AI/Tech</span>
       </div>
       <ul class="ind-list">
         <li>ОГГИС и ИУС МСБ Газпром — аналитик, затем PM: геолого-геофизические данные, планирование добычи УВ</li>
@@ -244,17 +256,16 @@
         <div class="ind-title">🚂 Транспорт / Логистика</div>
         <div class="ind-period">2005–2025</div>
       </div>
-      <div class="ind-projects">РЖД (ГО/ЧС), ЕГИП (транспортная инфраструктура Москвы), VIZARD (СМП, морская логистика)</div>
+      <div class="ind-projects">РЖД (ГО/ЧС), ЕГИП (транспортная инфраструктура Москвы), VIZARD (СМП, морская логистика) &nbsp;··· <b>130+ процессов</b></div>
       <div class="tags">
-        <span class="tag">Транспортные ИС</span>
-        <span class="tag">Безопасность</span>
-        <span class="tag">Городская логистика</span>
-        <span class="tag-ai">AI-маршрутизация</span>
-        <span class="tag-ai">ML</span>
+        <span class="tag-t1">◆ Стратегия</span>
+        <span class="tag-t2">◆ PM</span>
+        <span class="tag-t4">◆ Инфраструктура</span>
+        <span class="tag-t5">◆ AI/Tech</span>
       </div>
       <ul class="ind-list">
         <li>РЖД: Система подготовки планов ГО и ЧС — ГИС-специалист (2005–2008)</li>
-        <li>EGIP: транспортная инфраструктура Москвы в едином геопространстве</li>
+        <li>ЕГИП: транспортная инфраструктура Москвы в едином геопространстве</li>
         <li>VIZARD: AI-маршрутизация судов по Северному морскому пути</li>
       </ul>
       <div class="ind-metrics">
@@ -270,13 +281,13 @@
         <div class="ind-title">🏙 Городское управление / Smart City</div>
         <div class="ind-period">2012–2016</div>
       </div>
-      <div class="ind-projects">ЕГИП — ДИТ г. Москвы, 60+ органов исполнительной власти</div>
+      <div class="ind-projects">ЕГИП — ДИТ г. Москвы, 60+ органов исполнительной власти &nbsp;··· <b>150+ процессов</b></div>
       <div class="tags">
-        <span class="tag">Smart City</span>
-        <span class="tag">Интеграция ИС</span>
-        <span class="tag">B2G</span>
-        <span class="tag">Управление изменениями</span>
-        <span class="tag-ai">ML (2014–2016)</span>
+        <span class="tag-t1">◆ Стратегия</span>
+        <span class="tag-t2">◆ PM</span>
+        <span class="tag-t3">◆ Продукт</span>
+        <span class="tag-t4">◆ Инфраструктура</span>
+        <span class="tag-t5">◆ AI/Tech</span>
       </div>
       <ul class="ind-list">
         <li>Единое геоинформационное пространство: 37 систем, 100+ наборов данных</li>
@@ -296,13 +307,11 @@
         <div class="ind-title">⛏ Горнодобыча / Промышленность</div>
         <div class="ind-period">2010 · 2024</div>
       </div>
-      <div class="ind-projects">Норникель (кадастр ЗУ), Верхнекамское месторождение калийных солей (VIZARD)</div>
+      <div class="ind-projects">Норникель (кадастр ЗУ), Верхнекамское месторождение калийных солей (VIZARD) &nbsp;··· <b>20+ процессов</b></div>
       <div class="tags">
-        <span class="tag">Горнодобыча</span>
-        <span class="tag">Мониторинг инфраструктуры</span>
-        <span class="tag-ai">SAR / ДЗЗ</span>
-        <span class="tag-ai">AI-мониторинг</span>
-        <span class="tag">Деформации поверхности</span>
+        <span class="tag-t2">◆ PM</span>
+        <span class="tag-t3">◆ Продукт</span>
+        <span class="tag-t5">◆ AI/Tech</span>
       </div>
       <ul class="ind-list">
         <li>Норникель: управление жизненным циклом земельных участков под объектами промышленной инфраструктуры</li>
@@ -321,13 +330,12 @@
         <div class="ind-title">🌾 Сельское хозяйство / АПК</div>
         <div class="ind-period">2008–2009 · 2025–н.в.</div>
       </div>
-      <div class="ind-projects">Минсельхоз РФ (мониторинг земель), Россельхозбанк (залоги), Россельхознадзор (AI-контроль)</div>
+      <div class="ind-projects">Минсельхоз РФ (мониторинг земель), Россельхозбанк (залоги), Россельхознадзор (AI-контроль) &nbsp;··· <b>20+ процессов</b></div>
       <div class="tags">
-        <span class="tag">АПК</span>
-        <span class="tag">ДМЗ</span>
-        <span class="tag">Госрегулирование</span>
-        <span class="tag-ai">CV / ML</span>
-        <span class="tag-ai">БПЛА</span>
+        <span class="tag-t1">◆ Стратегия</span>
+        <span class="tag-t2">◆ PM</span>
+        <span class="tag-t3">◆ Продукт</span>
+        <span class="tag-t5">◆ AI/Tech</span>
       </div>
       <ul class="ind-list">
         <li>Минсельхоз: система дистанционного мониторинга земель сельскохозяйственного назначения (2008–2009)</li>
@@ -346,14 +354,13 @@
         <div class="ind-title">📐 Кадастр / Земельные ресурсы</div>
         <div class="ind-period">2010–2012 · 2025–н.в.</div>
       </div>
-      <div class="ind-projects">Норникель (управление ЗУ), ППК «Роскадастр» (GeoAI)</div>
+      <div class="ind-projects">Норникель (управление ЗУ), ППК «Роскадастр» (GeoAI) &nbsp;··· <b>10+ процессов</b></div>
       <div class="tags">
-        <span class="tag">Кадастр</span>
-        <span class="tag">Земельные ресурсы</span>
-        <span class="tag">Геодезия / КГР</span>
-        <span class="tag-ai">LLM</span>
-        <span class="tag-ai">RAG</span>
-        <span class="tag-ai">GeoAI</span>
+        <span class="tag-t1">◆ Стратегия</span>
+        <span class="tag-t2">◆ PM</span>
+        <span class="tag-t3">◆ Продукт</span>
+        <span class="tag-t4">◆ Инфраструктура</span>
+        <span class="tag-t5">◆ AI/Tech</span>
       </div>
       <ul class="ind-list">
         <li>Норникель: управление жизненным циклом ЗУ под объектами инфраструктуры (2010–2012)</li>

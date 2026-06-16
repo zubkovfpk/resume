@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Зубков С.А. — Chief AI Officer / Руководитель AI-направления</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+  :root {
+    --accent: #2c3e50;
+    --accent2: #34495e;
+    --gold: #2980b9;
+    --hi: #f0f4f8;
+    --text: #1a1a1a;
+    --muted: #555;
+    --border: #dde3ea;
+    --tag-bg: #2c3e50;
+    --tag-color: #fff;
+    --tag-ai-bg: #2980b9;
+    --tag-ai-color: #fff;
+    --step2-bg: #e8ecf0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Inter', Arial, sans-serif; font-size: 8.5pt; color: var(--text); background: #fff; line-height: 1.45; }
+  .page { width: 794px; margin: 0 auto; padding: 22px 28px 20px; }
+
+  /* HEADER */
+  .header { display: flex; gap: 14px; align-items: flex-start; margin-bottom: 10px; }
+  .header-photo { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; flex-shrink: 0; border: 2.5px solid var(--gold); }
+  h1 { font-size: 19pt; font-weight: 700; color: var(--text); margin-bottom: 2px; }
+  .job-title { font-size: 10pt; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .contacts { font-size: 7.8pt; color: var(--muted); display: flex; flex-wrap: wrap; gap: 3px 12px; margin-bottom: 3px; }
+  .contacts a { color: var(--muted); text-decoration: none; }
+  .meta-line { font-size: 7.6pt; color: var(--muted); }
+
+  /* SECTION */
+  .section-title {
+    font-size: 9.5pt; font-weight: 700; color: var(--accent);
+    margin: 10px 0 5px; padding-bottom: 3px;
+    border-bottom: 2px solid var(--gold);
+    text-transform: uppercase; letter-spacing: 0.5px;
+  }
+
+  /* PROFILE */
+  .profile-text { font-size: 8.2pt; line-height: 1.55; margin-bottom: 6px; }
+
+  /* METRICS */
+  .metrics { display: flex; gap: 5px; margin: 6px 0 8px; }
+  .metric-box { flex: 1; background: var(--accent); color: #fff; border-radius: 5px; padding: 7px 8px; text-align: center; }
+  .metric-value { font-size: 12pt; font-weight: 700; display: block; color: var(--gold); }
+  .metric-label { font-size: 6.6pt; opacity: 0.85; margin-top: 1px; text-transform: uppercase; letter-spacing: 0.3px; }
+
+  /* COMPETENCIES */
+  .comp-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 5px; margin-bottom: 4px; }
+  .comp-card { border: 1px solid var(--border); border-radius: 5px; padding: 7px 9px; }
+  .comp-title { font-weight: 700; font-size: 8.2pt; color: var(--accent); margin-bottom: 3px; border-left: 3px solid var(--gold); padding-left: 5px; }
+  .comp-text { font-size: 7.6pt; color: #333; line-height: 1.45; }
+
+  /* PLATFORM TRACK */
+  .platform-track { margin-bottom: 10px; }
+  .pt-steps { display: flex; gap: 0; margin-bottom: 8px; }
+  .pt-step { flex: 1; background: var(--hi); border: 1px solid var(--border); padding: 8px 10px; position: relative; }
+  .pt-step:not(:last-child)::after {
+    content: '▶'; position: absolute; right: -10px; top: 50%; transform: translateY(-50%);
+    color: var(--accent); font-size: 12pt; z-index: 1; background: var(--step2-bg); padding: 0 1px;
+  }
+  .pt-step:first-child::after {
+    background: var(--step2-bg);
+  }
+  .pt-step:first-child { border-radius: 5px 0 0 5px; }
+  .pt-step:nth-child(2) { background: var(--step2-bg); }
+  .pt-step:last-child { border-radius: 0 5px 5px 0; background: #2c3e50; color: #fff; }
+  .pt-step:last-child .pt-period { color: #a8c8e8; }
+  .pt-step:last-child .pt-desc { color: #ddd; }
+  .pt-level { font-size: 6.8pt; font-weight: 700; text-transform: uppercase; letter-spacing: 0.4px; color: var(--gold); margin-bottom: 2px; }
+  .pt-step:last-child .pt-level { color: #a8c8e8; }
+  .pt-period { font-size: 7.2pt; color: var(--muted); margin-bottom: 2px; }
+  .pt-title { font-size: 8.5pt; font-weight: 700; margin-bottom: 2px; }
+  .pt-step:last-child .pt-title { color: #fff; }
+  .pt-project { font-size: 8pt; font-weight: 600; color: var(--accent); margin-bottom: 2px; }
+  .pt-step:last-child .pt-project { color: #a8c8e8; }
+  .pt-desc { font-size: 7.5pt; color: #444; line-height: 1.4; }
+
+  /* INDUSTRY TRACKS */
+  .industry-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; margin-bottom: 4px; }
+  .ind-card { border: 1px solid var(--border); border-radius: 5px; padding: 8px 10px; }
+  .ind-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 3px; }
+  .ind-title { font-size: 8.5pt; font-weight: 700; color: var(--accent); }
+  .ind-period { font-size: 7.2pt; color: var(--muted); }
+  .ind-projects { font-size: 7.6pt; color: var(--muted); margin-bottom: 4px; font-style: italic; }
+  .tags { display: flex; flex-wrap: wrap; gap: 3px; margin: 3px 0 4px; }
+  .tag { background: var(--tag-bg); color: var(--tag-color); font-size: 6.5pt; font-weight: 600; padding: 1px 5px; border-radius: 3px; }
+  .tag-ai { background: var(--tag-ai-bg); color: var(--tag-ai-color); font-size: 6.5pt; font-weight: 700; padding: 1px 5px; border-radius: 3px; }
+  .tag-gray { background: #ebebeb; color: #444; font-size: 6.5pt; font-weight: 600; padding: 1px 5px; border-radius: 3px; }
+  .ind-metrics { display: flex; gap: 5px; margin-top: 4px; }
+  .ind-metric { flex: 1; background: var(--hi); border-radius: 3px; padding: 4px 5px; text-align: center; }
+  .ind-metric-val { font-size: 8.5pt; font-weight: 700; color: var(--accent); display: block; }
+  .ind-metric-lbl { font-size: 6.2pt; color: var(--muted); line-height: 1.3; }
+  ul.ind-list { padding-left: 12px; }
+  ul.ind-list li { font-size: 7.6pt; margin-bottom: 2px; line-height: 1.4; }
+  .hl { background: #fff0cc; padding: 0 2px; font-weight: 700; border-radius: 2px; }
+
+  /* BOTTOM TWO-COL */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 6px; }
+  .col-title { font-size: 8pt; font-weight: 700; color: var(--accent); margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.3px; border-bottom: 1px solid var(--border); padding-bottom: 2px; }
+  ul.col-list { padding-left: 12px; }
+  ul.col-list li { font-size: 7.6pt; margin-bottom: 2px; line-height: 1.4; }
+  .stack-line { font-size: 7.6pt; line-height: 1.6; }
+  .edu-item { margin-bottom: 4px; }
+  .edu-name { font-size: 8pt; font-weight: 700; }
+  .edu-sub { font-size: 7.5pt; color: var(--muted); }
+
+  /* CLOSING */
+  .closing-quote {
+    background: var(--hi); border-left: 3px solid var(--gold);
+    border-radius: 0 5px 5px 0; padding: 8px 12px;
+    font-size: 7.8pt; color: #222; font-style: italic;
+    margin-top: 8px; line-height: 1.5;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <img class="header-photo" src="data:image/jpeg;base64,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" alt="Фото">
+    <div style="flex:1">
+      <h1>Зубков Сергей Андреевич</h1>
+      <div class="job-title">Chief AI Officer (Fractional) &nbsp;·&nbsp; Руководитель AI-направления &nbsp;·&nbsp; Digital Transformation</div>
+      <div class="contacts">
+        <span>Москва</span>
+        <span>+7 (926) 276-61-43</span>
+        <span><a href="mailto:zubkovfpk@yandex.ru">zubkovfpk@yandex.ru</a></span>
+        <span>Telegram: @SergeyAZubkov</span>
+        <span><a href="https://www.linkedin.com/in/sergey-a-zubkov">LinkedIn</a></span>
+      </div>
+      <div class="meta-line">Москва &nbsp;·&nbsp; Офис / гибрид / удалённо &nbsp;·&nbsp; Зарплата: от 500 000 ₽ net &nbsp;·&nbsp; Готов к командировкам</div>
+    </div>
+  </div>
+
+  <!-- ПРОФИЛЬ -->
+  <div class="section-title">Профиль</div>
+  <div class="profile-text">
+    20+ лет в ИТ и цифровой трансформации — от крупных государственных платформ до собственного AI-продукта. Прошёл путь от инженера/аналитика до архитектора федеральных систем и создателя промышленной AI-платформы. 9 лет — практика внедрения AI-решений с измеримым бизнес-результатом. Работал с крупнейшими заказчиками нефтегазовой, горнодобывающей, транспортной отраслей и государственного сектора. Три проекта в роли Fractional CAIO завершаются в июне 2026 года — каждый с подтверждённым ROI и KRI-системой.
+  </div>
+
+  <!-- МЕТРИКИ -->
+  <div class="metrics">
+    <div class="metric-box"><span class="metric-value">22 года</span><span class="metric-label">В ИТ и управлении</span></div>
+    <div class="metric-box"><span class="metric-value">150 млн ₽</span><span class="metric-label">Макс. AI-бюджет</span></div>
+    <div class="metric-box"><span class="metric-value">400+</span><span class="metric-label">Процессов трансформировано</span></div>
+    <div class="metric-box"><span class="metric-value">7</span><span class="metric-label">AI-решений в Prod</span></div>
+    <div class="metric-box"><span class="metric-value">6 отраслей</span><span class="metric-label">Трансформировано</span></div>
+    <div class="metric-box"><span class="metric-value">1 млрд ₽+</span><span class="metric-label">Совокупный эффект</span></div>
+  </div>
+
+  <!-- КЛЮЧЕВЫЕ КОМПЕТЕНЦИИ -->
+  <div class="section-title">Ключевые компетенции</div>
+  <div class="comp-grid">
+    <div class="comp-card">
+      <div class="comp-title">Управление проектами (IPMA)</div>
+      <div class="comp-text">Сертифицированный PM — IPMA D, 2009, № D0861. PMBoK, Agile, TOGAF. Полный цикл: инициация → проектирование → внедрение → валидация. Кросс-функциональные команды: отраслевые эксперты, ИТ-подрядчики, регуляторы.</div>
+    </div>
+    <div class="comp-card">
+      <div class="comp-title">Управление AI-портфелем</div>
+      <div class="comp-text">Полный цикл: бэклог → ТЭО → PoC → пилот → Prod → тиражирование. ТЭО, ROI, TCO, unit-экономика. Защита кейсов перед C-suite. Управление кросс-функциональными командами DS/ML + бизнес + подрядчики.</div>
+    </div>
+    <div class="comp-card">
+      <div class="comp-title">ГИС / ДЗЗ / БПЛА</div>
+      <div class="comp-text">Геопространственные данные, аэрофотосъёмка и ДЗЗ как основа AI-систем. VIZARD: детекция объектов на видео/фото с БПЛА в промышленной эксплуатации. Edge-инференс без GPU на планшетах наблюдателей и бортах БПЛА. Цепочка: спутник → БПЛА → полевой/морской контроль.</div>
+    </div>
+    <div class="comp-card">
+      <div class="comp-title">Управление рисками AI</div>
+      <div class="comp-text">Escalation policy (зелёная / жёлтая / красная зоны автономности), Constitutional AI, Evaluation Framework с KRI и триггерами деградации. Forbidden action rate — строго 0%.</div>
+    </div>
+    <div class="comp-card">
+      <div class="comp-title">Кадровое развитие в AI</div>
+      <div class="comp-text">Формирование AI-команд с нуля, онбординг подрядчиков, развитие AI-грамотности в организации заказчика. Воспитанники — ведущие разработчики в InDrive, WB, Московский транспорт.</div>
+    </div>
+    <div class="comp-card">
+      <div class="comp-title">Мониторинг и регуляторика АПК</div>
+      <div class="comp-text">Агромониторинг и фитосанитарный контроль: ML-детекция сорных растений и культур по данным БПЛА и ДЗЗ, анализ зон произрастания. Опыт работы с федеральными регуляторами (Минсельхоз, Россельхозбанк, ФТС). Документирование требований, ведение проектной документации.</div>
+    </div>
+  </div>
+
+  <!-- ПЛАТФОРМЕННЫЙ ТРЕК -->
+  <div class="section-title">Платформенный трек: от интегратора к создателю продукта</div>
+  <div class="pt-steps">
+    <div class="pt-step">
+      <div class="pt-level">Уровень I · 2004–2012</div>
+      <div class="pt-title">Инженер → PM</div>
+      <div class="pt-project">Системный интегратор / ГИС-организации</div>
+      <div class="pt-desc">Крупные отраслевые ИС для ТЭК, транспорта, госсектора. Рост: ГИС-специалист → аналитик → руководитель проекта / и.о. начальника управления.</div>
+    </div>
+    <div class="pt-step">
+      <div class="pt-level">Уровень II · 2012–2016</div>
+      <div class="pt-title">Chief Architect</div>
+      <div class="pt-project">ЕГИП — единое геоинформационное пространство Москвы</div>
+      <div class="pt-desc">Федеральная интеграционная платформа: 60+ ОИВ, 37 систем, бюджет ~900 млн руб. Взаимодействие с ТОП-руководителями федерального и городского уровней. ML первого поколения (2014–2016).</div>
+    </div>
+    <div class="pt-step">
+      <div class="pt-level">Уровень III · 2017–н.в.</div>
+      <div class="pt-title">CTO / Co-Founder → Fractional CAIO</div>
+      <div class="pt-project">VIZARD — промышленная AI-платформа</div>
+      <div class="pt-desc">Собственный AI-продукт: 7 решений в Prod, 150+ млн руб., клиенты — Газпром недра, Роснефть, СПГ-операторы. Параллельно — три Fractional CAIO проекта для федеральных заказчиков.</div>
+    </div>
+  </div>
+
+  <!-- ОТРАСЛЕВАЯ ЭКСПЕРТИЗА -->
+  <div class="section-title">Отраслевая экспертиза</div>
+  <div class="industry-grid">
+
+    <!-- Нефтегаз / ТЭК -->
+    <div class="ind-card">
+      <div class="ind-header">
+        <div class="ind-title">🌾 Сельское хозяйство / АПК</div>
+        <div class="ind-period">2008–2009 · 2025–н.в.</div>
+      </div>
+      <div class="ind-projects">Минсельхоз РФ (мониторинг земель), Россельхозбанк (контроль залогов), с/х-компания Дальнего Востока (NDA)</div>
+      <div class="tags">
+        <span class="tag">АПК</span>
+        <span class="tag">ДМЗ</span>
+        <span class="tag">Госрегулирование</span>
+        <span class="tag-ai">CV / ML</span>
+        <span class="tag-ai">БПЛА</span>
+
+      </div>
+      <ul class="ind-list">
+        <li>Минсельхоз: система дистанционного мониторинга земель сельскохозяйственного назначения (2008–2009)</li>
+        <li>Россельхозбанк: Система контроля использования залоговых объектов — поля, техника, инфраструктура (2009)</li>
+        <li>С/х-компания Дальнего Востока (NDA): внедрение ML-технологий для детекции сорных растений и сельскохозяйственных культур по данным БПЛА и ДЗЗ</li>
+                <li>Таможенная служба РФ: внедрение AI-технологий анализа зон произрастания по данным ДЗЗ</li>
+      </ul>
+      <div class="ind-metrics">
+        <div class="ind-metric"><span class="ind-metric-val">mAP &gt;80%</span><span class="ind-metric-lbl">точность детекции</span></div>
+        <div class="ind-metric"><span class="ind-metric-val">0 → MVP</span><span class="ind-metric-lbl">с нуля до сдачи заказчику</span></div>
+        <div class="ind-metric"><span class="ind-metric-val">БПЛА</span><span class="ind-metric-lbl">edge-инференс без GPU</span></div>
+      </div>
+    </div>
+
+    <!-- Горнодобыча -->
+    <div class="ind-card">
+      <div class="ind-header">
+        <div class="ind-title">🛢 Нефтегаз / ТЭК</div>
+        <div class="ind-period">2008–2023</div>
+      </div>
+      <div class="ind-projects">Газпром (ОГГИС, ИУС МСБ, Оренбург), Газпром недра, НК «Роснефть», Транснефть, ТЭК МО, Ямал (NDA)</div>
+      <div class="tags">
+        <span class="tag">ГИС / ДЗЗ</span>
+        <span class="tag">Геологоразведка</span>
+        <span class="tag">Добыча УВ</span>
+        <span class="tag-ai">AI/ML</span>
+        <span class="tag-ai">SAR</span>
+        <span class="tag">Мониторинг инфраструктуры</span>
+      </div>
+      <ul class="ind-list">
+        <li>ОГГИС и ИУС МСБ Газпром — аналитик, затем PM: геолого-геофизические данные, планирование добычи УВ, объекты в Надыме и Уренгое</li>
+        <li>VIZARD: AI-мониторинг деформаций поверхности и инфраструктуры на п-ове Ямал (NDA)</li>
+                <li>VIZARD: детекция айсбергов, нефтяных пятен и судов на фото и видео с БПЛА — AI-решение в промышленной эксплуатации</li>
+      </ul>
+      <div class="ind-metrics">
+        <div class="ind-metric"><span class="ind-metric-val">−35%</span><span class="ind-metric-lbl">расходы на сухопутное бурение (материк)</span></div>
+        <div class="ind-metric"><span class="ind-metric-val">120→200 сут.</span><span class="ind-metric-lbl">эксплуатация буровой на шельфе</span></div>
+        <div class="ind-metric"><span class="ind-metric-val">5 проектов</span><span class="ind-metric-lbl">от аналитика до AI-платформы</span></div>
+      </div>
+    </div>
+
+    <!-- Транспорт / Логистика -->
+    <div class="ind-card">
+      <div class="ind-header">
+        <div class="ind-title">🚂 Транспорт / Логистика</div>
+        <div class="ind-period">2005–2025</div>
+      </div>
+      <div class="ind-projects">РЖД (ГО/ЧС), ЕГИП (транспортная инфраструктура Москвы), VIZARD (СМП, морская логистика)</div>
+      <div class="tags">
+        <span class="tag">Транспортные ИС</span>
+        <span class="tag">Безопасность</span>
+        <span class="tag">Городская логистика</span>
+        <span class="tag-ai">AI-маршрутизация</span>
+        <span class="tag-ai">ML</span>
+      </div>
+      <ul class="ind-list">
+        <li>РЖД: Система подготовки планов ГО и ЧС — ГИС-специалист (2005–2008)</li>
+        <li>ЕГИП: транспортная инфраструктура Москвы в едином геопространстве</li>
+        <li>VIZARD: AI-маршрутизация судов по Северному морскому пути</li>
+      </ul>
+      <div class="ind-metrics">
+        <div class="ind-metric"><span class="ind-metric-val">+17%</span><span class="ind-metric-lbl">скорость прохода СМП</span></div>
+        <div class="ind-metric"><span class="ind-metric-val">~350 K $</span><span class="ind-metric-lbl">эффект на один морской рейс по СМП</span></div>
+        <div class="ind-metric"><span class="ind-metric-val">1 млрд ₽+</span><span class="ind-metric-lbl">совокупный эффект 5+ лет</span></div>
+      </div>
+    </div>
+
+    <!-- Городское управление / Smart City -->
+    <div class="ind-card">
+      <div class="ind-header">
+        <div class="ind-title">🏙 Городское управление / Smart City</div>
+        <div class="ind-period">2012–2016</div>
+      </div>
+      <div class="ind-projects">ЕГИП — ДИТ г. Москвы, 60+ органов исполнительной власти</div>
+      <div class="tags">
+        <span class="tag">Smart City</span>
+        <span class="tag">Интеграция ИС</span>
+        <span class="tag">B2G</span>
+        <span class="tag">Управление изменениями</span>
+        <span class="tag-ai">ML (2014–2016)</span>
+      </div>
+      <ul class="ind-list">
+        <li>Единое геоинформационное пространство: 37 систем, 100+ наборов данных</li>
+        <li>Переход от 30+ разрозненных ведомственных систем к единой платформе</li>
+        <li>Сокращение расходов на инспекцию временных объектов; согласование размещения объектов полностью «в цифре»</li>
+      </ul>
+      <div class="ind-metrics">
+        <div class="ind-metric"><span class="ind-metric-val">6,3×</span><span class="ind-metric-lbl">снижение TCO</span></div>
+        <div class="ind-metric"><span class="ind-metric-val">−2×</span><span class="ind-metric-lbl">расходы ГИН</span></div>
+        <div class="ind-metric"><span class="ind-metric-val">~900 млн ₽</span><span class="ind-metric-lbl">бюджет программы</span></div>
+      </div>
+    </div>
+
+    <!-- Кадастр / Земельные ресурсы -->
+    <div class="ind-card">
+      <div class="ind-header">
+        <div class="ind-title">⛏ Горнодобыча / Промышленность</div>
+        <div class="ind-period">2010 · 2024</div>
+    <div class="ind-card">
+      <div class="ind-header">
+        <div class="ind-title">📐 Кадастр / Земельные ресурсы</div>
+        <div class="ind-period">2010–2012 · 2025–н.в.</div>
+      </div>
+      <div class="ind-projects">Норникель (управление ЗУ), ППК «Роскадастр» (GeoAI)</div>
+      <div class="tags">
+        <span class="tag">Кадастр</span>
+        <span class="tag">Земельные ресурсы</span>
+        <span class="tag">Геодезия / КГР</span>
+        <span class="tag-ai">LLM</span>
+        <span class="tag-ai">RAG</span>
+        <span class="tag-ai">GeoAI</span>
+      </div>
+      <ul class="ind-list">
+        <li>Норникель: управление жизненным циклом ЗУ под объектами инфраструктуры (2010–2012)</li>
+        <li>Роскадастр (Fractional CAIO): дорожная карта GeoAI 2026–2030, LLM-агенты (GigaChat + YandexGPT, pgvector, Langfuse self-hosted). Разработал модель рисков AI: Autonomy Boundary Matrix (три зоны автономности агента), Constitutional AI как контрольный слой, политика эскалации инцидентов, KRI.</li>
+      </ul>
+      <div class="ind-metrics">
+        <div class="ind-metric"><span class="ind-metric-val">6 блоков</span><span class="ind-metric-lbl">AI-стратегия 2026–2030</span></div>
+        <div class="ind-metric"><span class="ind-metric-val">25</span><span class="ind-metric-lbl">мероприятий дорожной карты</span></div>
+        <div class="ind-metric"><span class="ind-metric-val">LLM + RAG</span><span class="ind-metric-lbl">в операционной деятельности</span></div>
+      </div>
+    </div>
+
+    <!-- Сельское хозяйство / АПК -->
+      </div>
+      <div class="ind-projects">Норникель (кадастр ЗУ), Верхнекамское месторождение калийных солей (VIZARD)</div>
+      <div class="tags">
+        <span class="tag">Горнодобыча</span>
+        <span class="tag">Мониторинг инфраструктуры</span>
+        <span class="tag-ai">SAR / ДЗЗ</span>
+        <span class="tag-ai">AI-мониторинг</span>
+        <span class="tag">Деформации поверхности</span>
+      </div>
+      <ul class="ind-list">
+        <li>Норникель: управление жизненным циклом земельных участков под объектами промышленной инфраструктуры</li>
+        <li>Верхнекамское месторождение: дистанционный AI-мониторинг площадей и инфраструктуры на основе данных ДЗЗ и SAR (VIZARD)</li>
+      </ul>
+      <div class="ind-metrics">
+        <div class="ind-metric"><span class="ind-metric-val">SAR→CV</span><span class="ind-metric-lbl">ML-пайплайн мониторинга</span></div>
+        <div class="ind-metric"><span class="ind-metric-val">2 проекта</span><span class="ind-metric-lbl">Норникель + Верхнекамское</span></div>
+        <div class="ind-metric"><span class="ind-metric-val">edge</span><span class="ind-metric-lbl">инференс на БПЛА без GPU</span></div>
+      </div>
+    </div>
+
+
+  </div>
+
+  <!-- СТЕК + ОБРАЗОВАНИЕ -->
+  <div class="two-col">
+    <div>
+      <div class="section-title" style="margin-top:6px;">Технологический стек</div>
+      <div class="stack-line">
+        <b>AI/ML:</b> LLM, Agentic RAG, GraphRAG, multi-agent, Constitutional AI, Langfuse self-hosted, Evaluation Framework, edge-инференс (EfficientNet, LLaMA-подобные)<br>
+        <b>Геопространственный AI:</b> SAR→RGB, SegFormer, U-Net++, GeoTIFF, NetCDF, PostGIS, pgvector<br>
+        <b>Инфраструктура:</b> K8s, Docker, CI/CD, FastAPI, PostgreSQL, Apache AGE<br>
+        <b>LLM-стек:</b> GigaChat, YandexGPT, LangChain, ruBERT, E5<br>
+        <b>Методологии:</b> Agile, TOGAF, COBIT, IPMA, ISO 31000, PMBoK<br>
+        <b>Инструменты:</b> Jira, Confluence, Cursor, Windsurf, Langfuse
+      </div>
+    </div>
+    <div>
+      <div class="section-title" style="margin-top:6px;">Образование и активность</div>
+      <div class="edu-item">
+        <div class="edu-name">Дипломатическая академия МИД России, 2011</div>
+        <div class="edu-sub">Международные отношения</div>
+      </div>
+      <div class="edu-item">
+        <div class="edu-name">МИИГАиК, 2006</div>
+        <div class="edu-sub">Прикладная космонавтика / Проектирование ИС</div>
+      </div>
+      <div class="edu-item">
+        <div class="edu-name">IPMA · Сертификат управления проектами, 2009 · № D0861</div>
+      </div>
+      <div style="margin-top:4px; font-size:7.6pt; line-height:1.5;">
+        <b>Спикер:</b> RAO-CIS (с 2018), Saudi Maritime Congress 2024, AI IN Казань 2023, Digital Innopolis Days 2025<br>
+        <b>Награды:</b> 2× победитель «АРКТЕК ИНЖИНИРИНГ» 2023; Лауреат Российско-Китайского конкурса инноваций 2023; Благодарность Мэра Москвы 2015<br>
+        <b>Экспертная деятельность:</b> ИНТЦ МГУ «Воробьёвы горы»; 5+ публикаций · 10+ РИД
+      </div>
+    </div>
+  </div>
+
+  <div class="closing-quote">
+    Управляю проектами на стороне заказчика — от требований до валидации в поле. Понимаю цепочку от спутника и БПЛА до регуляторного решения. Говорю на языке отраслевых экспертов и на языке кода — и несу личную ответственность за результат.
+  </div>
+
+</div>
+</body>
+</html>

@@ -19,7 +19,7 @@ AI Product Lead — это про то, что строить и зачем. CTO
 Моё финансовое ожидание: оклад от 500 000 руб. net + годовой бонус.
 Резюме:
 — HTML-версия (актуальная): https://zubkovfpk.github.io/resume/positions/emco-cto/
-— PDF: https://zubkovfpk.github.io/resume/positions/emco-cto/Zubkov_SA_Resume_EMCO_CTO.pdf
+— PDF: https://raw.githubusercontent.com/zubkovfpk/resume/main/positions/emco-cto/Zubkov_SA_Resume_EMCO_CTO.pdf
 
 Сергей Зубков
 +7 (926) 276-61-43 · MAX · zubkovsa@vizard.tech · @SergeyAZubkov

@@ -23,6 +23,7 @@
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: 'Inter', Arial, sans-serif; font-size: 8.5pt; color: var(--text); background: #fff; line-height: 1.45; }
   .page { width: 794px; margin: 0 auto; padding: 22px 28px 20px; }
+  @page { margin-top: 14px; }
   /* HEADER */
   .header { display: flex; gap: 14px; align-items: flex-start; margin-bottom: 10px; }
   .header-photo { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; flex-shrink: 0; border: 2.5px solid var(--gold); }
@@ -73,7 +74,7 @@
   .pt-step:last-child .pt-project { color: #a8c8e8; }
   .pt-desc { font-size: 7.5pt; color: #444; line-height: 1.4; }
   /* INDUSTRY TRACKS */
-  .industry-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; margin-bottom: 4px; break-inside: avoid; page-break-inside: avoid; }
+  .industry-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; margin-bottom: 4px; break-inside: avoid; page-break-inside: avoid; break-before: avoid; page-break-before: avoid; }
   .ind-card { border: 1px solid var(--border); border-radius: 5px; padding: 8px 10px; break-inside: avoid; page-break-inside: avoid; }
   .ind-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 3px; }
   .ind-title { font-size: 8.5pt; font-weight: 700; color: var(--accent); }

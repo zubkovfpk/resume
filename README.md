@@ -1,48 +1,72 @@
 # Зубков Сергей Андреевич — Резюме
 
-Репозиторий содержит актуальные версии резюме для разных позиций.
+Репозиторий содержит актуальную базовую версию резюме и адаптации под конкретные вакансии (создаются по запросу, удаляются после завершения цикла откликов).
 
 ## Быстрые ссылки
 
-| Позиция | GitHub Pages |
-|---------|-------------|
-| **Каталог (все резюме)** | [zubkovfpk.github.io/resume](https://zubkovfpk.github.io/resume/) |
-| **Владелец продукта (AI & Data)** | [/positions/po-ai](https://zubkovfpk.github.io/resume/positions/po-ai/) |
-| **IT-директор / CTO** | [/positions/it-director](https://zubkovfpk.github.io/resume/positions/it-director/) |
-| **AI-инженер (Middle)** | [/positions/ai-engineer](https://zubkovfpk.github.io/resume/positions/ai-engineer/) |
-| **Директор по внедрению ИИ — Дата Маркетинг** | [/positions/datamarketing](https://zubkovfpk.github.io/resume/positions/datamarketing/) |
-| **Chief AI Officer — Kontakt InterSearch** | [/positions/caio](https://zubkovfpk.github.io/resume/positions/caio/) |
+| | |
+|---|---|
+| **Каталог (GitHub Pages)** | [zubkovfpk.github.io/resume](https://zubkovfpk.github.io/resume/) |
+| **Universal — HTML** | [/positions/universal](https://zubkovfpk.github.io/resume/positions/universal/) |
+| **Universal — PDF** | [Zubkov_SA_Resume_Universal.pdf](https://raw.githubusercontent.com/zubkovfpk/resume/main/positions/universal/Zubkov_SA_Resume_Universal.pdf) |
 
 ## Структура
 
 ```
 positions/
-  po-ai/             # Владелец продукта (AI & Data) — основное (v2.0, май 2026)
-  it-director/       # IT-директор / CTO / Chief AI Officer (v1.5, апр. 2026)
-  ai-engineer/       # AI-инженер (Middle) — черновик (май 2026)
-  datamarketing/     # Директор по внедрению ИИ — адаптация под Дата Маркетинг
-  caio/              # Chief AI Officer — адаптация под Kontakt InterSearch (май 2026)
+  universal/             # Базовое резюме Head of AI / CAIO / CTO (v1.7.7, июль 2026)
+    index.html
+    Zubkov_SA_Resume_Universal.pdf
+  [slug]/                # Адаптации под вакансии (создаются и удаляются по циклу)
+    index.html
+    Zubkov_SA_Resume_[Name].pdf
+    cover_letter_[slug].md
 shared/
-  foto_zsa.jpg          # Фото
-  master_profile_ru.md  # Мастер-профиль
-  master_profile_ru.pdf # Мастер-профиль PDF (v1.7.6)
-index.html              # GitHub Pages — каталог резюме
+  foto_zsa.jpg           # Фото
+  master_profile_ru.md   # Мастер-профиль v1.7.7 — источник истины для всех адаптаций
+index.html               # GitHub Pages — каталог резюме
 ```
 
 ## Правила адаптаций
 
-- **Базовое резюме PO** (`positions/po-ai/`) — основное, зарплата 500 000 ₽, без привязки к конкретной вакансии
-- **Базовое резюме IT-директор** (`positions/it-director/`) — зарплата 700 000 ₽
-- **Под конкретную вакансию** — города, формат и зарплату добавлять в адаптации, не перезаписывая базовое
-- **Email** — `zubkovfpk@yandex.ru` (стандарт) или `zubkovfpk@gmail.com` (tech/GenAI аудитория)
-- **Релокация** — стандартная формулировка: «Релокация: готов рассматривать с сентября 2027»
+- База — всегда `positions/universal/index.html`; цвета адаптируются под корпоративный стиль работодателя
+- Заголовок роли — универсальный, не переписывается под текст вакансии в лоб
+- HTML-итерации первые, PDF только после согласования вёрстки
+- Cover letter — только после явного запроса, после утверждения PDF
+- Метрики и цифры — только из мастер-профиля, без подгонки под вакансию
+- Зарплата: от 500 000 руб. net (в отдельных позициях — без «от»)
+- Номера страниц PDF: формат «N из M»
+- Фото: заглушка `PHOTO_PLACEHOLDER` без префикса `data:image/jpeg;base64,`
+
+### Что не делать
+- Co-Founder — убран из всех резюме
+- LoRA — не упоминать в стеке
+- «цифровые экосистемы» — заменять на «цифровое пространство» / «цифровая платформа»
+- ROI 1,57× — не упоминать в резюме
+- «Резюме онлайн» — не добавлять в блок контактов
+- GigaChat / YandexGPT — не упоминать в связке с закрытым госконтуром
+- Mistral — не упоминать в стеке (вопросы происхождения)
 
 ## Версии
 
 | Версия | Позиция | Дата |
 |--------|---------|------|
-| v2.0 | Владелец продукта (AI & Data), основное | май 2026 |
-| v1.5 | IT-директор / CTO / Chief AI Officer | апр. 2026 |
-| draft | AI-инженер (Middle), черновик | май 2026 |
-| datamarketing | Директор по внедрению ИИ / Дата Маркетинг | апр. 2026 |
-| caio | Chief AI Officer / Kontakt InterSearch | май 2026 |
+| v1.7.7 | Universal — Head of AI / CAIO / CTO (база) | июль 2026 |
+
+### История адаптаций (архив)
+
+| Позиция | Работодатель | Период |
+|---------|-------------|--------|
+| Head of AI CoE | ВСМПО-АВИСМА | июль 2026 |
+| CAIO / Руководитель цифровой трансформации | Биотех | июнь–июль 2026 |
+| CTO | ВСК | июнь–июль 2026 |
+| CTO | EMCO | июнь 2026 |
+| Директор проектного офиса AI | Росатом | июнь 2026 |
+| ИТ-лидер трайба (AI) | Сбер | май–июнь 2026 |
+| Руководитель AI-проектов | Горнодобыча (APi Executive) | июнь 2026 |
+| Директор по внедрению ИИ | DataMarketing | май 2026 |
+| Chief AI Officer | Kontakt InterSearch | май 2026 |
+| Директор по маркетинговым технологиям | СберМаркетинг | май 2026 |
+| IT-директор / CTO | — | апр. 2026 |
+| Владелец продукта (AI & Data) | — | май 2026 |
+| AI-инженер (Middle) | — | май 2026 |

@@ -11,184 +11,123 @@ body { font-family: "Segoe UI", Tahoma, sans-serif; background: #f5f5f5; color: 
 h1 { font-size: 26pt; font-weight: 700; color: #1a1a1a; margin-bottom: 6px; }
 .subtitle { font-size: 11pt; color: #555; }
 .photo { width: 90px; height: 90px; border-radius: 50%; object-fit: cover;
-  border: 3px solid #21a038; margin: 0 auto 16px; display: block; }
+  border: 3px solid #2c3e50; margin: 0 auto 16px; display: block; }
 .section-label { font-size: 8pt; font-weight: 700; text-transform: uppercase;
   letter-spacing: 1px; color: #aaa; margin: 28px 0 10px; }
 .cards { display: flex; flex-direction: column; gap: 16px; }
 .card { background: #fff; border-radius: 10px; padding: 22px 28px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08); border-left: 4px solid #21a038;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08); border-left: 4px solid #2980b9;
   display: flex; justify-content: space-between; align-items: center; gap: 20px; }
-.card.draft { border-left-color: #D97706; opacity: 0.85; }
 .card-info { flex: 1; }
 .card-title { font-size: 13pt; font-weight: 700; color: #1a1a1a; margin-bottom: 4px; }
 .card-meta { font-size: 8.5pt; color: #777; margin-bottom: 10px; }
 .card-tags { display: flex; gap: 6px; flex-wrap: wrap; }
-.tag { background: #e8f5e9; color: #21a038; font-size: 7.5pt; font-weight: 600;
+.tag { background: #eaf2fb; color: #2980b9; font-size: 7.5pt; font-weight: 600;
   padding: 2px 8px; border-radius: 3px; }
-.tag.amber { background: #FEF3C7; color: #D97706; }
-.btn { display: inline-block; background: #21a038; color: white; padding: 8px 18px;
+.btn { display: inline-block; background: #2980b9; color: white; padding: 8px 18px;
   border-radius: 6px; text-decoration: none; font-size: 8.5pt; font-weight: 600;
   white-space: nowrap; }
-.btn:hover { background: #1a8030; }
-.btn-pdf { background: #fff; color: #21a038; border: 1.5px solid #21a038;
+.btn:hover { background: #1f6390; }
+.btn-pdf { background: #fff; color: #2980b9; border: 1.5px solid #2980b9;
   margin-top: 6px; display: block; text-align: center; }
-.btn-pdf:hover { background: #f0fff4; }
-.btn.amber { background: #D97706; }
-.btn.amber:hover { background: #b45309; }
+.btn-pdf:hover { background: #eaf2fb; }
 .btns { display: flex; flex-direction: column; gap: 6px; min-width: 110px; }
+
+.info-box { background: #fff; border-radius: 10px; padding: 20px 28px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08); margin-top: 8px; }
+.info-box h3 { font-size: 9pt; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.5px; color: #2980b9; margin-bottom: 10px; }
+.info-box p, .info-box li { font-size: 8.5pt; color: #444; line-height: 1.6; }
+.info-box ul { padding-left: 16px; }
+.info-box ul li { margin-bottom: 3px; }
+.info-box .rule { border-top: 1px solid #eee; margin: 10px 0; }
+
 .footer { text-align: center; margin-top: 36px; font-size: 8pt; color: #aaa; }
 .footer a { color: #aaa; }
 </style>
 </head>
 <body>
 <div class="page">
+
   <div class="header">
     <img class="photo" src="shared/foto_zsa.jpg" alt="Фото"/>
     <h1>Зубков Сергей Андреевич</h1>
-    <div class="subtitle">Москва &nbsp;·&nbsp; zubkovfpk@yandex.ru &nbsp;·&nbsp; +7 (926) 276-61-43</div>
+    <div class="subtitle">Москва &nbsp;·&nbsp; zubkovfpk@yandex.ru &nbsp;·&nbsp; +7 (926) 276-61-43 · MAX</div>
   </div>
 
-  <div class="section-label">Основные резюме</div>
+  <div class="section-label">Актуальное резюме</div>
   <div class="cards">
 
     <div class="card">
       <div class="card-info">
-        <div class="card-title">Владелец продукта (AI &amp; Data) / AI Product Owner</div>
-        <div class="card-meta">Основное резюме &nbsp;·&nbsp; обновлено 6 мая 2026 &nbsp;·&nbsp; v2.0</div>
+        <div class="card-title">Universal — Head of AI / CAIO / CTO</div>
+        <div class="card-meta">Базовая версия &nbsp;·&nbsp; обновлено июль 2026 &nbsp;·&nbsp; v1.7.7</div>
         <div class="card-tags">
-          <span class="tag">Product Owner</span>
-          <span class="tag">AI-стратегия</span>
-          <span class="tag">Бэклог / Roadmap</span>
-          <span class="tag">Unit-экономика</span>
-          <span class="tag">9 лет в AI/ML</span>
-        </div>
-      </div>
-      <div class="btns">
-        <a class="btn" href="positions/po-ai/">Открыть →</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-info">
-        <div class="card-title">IT-директор / CTO / Chief AI Officer</div>
-        <div class="card-meta">Общее резюме &nbsp;·&nbsp; апр. 2026 &nbsp;·&nbsp; v1.5 — планируется актуализация</div>
-        <div class="card-tags">
-          <span class="tag">Digital Transformation</span>
-          <span class="tag">Enterprise Architecture</span>
+          <span class="tag">Fractional CAIO</span>
+          <span class="tag">AI CoE</span>
+          <span class="tag">MLOps / LLMOps</span>
           <span class="tag">20+ лет в ИТ</span>
+          <span class="tag">7 AI в production</span>
         </div>
       </div>
       <div class="btns">
-        <a class="btn" href="positions/it-director/">Открыть →</a>
-        <a class="btn btn-pdf" href="positions/it-director/Zubkov_SA_Resume_IT-Director.pdf">PDF ↓</a>
-      </div>
-    </div>
-
-    <div class="card draft">
-      <div class="card-info">
-        <div class="card-title">AI-инженер (Middle)</div>
-        <div class="card-meta">Черновик — дополнить после hydromet_bulletin &nbsp;·&nbsp; 6 мая 2026</div>
-        <div class="card-tags">
-          <span class="tag amber">⚠ черновик</span>
-          <span class="tag">Multi-Agent</span>
-          <span class="tag">LLM / RAG</span>
-          <span class="tag">CV/ML</span>
-          <span class="tag">Частичная занятость</span>
-        </div>
-      </div>
-      <div class="btns">
-        <a class="btn amber" href="positions/ai-engineer/">Открыть →</a>
+        <a class="btn" href="positions/universal/">Открыть →</a>
+        <a class="btn btn-pdf" href="positions/universal/Zubkov_SA_Resume_Universal.pdf">PDF ↓</a>
       </div>
     </div>
 
   </div>
 
-  <div class="section-label">Адаптации под вакансии</div>
-  <div class="cards">
+  <div class="section-label">Структура репозитория</div>
+  <div class="info-box">
+    <h3>Файловая структура</h3>
+    <ul>
+      <li><code>positions/universal/</code> — базовое резюме (HTML + PDF), основа для адаптаций</li>
+      <li><code>positions/[slug]/</code> — адаптации под конкретные вакансии (создаются по запросу, удаляются после завершения цикла)</li>
+      <li><code>shared/</code> — фото, мастер-профиль, общие ресурсы</li>
+      <li><code>shared/master_profile_ru.md</code> — мастер-профиль v1.7.7, источник истины для всех адаптаций</li>
+    </ul>
+  </div>
 
-    <div class="card">
-      <div class="card-info">
-        <div class="card-title">Директор по внедрению ИИ</div>
-        <div class="card-meta">Дата Маркетинг &nbsp;·&nbsp; май 2026</div>
-        <div class="card-tags">
-          <span class="tag">AI-внедрение</span>
-          <span class="tag">Data-платформа</span>
-          <span class="tag">B2B</span>
-        </div>
-      </div>
-      <div class="btns">
-        <a class="btn" href="positions/datamarketing/">Открыть →</a>
-      </div>
-    </div>
+  <div class="section-label">Правила адаптаций</div>
+  <div class="info-box">
+    <h3>Принципы создания позиций</h3>
+    <ul>
+      <li>База — всегда <code>universal/index.html</code>, цвета адаптируются под корпоративный стиль работодателя</li>
+      <li>Заголовок роли — универсальный, не переписывается под текст вакансии в лоб</li>
+      <li>HTML-итерации первые, PDF только после согласования вёрстки</li>
+      <li>Cover letter — только после явного запроса, после утверждения PDF</li>
+      <li>Метрики и цифры — только из мастер-профиля, без подгонки под вакансию</li>
+      <li>Завершённые формы глаголов: «Спроектировал», «Обеспечил», «Вывел»</li>
+      <li>Зарплата: от 500 000 руб. (в отдельных позициях — без «от»)</li>
+      <li>Номера страниц PDF: формат «N из M»</li>
+    </ul>
+    <div class="rule"></div>
+    <h3>Что не делать</h3>
+    <ul>
+      <li>Co-Founder — убран из всех резюме</li>
+      <li>LoRA — не упоминать в стеке</li>
+      <li>«цифровые экосистемы» — заменять на «цифровое пространство» / «цифровая платформа»</li>
+      <li>ROI 1,57× — не упоминать в резюме</li>
+      <li>«Резюме онлайн» — не добавлять в блок контактов</li>
+      <li>GigaChat / YandexGPT — не упоминать в связке с закрытым госконтуром</li>
+    </ul>
+  </div>
 
-    <div class="card">
-      <div class="card-info">
-        <div class="card-title">Chief AI Officer / Директор по внедрению ИИ</div>
-        <div class="card-meta">Kontakt InterSearch &nbsp;·&nbsp; май 2026</div>
-        <div class="card-tags">
-          <span class="tag">CAIO</span>
-          <span class="tag">AI-стратегия</span>
-          <span class="tag">Roadmap</span>
-          <span class="tag">Enterprise AI</span>
-        </div>
-      </div>
-      <div class="btns">
-        <a class="btn" href="positions/caio/">Открыть →</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-info">
-        <div class="card-title">ИТ-лидер трайба (AI)</div>
-        <div class="card-meta">Сбер. IT (ПАО Сбербанк) &nbsp;·&nbsp; май 2026</div>
-        <div class="card-tags">
-          <span class="tag">AI-программы</span>
-          <span class="tag">Стейкхолдеры</span>
-          <span class="tag">Бюджет</span>
-          <span class="tag">Коллегиальные органы</span>
-        </div>
-      </div>
-      <div class="btns">
-        <a class="btn" href="positions/sber-tribe/">Открыть →</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-info">
-        <div class="card-title">Директор проектного офиса по внедрению ИИ</div>
-        <div class="card-meta">Госкорпорация Росатом &nbsp;·&nbsp; июнь 2026</div>
-        <div class="card-tags">
-          <span class="tag">AI-методология</span>
-          <span class="tag">Жизненный цикл AI</span>
-          <span class="tag">Управление рисками</span>
-          <span class="tag">Госкорпорация</span>
-        </div>
-      </div>
-      <div class="btns">
-        <a class="btn" href="positions/rosatom/">Открыть →</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-info">
-        <div class="card-title">Руководитель AI-проектов / Head of AI</div>
-        <div class="card-meta">Горнодобыча (APi Executive Consulting) &nbsp;·&nbsp; июнь 2026</div>
-        <div class="card-tags">
-          <span class="tag">Нефтегаз</span>
-          <span class="tag">Горнодобыча</span>
-          <span class="tag">Портфель AI</span>
-          <span class="tag">ТЭО / ROI</span>
-        </div>
-      </div>
-      <div class="btns">
-        <a class="btn" href="positions/goldmining/">Открыть →</a>
-      </div>
-    </div>
-
+  <div class="section-label">История версий</div>
+  <div class="info-box">
+    <h3>Changelog</h3>
+    <ul>
+      <li><b>Июль 2026</b> — Чистка репозитория: удалены все адаптации после завершения цикла откликов. Оставлена только universal-база. Обновлена главная страница.</li>
+      <li><b>Июнь–июль 2026</b> — Подготовлены и использованы адаптации: EMCO CTO, VSK CTO, Biotech CAIO, ВСМПО-АВИСМА (Head of AI CoE). Мастер-профиль v1.7.7.</li>
+      <li><b>Май–июнь 2026</b> — Адаптации: Росатом, Сбер Трайб, Горнодобыча, DataMarketing, CAIO, Сбер Маркетинг. Введён блок «Универсальный» как базовая версия.</li>
+      <li><b>Апрель–май 2026</b> — Первые адаптации: IT-директор, PO AI, EMCO AI PL, BCS, AI-инженер.</li>
+    </ul>
   </div>
 
   <div class="footer">
-    Зубков Сергей Андреевич &nbsp;·&nbsp; обновлено май 2026
+    Зубков Сергей Андреевич &nbsp;·&nbsp; обновлено июль 2026 &nbsp;·&nbsp;
+    <a href="https://github.com/zubkovfpk/resume">GitHub</a>
   </div>
 
 </div>

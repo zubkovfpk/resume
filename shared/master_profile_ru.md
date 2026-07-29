@@ -1,6 +1,6 @@
 # Мастер‑профиль Сергея (RU)
 
-Версия: 1.7.8  
+Версия: 1.7.9  
 Дата сборки: 2026‑04‑21  
 Последнее обновление: 2026‑07‑29  
 Автор: Зубков Сергей Андреевич  
@@ -73,7 +73,7 @@
 ### 3.2. AI / GenAI / Data (`AILead`, `GenAIArch`, `CTO`)
 
 - GenAI, LLM, Agentic RAG, GraphRAG, multi‑agent workflows.
-- Prompt engineering и оркестрация AI‑агентов (Cursor, Windsurf, Perplexity).
+- Prompt engineering и оркестрация AI‑агентов (Cursor, Devin (Windsurf), Perplexity).
 - Constitutional AI, оценка качества агентов, AI‑product management.
 - ML первого поколения — детекция объектов на LiDAR + стереофото (исторический опыт ЕГИП, 2014–2016, без ретроактивных GenAI‑приписок).
 - ESG & Climate GeoAI: мониторинг ПГ (CO₂/CH₄), NbS-анализ, MRV-технологии.
@@ -302,7 +302,7 @@ ML-пайплайн VIZARD (классификация ледовой обста
 - Python (pytest, asyncio, APScheduler), PostgreSQL/PostGIS.
 - Геопространственные и метеоформаты: NetCDF, GRIB2, GeoTIFF, Shapefile, GeoPackage.
 - Источники метеоданных: GFS, CMEMS, ERA5, NOAA.
-- Multi‑agent AI‑оркестрация инструментов разработки: Cursor, Windsurf, Perplexity; prompt‑инженерия.
+- Multi‑agent AI‑оркестрация инструментов разработки: Cursor, Devin (Windsurf), Perplexity; prompt‑инженерия.
 - CI/CD, Docker, Git/GitHub, автоматизированное тестирование, документация (Markdown, PlantUML, ADR).
 
 Практические управленческие смыслы:
@@ -384,7 +384,7 @@ ML-пайплайн VIZARD (классификация ледовой обста
 Связь с hydromet_bulletin:
 
 - Функционально и по бизнес‑логике — полностью независимое направление от hydromet_bulletin.
-- Общее: использование мульти‑агентного AI‑инструментария разработки (Cursor, Windsurf, Perplexity) как сквозной практики ВИЗАРД.
+- Общее: использование мульти‑агентного AI‑инструментария разработки (Cursor, Devin (Windsurf), Perplexity) как сквозной практики ВИЗАРД.
 
 ### 4.6. Проект в ППК «Роскадастр» (апрель 2025 — июн. 2026)
 
@@ -492,7 +492,7 @@ ML-пайплайн VIZARD (классификация ледовой обста
   - Python (pytest, asyncio, APScheduler), PostgreSQL/PostGIS.
   - Геопространственные и метеоформаты: NetCDF, GRIB2, GeoTIFF, Shapefile, GeoPackage.
   - Источники метеоданных: GFS, CMEMS, ERA5, NOAA.
-  - AI‑оркестрация: Cursor, Windsurf, Perplexity; prompt‑инженерия, Constitutional AI‑подходы к поведению агентов.
+  - AI‑оркестрация: Cursor, Devin (Windsurf), Perplexity; prompt‑инженерия, Constitutional AI‑подходы к поведению агентов.
   - CI/CD, Docker, Git/GitHub, Markdown/PlantUML, ADR.
 - Публичность: внешний репозиторий GitHub, доступ по запросу; возможен guided‑tour по коду и архитектуре.
 - Результаты (управленческие и технические):
@@ -518,7 +518,7 @@ ML-пайплайн VIZARD (классификация ледовой обста
   - Архитектуры: семейства YOLO, EfficientDet, InternImage, ResNet, Faster R‑CNN; трансформерные (ViT, DETR, RT‑DETR, SegFormer); гибридные подходы.
   - Техники: SAHI для крупноформатных изображений, Raster Vision для геопространственных ML‑рабочих процессов.
   - Данные: RGB‑аэрофотосъёмка с БПЛА; десятки тысяч изображений; разметка профильными специалистами.
-  - Оркестрация разработки: мульти‑агентные AI‑инструменты (Cursor, Windsurf, Perplexity).
+  - Оркестрация разработки: мульти‑агентные AI‑инструменты (Cursor, Devin (Windsurf), Perplexity).
 - Целевые классы: около 100 видов сорных растений; карантинные виды — амброзия голометельчатая / полыннолистная / трёхраздельная, повилики, горчак ползучий.
 - Метрики качества модели (публикуются по запросу / на собеседовании): mAP@0.5 > 80%; IoU > 0.75; F1‑score > 0.8; Recall > 0.85.
 - Бизнес‑KPI: повышение эффективности внесения удобрений и пестицидов и снижение затрат на химические вещества; автоматическое обнаружение ~100 видов сорных растений.
@@ -784,7 +784,7 @@ ML-пайплайн VIZARD (классификация ледовой обста
 - AI / ML: LLM, Agentic RAG (Self-RAG), GraphRAG, multi‑agent orchestration, Constitutional AI, prompt‑инженерия, fine-tuning LLM; Evaluation Framework (Autonomy Boundary Matrix, Critic loop, quality gate, KRI, триггеры деградации). Госконтур: GigaChat, YandexGPT, pgvector, Apache AGE, LangChain, Langfuse self-hosted, ruBERT, E5. Исторический опыт ML — детекция объектов на LiDAR + стереофото.
   - Примечание: LoRA (Low-Rank Adaptation) — метод fine-tuning LLM; в стек включать только как «fine-tuning LLM», не «LoRA» (омоним с радиосвязью, создаёт путаницу).
 - Computer Vision / Deep Learning: семейства YOLO, EfficientDet, InternImage, ResNet, Faster R‑CNN; трансформерные архитектуры (ViT, DETR, RT‑DETR, SegFormer); гибридные подходы; SAHI, Raster Vision. Сегментация на SAR-данных: пайплайн SAR → RGB-композиты GeoTIFF → классификация; эволюция: U-Net → U-Net++ (Attention Gate) → SegFormer (VIZARD, ледовая обстановка).
-- Инструменты разработки и DevOps: Cursor, Windsurf, Perplexity, VS Code, Git/GitHub, Docker, CI/CD, pytest.
+- Инструменты разработки и DevOps: Cursor, Devin (Windsurf), Perplexity, VS Code, Git/GitHub, Docker, CI/CD, pytest.
 - Архитектурная документация: C4, PlantUML, ADR, Markdown.
 - Методологии: TOGAF, COBIT, PRINCE2, IPMA (сертификат), ISO 31000, FMEA, SORA.
 - Смежные (управленческий уровень): ИБ/кибербезопасность, брокеры сообщений (RabbitMQ/Kafka), observability.

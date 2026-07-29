@@ -1,6 +1,6 @@
 # Мастер‑профиль Сергея (RU)
 
-Версия: 1.7.9  
+Версия: 1.8.0  
 Дата сборки: 2026‑04‑21  
 Последнее обновление: 2026‑07‑29  
 Автор: Зубков Сергей Андреевич  
@@ -892,3 +892,65 @@ ML-пайплайн VIZARD (классификация ледовой обста
 3. Выбрать первую конкретную вакансию (из шорт‑листа hh.ru) и собрать под неё первую версию резюме на базе мастер‑профиля.
 4. Параллельно — сверстать HTML‑версию резюме с использованием имеющегося CSS и подготовить PDF‑экспорт.
 5. В процессе — наработать сопроводительные письма, шаблоны ответов на типовые вопросы HR и план подготовки к собеседованиям по наиболее сложным темам (M&A, регуляторика, AI‑стек).
+
+## 18. Технические параметры PDF‑генерации (Playwright)
+
+Параметры зафиксированы по результатам тестирования — использовать как стартовую точку при создании новых адаптаций.
+
+### 18.1. Стандартные параметры
+
+- **Движок:** Playwright (Chromium), Node.js.
+- **Формат страницы:** A4.
+- **printBackground:** true.
+- **Поля (margin):** top: 0mm, bottom: 12mm, left: 0mm, right: 0mm.
+- **Footer:** «N из M» через `footerTemplate` — `<span class="pageNumber"></span> из <span class="totalPages"></span>`.
+- **Запуск скрипта из:** `/home/user/` (там `node_modules`).
+
+### 18.2. Scale по адаптациям
+
+| Адаптация | scale | Страниц | Примечание |
+|-----------|-------|---------|------------|
+| universal | 0.96 | 2 | базовый эталон |
+| YADRO (Kvadra) | 0.88 | 2 | 6 отраслевых карточек + break-before: always на «Отраслевая экспертиза» |
+
+### 18.3. Правила разрыва страниц
+
+- `@media print` в HTML — Playwright **игнорирует** при использовании `scale`. Не использовать.
+- Управление разрывами только через `page.addStyleTag()` или `page.evaluate()` в JS-скрипте — до вызова `page.pdf()`.
+- `break-inside: avoid` на карточках (`.ind-card`) при scale 0.96 → лишняя страница. Если карточек 6+, использовать `break-before: always` на заголовке секции + уменьшить scale.
+- `break-before: always` инъектируется динамически: найти заголовок секции через `querySelectorAll` → добавить CSS-класс → навесить `break-before: always` через `addStyleTag`.
+
+### 18.4. Шаблон скрипта
+
+```js
+// gen_pdf_<position>.js — запускать из /home/user/
+const { chromium } = require('playwright');
+const path = require('path');
+
+(async () => {
+  const browser = await chromium.launch();
+  const page = await browser.newPage();
+  await page.goto('file://' + path.resolve('/home/user/workspace/resume-repo/positions/<pos>/index.html'), { waitUntil: 'networkidle' });
+  await page.waitForTimeout(2000);
+
+  // Инъекция break-before на нужную секцию (при необходимости)
+  await page.addStyleTag({ content: `.section-title.target-section { break-before: always; }` });
+  await page.evaluate(() => {
+    const el = [...document.querySelectorAll('.section-title')].find(e => e.textContent.includes('Текст заголовка'));
+    if (el) el.classList.add('target-section');
+  });
+
+  await page.pdf({
+    path: '/home/user/workspace/Zubkov_SA_Resume_<POS>.pdf',
+    format: 'A4',
+    printBackground: true,
+    scale: 0.88, // подбирается под конкретную адаптацию
+    margin: { top: '0mm', bottom: '12mm', left: '0mm', right: '0mm' },
+    displayHeaderFooter: true,
+    headerTemplate: '<span></span>',
+    footerTemplate: `<div style="width:100%; text-align:center; font-size:7pt; color:#999; font-family:Arial,sans-serif; padding-bottom:4px;"><span class="pageNumber"></span> из <span class="totalPages"></span></div>`,
+  });
+
+  await browser.close();
+})();
+```

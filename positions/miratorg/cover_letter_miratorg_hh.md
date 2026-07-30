@@ -12,3 +12,6 @@
 
 Сергей Зубков
 +7 (926) 276-61-43 · @SergeyAZubkov
+
+Резюме (HTML): https://zubkovfpk.github.io/resume/positions/miratorg/
+PDF: https://raw.githubusercontent.com/zubkovfpk/resume/main/positions/miratorg/Zubkov_SA_Resume_Miratorg.pdf

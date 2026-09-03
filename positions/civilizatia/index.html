@@ -55,7 +55,7 @@
   .comp-title { font-weight: 700; font-size: 8.2pt; color: var(--accent); margin-bottom: 3px; border-left: 3px solid var(--gold); padding-left: 5px; }
   .comp-text { font-size: 7.6pt; color: #333; line-height: 1.45; }
 
-  .pt-steps { display: flex; gap: 0; margin-bottom: 8px; }
+  .pt-steps { display: flex; gap: 0; margin-bottom: 8px; break-inside: avoid; page-break-inside: avoid; }
   .pt-step { flex: 1; background: var(--hi); border: 1px solid var(--border); padding: 8px 10px; position: relative; }
   .pt-step:not(:last-child)::after {
     content: '›'; position: absolute; right: 2px; top: 50%; transform: translateY(-50%);
@@ -298,6 +298,7 @@
       <ul class="ind-list">
         <li>Построение систем управления знаниями и проектных компетенций с нуля в двух технологических компаниях</li>
         <li>Fractional AI Tutor — Universidad del Quindío (Колумбия): образовательный пилот в области геоматики</li>
+        <li>Space-π (Фонд содействия инновациям), с 2021: участие МГУ-СТАНДАРТ в научно-образовательном проекте школьного спутникостроения как компания-партнёр и отраслевой эксперт</li>
         <li>Экспертная деятельность: ИНТЦ МГУ «Воробьёвы горы», 5+ публикаций, 10+ РИД, спикер отраслевых конференций</li>
       </ul>
       <div class="ind-metrics">

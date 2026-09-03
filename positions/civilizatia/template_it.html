@@ -116,7 +116,8 @@
   .closing-contacts { margin-top: 4px; font-size: 7.4pt; color: #555; text-align: center; letter-spacing: 0.2px; }
   .closing-contacts a { color: #555; text-decoration: none; }
 
-  .salary-box { display: flex; gap: 5px; margin: 4px 0 4px; }
+  .salary-box { display: flex; gap: 5px; margin: 4px 0 4px; break-inside: avoid; page-break-inside: avoid; }
+  .comp-section { break-inside: avoid; page-break-inside: avoid; }
   .sal-card { flex: 1; background: var(--accent); color: #fff; border-radius: 5px; padding: 5px 10px; text-align: center; }
   .sal-val { font-size: 13pt; font-weight: 700; display: block; color: #6ea3ff; }
   .sal-lbl { font-size: 6.6pt; opacity: 0.85; margin-top: 1px; text-transform: uppercase; letter-spacing: 0.3px; }
@@ -354,11 +355,13 @@
   </div>
 
   <!-- КОМПЕНСАЦИЯ -->
+  <div class="comp-section">
   <div class="section-title">Ожидания по компенсации</div>
   <div class="salary-box">
     <div class="sal-card" style="flex:2;"><span class="sal-val">от 500 тыс. ₽</span><span class="sal-lbl">Фикс до вычета · старт, с ежегодным пересмотром</span></div>
     <div class="sal-card" style="flex:2;"><span class="sal-val">По результатам</span><span class="sal-lbl">Бонус по ИТ-milestones</span></div>
     <div class="sal-card" style="flex:3;"><span class="sal-val" style="font-size:11pt;">Долгосрочная — обсуждаемо</span><span class="sal-lbl">В зависимости от структуры участия</span></div>
+  </div>
   </div>
 
   <!-- CLOSING QUOTE -->

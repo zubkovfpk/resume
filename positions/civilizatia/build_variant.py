@@ -24,8 +24,17 @@ with sync_playwright() as p:
     browser = p.chromium.launch()
     page = browser.new_page()
     page.goto(f"file://{tmp_html}")
-    page.pdf(path=pdf_path, format="A4", print_background=True,
-             margin={"top": "8mm", "bottom": "6mm", "left": "0mm", "right": "0mm"})
+    page.pdf(
+        path=pdf_path, format="A4", print_background=True,
+        margin={"top": "8mm", "bottom": "10mm", "left": "0mm", "right": "0mm"},
+        display_header_footer=True,
+        header_template="<div></div>",
+        footer_template="""
+        <div style="width:100%; font-size:7pt; color:#888; text-align:center; font-family: Arial, sans-serif;">
+          <span class="pageNumber"></span> из <span class="totalPages"></span>
+        </div>
+        """,
+    )
     browser.close()
 
 os.remove(tmp_html)

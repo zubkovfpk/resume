@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## v1.9.5 — сентябрь 2026 (Fractional CAIO — девелопмент/PropTech)
+- Добавлен подраздел опыта 4.7 — Capital Group (Fractional CAIO / AI Transformation Advisor, август 2026 — н.в.): матрица из 15 AI-инициатив по ЖЦ ОКС, архитектура автоматизации Excel → 1С:ERP с human-in-the-loop
+- Добавлена карточка 5.7 (витрина) и Summary 2.5 (Fractional CAIO / отраслевой advisor, мультиотраслевой)
+- Новый тег `PropTech`; добавлен в разделы 3.5, 14.2, 14.3 (профиль вакансии девелопмент/PropTech)
+- Точечные вставки про Capital Group в Summary 2.1 и 3.5 (продукт и рынок)
+- Повод: fit-анализ вакансии AI & Business Transformation Manager (Kadena Properties, Белград) выявил отсутствие отражения текущего проекта Capital Group в мастер-профиле
+
 ## v1.6 — апрель 2026 (Head of AI)
 - Добавлен пункт «Дорожная карта GeoAI 2026–2030» + MLOps-контур в блок Роскадастра
 - Зарплата: от 500 000 ₽ net

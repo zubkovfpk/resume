@@ -1,7 +1,7 @@
 # Global / Case-Based Profile — Sergey Zubkov (производный документ)
 
-**Версия: 0.2**
-Дата: 2026-09-08
+**Версия: 0.3**
+Дата: 2026-09-09
 Источник фактов: `shared/master_profile_ru.md` (v1.9.6) — при любом расхождении в цифрах или формулировках приоритет у мастер-профиля.
 Статус: только текст/структура, без вёрстки HTML/PDF.
 Основа ролевой рамки: `FCAIO/AI_Roles_Matrix.pdf` (Strategy A, подготовлено 26.08.2026). Компенсационные бенчмарки — только в AI_Roles_Matrix.pdf, в этом документе не дублируются (см. раздел 5).
@@ -13,12 +13,12 @@
 ## 0. Контактный блок (Global)
 
 - Имя: Sergey Zubkov
-- Локация: Moscow (base) — открыт к Dubai, Singapore, London, Berlin, Amsterdam, Remote (EMEA)
-- Релокация: готов рассматривать с сентября 2027 г.; более ранние сроки возможны для проектов без семейного переезда
+- Локация: Moscow (base) — открыт к Dubai, Singapore, Belgrade, Tbilisi, Barcelona, Milan, Remote (EMEA)
+- Релокация: готов рассматривать; детали и сроки обсуждаются на встречах/созвонах
 - Email: zubkovfpk@gmail.com
 - Telegram: @SergeyAZubkov · WhatsApp: +7 (926) 276-61-43
 - LinkedIn: https://www.linkedin.com/in/sergey-a-zubkov
-- Рабочие языки: английский (Upper-Intermediate, восстановление в активной фазе), русский (родной)
+- Рабочие языки: английский (B2 / Upper-Intermediate, восстановление в активной фазе), русский (родной)
 
 Теги для адаптации: `ALL`.
 
@@ -27,22 +27,24 @@
 ## 1. Заголовок / позиционирование (универсальная версия, 5 ролей)
 
 ```
-Fractional CAIO & AI Transformation Advisor | Safe-Execution AI, GeoAI | 22 yrs
+Chief AI Officer & AI Transformation Officer | AI Business Partner | 20+ yrs
 ```
 
-Целевые роли (LinkedIn tags, Strategy A): **Chief AI Officer (CAIO)**, **Chief AI Transformation Officer**, **AI Implementation Strategist**, **AI Business Strategy Manager**, **AI Operations Strategist**. Самые «съедобные» для executive search — CAIO и Chief AI Transformation Officer; остальные три работают как supporting evidence глубины экспертизы.
+Термин «Fractional» пока узнаваем в основном в США (где эта форма занятости активно развивается); в Европе и на международном рынке в целом термин часто требует пояснения. Поэтому в заголовке используются наиболее употребимые роли без слова «Fractional» — сам формат (Fractional CAIO на ретейнере) раскрывается в Summary. **AI Business Partner** — признанный, узнаваемый термин на стыке AI и бизнеса (используется в вакансиях крупных компаний, например Janus Henderson), выбран как заголовочная альтернатива вместо «Fractional Advisor».
+
+Целевые роли (LinkedIn tags, Strategy A): **Chief AI Officer (CAIO)**, **Chief AI Transformation Officer**, **AI Implementation Strategist**, **AI Business Strategy Manager**, **AI Operations Strategist**. Самые «съедобные» для executive search — CAIO и Chief AI Transformation Officer (оба вынесены в заголовок); остальные три работают как supporting evidence глубины экспертизы через кейсы.
 
 ---
 
 ## 2. Summary (кейс-ориентированный, ~2000 знаков)
 
-> Chief AI Officer и AI Transformation architect с 22-летним опытом перевода AI-стратегии в управляемые, измеримые production-системы. Соединяю board-level стратегию с инженерным исполнением — редкое сочетание, превращающее AI-инвестиции в P&L-эффект, а не в пилоты, которые не масштабируются.
+> Chief AI Officer и AI Transformation architect с 20+-летним опытом в IT и цифровой трансформации, последние годы сосредоточен на переводе AI-стратегии в управляемые, измеримые production-системы. Соединяю board-level стратегию с инженерным исполнением — редкое сочетание, превращающее AI-инвестиции в масштабируемый P&L-эффект.
 >
-> Портфель из 9 кейсов покрывает весь цикл AI-инициативы — от стратегии до операционки — в пяти отраслях: морская безопасность (VIZARD, 7 AI-модулей в production, forbidden action rate 0%), девелопмент недвижимости (Capital Group — 15 AI-инициатив по полному циклу капстроительства), госсектор (Роскадастр — governance-фрейм для LLM-агента; Россельхознадзор — ML-детекция по данным БПЛА, MVP сдан), городская инфраструктура (ЕГИП Москвы — 60+ ведомств, ~$10M+ программа) и международный EdTech (Universidad del Quindío, Колумбия — первый международный fractional-мандат).
+> Портфель кейсов покрывает весь цикл AI-инициативы — от стратегии до операционки — в нескольких отраслях: морская безопасность, девелопмент недвижимости, земельный кадастр и государственное управление данными, сельское хозяйство, городская инфраструктура и международный EdTech.
 >
-> Работаю в трёх форматах: (1) штатный Chief AI Officer / Chief AI Transformation Officer для growth-stage и enterprise; (2) Fractional CAIO на ретейнере; (3) проектная AI-implementation стратегия под определённый объём трансформации.
+> Работаю в трёх форматах: штатный Chief AI Officer / Chief AI Transformation Officer для growth-stage и enterprise; Fractional CAIO на ретейнере; проектная AI-implementation стратегия под определённый объём трансформации.
 >
-> Специализация: safe-execution AI в регулируемых отраслях (морская безопасность, госсектор, критическая инфраструктура, геопространственные данные). Архитектурная компетенция: on-prem MLOps на Kubernetes с суверенным LLM-стеком для регулируемых контуров. GeoAI как доменное расширение — 22 года в ГИС и ДЗЗ, позволяющие говорить на языке и AI-стратегии, и пространственных данных.
+> Специализация: safe-execution AI в регулируемых отраслях (морская безопасность, госсектор, критическая инфраструктура, геопространственные данные). Архитектурная компетенция: on-prem MLOps на Kubernetes с суверенным LLM-стеком для регулируемых контуров. GeoAI как доменное расширение — 20+ лет в ГИС и ДЗЗ, позволяющие говорить на языке и AI-стратегии, и пространственных данных.
 
 Теги: `ALL`.
 

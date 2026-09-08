@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## v1.9.6 — сентябрь 2026 (Universidad del Quindío + Global кейс-ориентированный профиль)
+- Добавлен подраздел опыта 4.8 — Universidad del Quindío (Fractional AI Product Lead, EdTech-пилот в Колумбии, январь 2026 — н.в.), карточка 5.8
+- Создан новый производный документ shared/master_profile_global_cases.md — кейс-ориентированная структура для международного/Fractional трека, 10 кейсов с маппингом на 5 ролей из AI_Roles_Matrix
+- Удалены устаревшие файлы из shared/: Zubkov_Cover_Headhunter.pdf, Zubkov_MasterProfile_Headhunter.pdf, Zubkov_MasterProfile_VK.pdf, Zubkov_MasterProfile_v17.pdf, cover_letter_zarina.md, esg_geoai.pdf
+- Исправлено название вуза в LinkedIn-адаптации: Universidad de la Sabana → Universidad del Quindío
+
 ## v1.9.5 — сентябрь 2026 (Fractional CAIO — девелопмент/PropTech)
 - Добавлен подраздел опыта 4.7 — Capital Group (Fractional CAIO / AI Transformation Advisor, август 2026 — н.в.): матрица из 15 AI-инициатив по ЖЦ ОКС, архитектура автоматизации Excel → 1С:ERP с human-in-the-loop
 - Добавлена карточка 5.7 (витрина) и Summary 2.5 (Fractional CAIO / отраслевой advisor, мультиотраслевой)
